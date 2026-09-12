@@ -1,0 +1,86 @@
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto 96px;
+  padding: 0 40px;
+}
+
+.section-header {
+  margin-bottom: 44px;
+}
+
+.section-category {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  border: none;
+  padding: 0;
+  color: #1d1d1f;
+  letter-spacing: -0.024em;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
+    sans-serif;
+}
+
+.section-headline {
+  font-size: 64px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.034em;
+  margin-bottom: 12px;
+  color: #1d1d1f;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC',
+    sans-serif;
+}
+
+.section-sub {
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #6e6e73;
+  max-width: 760px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC', sans-serif;
+}
+
+.dark .section-category,
+.dark .section-headline {
+  color: var(--vp-c-text-1);
+}
+
+.dark .section-sub {
+  color: var(--vp-c-text-2);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:is(.feature-card, .comm-card, .prod-card, .appendix-card, .buy-btn) {
+  border-bottom: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:is(.feature-card, .comm-card, .prod-card, .appendix-card, .buy-btn):is(
+  :hover,
+  :focus,
+  :focus-visible,
+  :active
+) {
+  border-bottom-color: transparent !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.highlight {
+  color: var(--vp-c-text-2);
+}
+
+@media (max-width: 768px) {
+  .section-headline {
+    font-size: 42px;
+  }
+}
