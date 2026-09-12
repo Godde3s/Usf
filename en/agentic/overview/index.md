@@ -23,7 +23,7 @@ The loop is exactly the four steps described in [The Agentic Method](/en/about/h
 - **Testing got serious.** If the test suite is weak, agents will happily produce confident garbage.
 
 ::: info Proof, not promises
-This portfolio — four locales, a cloned VitePress theme, custom components and RTL support — was built through this loop. So were NetPilot, OmniRouter and every panel in the [projects](/en/projects/netpilot/) section.
+This portfolio — two locales, a cloned VitePress theme, custom SVG icon set and 14 generated illustrations — was built through this loop. So were NetPilot, OmniRouter and every panel in the [projects](/en/projects/netpilot/) section.
 :::
 
 The following pages document each tool: [OpenCode](/en/agentic/opencode/), [Codex](/en/agentic/codex/), [Claude Code](/en/agentic/claude-code/) and [Hermes Agent](/en/agentic/hermes/).

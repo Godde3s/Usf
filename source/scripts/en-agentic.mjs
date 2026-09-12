@@ -17,7 +17,7 @@ export const pages = [
         '**Architecture matters more, not less.** Agents amplify good structure and expose bad structure instantly.',
         '**Testing got serious.** If the test suite is weak, agents will happily produce confident garbage.'
       ] },
-      { t: 'info', title: 'Proof, not promises', x: 'This portfolio — four locales, a cloned VitePress theme, custom components and RTL support — was built through this loop. So were NetPilot, OmniRouter and every panel in the [projects](/en/projects/netpilot/) section.' },
+      { t: 'info', title: 'Proof, not promises', x: 'This portfolio — two locales, a cloned VitePress theme, custom SVG icon set and 14 generated illustrations — was built through this loop. So were NetPilot, OmniRouter and every panel in the [projects](/en/projects/netpilot/) section.' },
       { t: 'p', x: 'The following pages document each tool: [OpenCode](/en/agentic/opencode/), [Codex](/en/agentic/codex/), [Claude Code](/en/agentic/claude-code/) and [Hermes Agent](/en/agentic/hermes/).' }
     ]
   },
@@ -75,7 +75,7 @@ export const pages = [
         '**Tool discipline.** It shows its work: commands run, tests executed, diffs staged.',
         '**Taste.** In practice, its refactors read like a careful senior engineer wrote them, which minimizes my review surface.'
       ] },
-      { t: 'quote', x: 'This portfolio is a Claude Code build: a full VitePress theme clone adapted to four locales with RTL support — planned once, reviewed by me, shipped in this shape.' },
+      { t: 'quote', x: 'This portfolio is a Claude Code build: a full VitePress theme clone adapted to two locales — planned once, reviewed by me, shipped in this shape.' },
       { t: 'h2', x: 'How I brief it' },
       { t: 'p', x: 'The better the plan I can critique, the better the result. So my briefs for Claude Code state the goal, the constraints, the definition of done — and explicitly invite a plan before execution. Then I do what the human is for: I read the plan, attack the weak points, and only then let it run. The pattern is described in [The Agentic Method](/en/about/how-i-work/).' },
       { t: 'p', x: 'Claude Code also plays the integrator role after [Codex](/en/agentic/codex/) fan-outs: reconciling diffs, resolving the overlaps, and running the full suite before anything reaches a branch I care about.' }

@@ -52,7 +52,7 @@ const PAGES = {
     ['story-1', { en: 'NetPilot: One Binary, Every Answer', es: 'NetPilot: un binario, todas las respuestas' }],
     ['story-2', { en: 'OmniRouter: Taming Model Chaos', es: 'OmniRouter: domando el caos de modelos' }],
     ['story-3', { en: 'Usf Panel: Tunnels vs. Censorship', es: 'Usf Panel: túneles contra la censura' }],
-    ['story-4', { en: 'This Portfolio: Four Languages, One Repo', es: 'Este portafolio: dos idiomas, un repo' }]
+    ['story-4', { en: 'This Portfolio: One Design, Two Languages', es: 'Este portafolio: un diseño, dos idiomas' }]
   ]
 }
 

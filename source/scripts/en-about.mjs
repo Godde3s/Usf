@@ -23,7 +23,7 @@ export const pages = [
       { t: 'list', x: [
         '**9+ programming languages** used in production: Python, JavaScript/TypeScript, Go, PHP, C#, C/C++, SQL, Ladder, Structured Text.',
         '**30+ public repositories** — API bridges, model routers, proxy panels, security tools and this very portfolio.',
-        '**4 languages** this site speaks: English, فارسی, العربية, Español.',
+        '**2 languages** this site speaks: English and Español — with clean i18n wiring ready for more.',
         '**1 rule**: every project must run, not just compile.'
       ] },
       { t: 'p', x: 'If any of that resonates — an idea, a broken system, an impossible deadline — my inbox is open. The fastest ways to reach me are Telegram and the contact details at the bottom of every page.' }

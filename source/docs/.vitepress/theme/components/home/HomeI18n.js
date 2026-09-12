@@ -33,7 +33,7 @@ export const i18n = {
         author: 'Usf Panel · Python'
       },
       s4: {
-        title: 'This portfolio — four languages, one VitePress',
+        title: 'This portfolio — two languages, one VitePress',
         author: 'Usf · Vue'
       },
       authorPrefix: 'Built with:',
@@ -239,7 +239,7 @@ export const i18n = {
         author: 'Usf Panel · Python'
       },
       s4: {
-        title: 'Este portafolio — cuatro idiomas, un solo VitePress',
+        title: 'Este portafolio — dos idiomas, un solo VitePress',
         author: 'Usf · Vue'
       },
       authorPrefix: 'Construido con:',

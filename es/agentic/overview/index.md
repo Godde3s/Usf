@@ -23,7 +23,7 @@ El ciclo es exactamente los cuatro pasos descritos en [El método agéntico](/es
 - **Los tests se pusieron serios.** Si la suite es débil, los agentes producirán basura confiable con total seguridad.
 
 ::: info Pruebas, no promesas
-Este portafolio — cuatro idiomas, un clon del tema VitePress, componentes personalizados y soporte RTL — se construyó con este ciclo. También NetPilot, OmniRouter y cada panel de la sección de [proyectos](/es/projects/netpilot/).
+Este portafolio — dos idiomas, un clon del tema VitePress, iconos SVG propios y 14 ilustraciones generadas — se construyó con este ciclo. También NetPilot, OmniRouter y cada panel de la sección de [proyectos](/es/projects/netpilot/).
 :::
 
 Las páginas siguientes documentan cada herramienta: [OpenCode](/es/agentic/opencode/), [Codex](/es/agentic/codex/), [Claude Code](/es/agentic/claude-code/) y [Hermes Agent](/es/agentic/hermes/).
