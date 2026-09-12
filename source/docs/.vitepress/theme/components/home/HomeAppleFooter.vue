@@ -9,88 +9,87 @@ const props = defineProps({
 const t = inject('t')
 
 const appleFooterInfo = computed(() => {
-  const locale = t.value._locale || 'zh-cn'
+  const locale = t.value._locale || 'en'
   const content = {
-    'zh-cn': {
-      notes: [
-        '1. 学习路径与章节内容会持续更新，显示内容以当前页面为准。',
-        '2. 示例项目与截图用于教学演示，可能与后续版本界面存在差异。',
-        '3. 部分章节链接会随着课程迭代调整，建议优先从首页导航进入最新路径。'
-      ],
-      breadcrumbPrefix: 'Easy-Vibe',
-      breadcrumbCurrent: '学习导航',
-      columns: [
-        {
-          title: '学习与导航',
-          links: ['零基础入门', '初中级开发', '高级开发', '附录', '学习地图', '课程总览']
-        },
-        {
-          title: '学习支持',
-          links: ['常见问题', '学习建议', '章节勘误', '版本更新']
-        },
-        {
-          title: '项目资源',
-          links: ['GitHub 仓库', '开源协议', '提交 Issue', '贡献指南']
-        },
-        {
-          title: '社区',
-          links: ['学习社群', '讨论区', '课程反馈']
-        },
-        {
-          title: '关于 Easy-Vibe',
-          links: ['项目介绍', '更新日志', '联系我们']
-        }
-      ],
-      more: '更多学习方式：访问',
-      moreLink: 'GitHub 仓库',
-      moreTail: '，获取更新与交流信息。',
-      copyright: 'Copyright © 2026 Easy-Vibe. 保留所有权利。',
-      policies: ['隐私政策', '使用条款', '网站地图']
-    },
     en: {
       notes: [
-        '1. Learning paths and chapters are continuously updated.',
-        '2. Screenshots and demo projects are for educational illustration.',
-        '3. Some chapter links may change as the course evolves.',
-        '4. The page is optimized for modern desktop browsers and responsive layouts.'
+        '1. Every project linked here is a working public repository — no mockups, no vaporware.',
+        '2. The site ships in English and Spanish; all projects are documented on GitHub.',
+        '3. Built and deployed with agentic coding — OpenCode, Codex, Claude Code and Hermes.'
       ],
-      breadcrumbPrefix: 'Easy-Vibe',
-      breadcrumbCurrent: 'Learning Navigation',
+      breadcrumbPrefix: 'Usf',
+      breadcrumbCurrent: 'Portfolio',
       columns: [
         {
           title: 'Explore',
-          links: ['Foundations', 'Junior/Mid Dev', 'Senior Dev', 'Appendix', 'Learning Map', 'Course Outline']
+          links: ['Profile & Mission', 'Projects', 'Agentic Coding', 'Core Skills', 'Project Stories']
         },
         {
-          title: 'Support',
-          links: ['FAQ', 'Learning Tips', 'Errata', 'Release Notes']
+          title: 'Flagship Builds',
+          links: ['Goftego', 'VeilChat', 'BaleForge', 'Snaplink', 'HabitGrid']
+        },
+        {
+          title: 'More Projects',
+          links: ['BalePhp', 'ModbusLite', 'NetPilot', 'OmniRouter', 'Usf Panel']
         },
         {
           title: 'Resources',
-          links: ['GitHub Repository', 'License', 'Report Issue', 'Contribution Guide']
+          links: ['GitHub Repository', 'License (MIT)', 'Releases', 'Sitemap']
         },
         {
-          title: 'Community',
-          links: ['Community', 'Discussions', 'Feedback']
-        },
-        {
-          title: 'About Easy-Vibe',
-          links: ['Overview', 'Changelog', 'Contact']
+          title: 'About',
+          links: ['GitHub Profile', 'Report Issue', 'Contact']
         }
       ],
-      more: 'More ways to learn: visit',
+      more: 'Everything here is open source: visit',
       moreLink: 'GitHub Repository',
-      moreTail: ' for updates and community discussions.',
-      copyright: 'Copyright © 2026 Easy-Vibe. All rights reserved.',
+      moreTail: 'and read every line.',
+      copyright: 'Copyright © 2026 Reza Bazdar (Godde3s). All rights reserved.',
       policies: ['Privacy Policy', 'Terms of Use', 'Sitemap']
+    },
+    es: {
+      notes: [
+        '1. Cada proyecto enlazado aquí es un repositorio público funcional — sin maquetas, sin vaporware.',
+        '2. El sitio se publica en inglés y español; todos los proyectos están documentados en GitHub.',
+        '3. Construido y desplegado con codificación agéntica — OpenCode, Codex, Claude Code y Hermes.'
+      ],
+      breadcrumbPrefix: 'Usf',
+      breadcrumbCurrent: 'Portafolio',
+      columns: [
+        {
+          title: 'Explorar',
+          links: ['Perfil y misión', 'Proyectos', 'Codificación agéntica', 'Habilidades', 'Historias']
+        },
+        {
+          title: 'Builds principales',
+          links: ['Goftego', 'VeilChat', 'BaleForge', 'Snaplink', 'HabitGrid']
+        },
+        {
+          title: 'Más proyectos',
+          links: ['BalePhp', 'ModbusLite', 'NetPilot', 'OmniRouter', 'Usf Panel']
+        },
+        {
+          title: 'Recursos',
+          links: ['GitHub Repository', 'Licencia (MIT)', 'Releases', 'Sitemap']
+        },
+        {
+          title: 'Acerca de',
+          links: ['GitHub Profile', 'Report Issue', 'Contact']
+        }
+      ],
+      more: 'Todo aquí es código abierto: visita',
+      moreLink: 'GitHub Repository',
+      moreTail: 'y lee cada línea.',
+      copyright: 'Copyright © 2026 Reza Bazdar (Godde3s). Todos los derechos reservados.',
+      policies: ['Política de privacidad', 'Términos de uso', 'Sitemap']
     }
   }
   return content[locale] || content.en
 })
 
 const footerBtnLink = computed(() => {
-  const locale = t.value._locale || 'zh-cn'
-  return withBase(`/${locale}/stage-1/learning-map/`)
+  const locale = t.value._locale || 'en'
+  return withBase(`/${locale}/projects/goftego/`)
 })
 
 const footerRepositoryLink = 'https://github.com/Godde3s/Usf'
@@ -98,32 +97,46 @@ const footerRepositoryLink = 'https://github.com/Godde3s/Usf'
 const footerPolicyLinkMap = {
   '隐私政策': '#',
   '使用条款': '#',
-  '网站地图': '#',
+  '网站地图': '/sitemap.xml',
   'Privacy Policy': '#',
   'Terms of Use': '#',
-  'Sitemap': '#'
+  'Sitemap': '/sitemap.xml',
+  'Política de privacidad': '#',
+  'Términos de uso': '#'
 }
 
 const footerColumnLinkMap = {
-  '零基础入门': '/stage-1/learning-map/',
-  '初中级开发': '/stage-2/',
-  '高级开发': '/stage-3/',
-  '附录': '/appendix/',
-  '学习地图': '/stage-1/learning-map/',
-  '课程总览': '/stage-1/learning-map/',
-  'Foundations': '/stage-1/learning-map/',
-  'Junior/Mid Dev': '/stage-2/',
-  'Senior Dev': '/stage-3/',
-  'Appendix': '/appendix/',
-  'Learning Map': '/stage-1/learning-map/',
-  'Course Outline': '/stage-1/learning-map/',
-  'Overview': '/stage-1/learning-map/'
+  'Profile & Mission': '/en/about/profile/',
+  'Projects': '/en/projects/goftego/',
+  'Agentic Coding': '/en/agentic/overview/',
+  'Core Skills': '/en/skills/languages/',
+  'Project Stories': '/en/vibe-stories/story-1/',
+  'Perfil y misión': '/es/about/profile/',
+  'Proyectos': '/es/projects/goftego/',
+  'Codificación agéntica': '/es/agentic/overview/',
+  'Habilidades': '/es/skills/languages/',
+  'Historias': '/es/vibe-stories/story-1/',
+  'Goftego': '/en/projects/goftego/',
+  'VeilChat': '/en/projects/veilchat/',
+  'BaleForge': '/en/projects/baleforge/',
+  'Snaplink': '/en/projects/snaplink/',
+  'HabitGrid': '/en/projects/habitgrid/',
+  'BalePhp': '/en/projects/bale-php/',
+  'ModbusLite': '/en/projects/modbuslite/',
+  'NetPilot': '/en/projects/netpilot/',
+  'OmniRouter': '/en/projects/omnirouter/',
+  'Usf Panel': '/en/projects/usf-panel/',
+  'Sitemap': '/sitemap.xml'
 }
 
 const footerExternalLinks = {
-  'GitHub 仓库': 'https://github.com/Godde3s/Usf',
   'GitHub Repository': 'https://github.com/Godde3s/Usf',
-  'Changelog': 'https://github.com/Godde3s/Usf/releases',
+  'GitHub Profile': 'https://github.com/Godde3s',
+  'License (MIT)': 'https://github.com/Godde3s/Usf#license',
+  'Licencia (MIT)': 'https://github.com/Godde3s/Usf#license',
+  'Releases': 'https://github.com/Godde3s/Usf/releases',
+  'Report Issue': 'https://github.com/Godde3s/Usf/issues',
+  'Contact': 'https://github.com/Godde3s/Usf/issues'
 }
 
 const getFooterLink = (label) => {
@@ -131,11 +144,7 @@ const getFooterLink = (label) => {
   if (external) return external
   const basePath = footerColumnLinkMap[label]
   if (!basePath) return '#'
-  const locale = t.value._locale || 'zh-cn'
-  if (basePath.startsWith('/guide/') && locale !== 'zh-cn' && locale !== 'en') {
-    return `/${locale}/stage-1/learning-map/`
-  }
-  return `/${locale}${basePath}`
+  return withBase(basePath)
 }
 
 const getPolicyLink = (label) => {

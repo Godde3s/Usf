@@ -160,10 +160,10 @@ export const createSeo = ({
         {
           name: 'keywords',
           content:
-            'AI编程,Vibe Coding,Claude Code,Cursor,Trae,AI IDE,零基础学编程,AI辅助开发,产品经理,全栈开发,编程教程,编程工具,Datawhale,Supabase,React,大模型,LLM,人工智能,微信小程序,Android开发,iOS开发,MCP,RAG,LangGraph,Dify,跨平台开发,AI应用开发'
+            'Reza Bazdar,Godde3s,Usf,full-stack engineer,Iran,agentic coding,OpenCode,Codex,Claude Code,Hermes Agent,VitePress,Go,Python,TypeScript,PHP,C#,.NET,Expo,React Native,Next.js,Vue,Bale bot,VLESS,proxy panel,Modbus TCP,LLM API bridge'
         }
       ],
-      ['meta', { name: 'author', content: 'Datawhale' }],
+      ['meta', { name: 'author', content: 'Reza Bazdar (Godde3s)' }],
       ['meta', { name: 'robots', content: 'index,follow' }],
       ['meta', { name: 'googlebot', content: 'index,follow' }],
       ['meta', { name: 'baiduspider', content: 'index,follow' }],
