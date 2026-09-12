@@ -1,11 +1,11 @@
 ---
-title: "This Portfolio: Four Languages, One Repo"
-description: "The meta-story: how this very site was specified, cloned from easy-vibe's design system, translated into four languages and shipped by an agent team."
+title: "This Portfolio: One Design, Two Languages"
+description: "The meta-story: how this very site was specified, cloned from easy-vibe's design system, translated into two languages and shipped by an agent team."
 ---
 
-# This Portfolio: Four Languages, One Repo
+# This Portfolio: One Design, Two Languages
 
-You are looking at the most self-referential project in my portfolio: **this website**. It is a faithful rebuild of the [easy-vibe](https://datawhalechina.github.io/easy-vibe/en/) design system — the exact VitePress theme, layout and behavior — with every text and image replaced by my own content, in **four languages**: English, Persian, Arabic and Spanish.
+You are looking at the most self-referential project in my portfolio: **this website**. It is a faithful rebuild of the [easy-vibe](https://datawhalechina.github.io/easy-vibe/en/) design system — the exact VitePress theme, layout and behavior — with every text and image replaced by my own content, in **two languages**: English and Spanish.
 
 ## Why clone a course site?
 
@@ -13,7 +13,7 @@ Because it is honest about what good engineering is: find something excellent, u
 
 ## What made it non-trivial
 
-- **Four locales with RTL** — Persian and Arabic flip typography, padding, icons and carousel direction; only code blocks stay LTR.
+- **A real i18n layer** — the language switcher, per-locale routes and localized UI chrome (settings panel, slides, code toggles) all work end to end.
 - **Custom wordmark** — the script "Usf" logo is generated from a real font into SVG paths so the animated welcome screen could keep its draw-on effect.
 - **Fourteen new illustrations** — every card and story cover generated to match the theme's pastel aesthetic.
 - **Agent-team assembly** — theme port, content, translations and deployment ran as parallel agent workstreams, coordinated the [Hermes way](/en/agentic/hermes/).

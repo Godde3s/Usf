@@ -14,7 +14,7 @@ description: "Claude Code: planificación multipaso, uso de herramientas y edici
 - **Disciplina de herramientas.** Muestra su trabajo: comandos ejecutados, tests corridos, diffs preparados.
 - **Buen gusto.** En la práctica, sus refactors se leen como de un senior cuidadoso, lo que minimiza mi superficie de revisión.
 
-> Este portafolio es una obra de Claude Code: un clon completo del tema VitePress adaptado a cuatro idiomas con soporte RTL — planificado una vez, revisado por mí, enviado en esta forma.
+> Este portafolio es una obra de Claude Code: un clon completo del tema VitePress adaptado a dos idiomas — planificado una vez, revisado por mí, enviado en esta forma.
 
 ## Cómo le paso el brief
 

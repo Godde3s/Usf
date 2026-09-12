@@ -17,7 +17,7 @@ export const pages = [
         '**La arquitectura importa más, no menos.** Los agentes amplifican la buena estructura y exponen la mala al instante.',
         '**Los tests se pusieron serios.** Si la suite es débil, los agentes producirán basura confiable con total seguridad.'
       ] },
-      { t: 'info', title: 'Pruebas, no promesas', x: 'Este portafolio — cuatro idiomas, un clon del tema VitePress, componentes personalizados y soporte RTL — se construyó con este ciclo. También NetPilot, OmniRouter y cada panel de la sección de [proyectos](/es/projects/netpilot/).' },
+      { t: 'info', title: 'Pruebas, no promesas', x: 'Este portafolio — dos idiomas, un clon del tema VitePress, iconos SVG propios y 14 ilustraciones generadas — se construyó con este ciclo. También NetPilot, OmniRouter y cada panel de la sección de [proyectos](/es/projects/netpilot/).' },
       { t: 'p', x: 'Las páginas siguientes documentan cada herramienta: [OpenCode](/es/agentic/opencode/), [Codex](/es/agentic/codex/), [Claude Code](/es/agentic/claude-code/) y [Hermes Agent](/es/agentic/hermes/).' }
     ]
   },
@@ -75,7 +75,7 @@ export const pages = [
         '**Disciplina de herramientas.** Muestra su trabajo: comandos ejecutados, tests corridos, diffs preparados.',
         '**Buen gusto.** En la práctica, sus refactors se leen como de un senior cuidadoso, lo que minimiza mi superficie de revisión.'
       ] },
-      { t: 'quote', x: 'Este portafolio es una obra de Claude Code: un clon completo del tema VitePress adaptado a cuatro idiomas con soporte RTL — planificado una vez, revisado por mí, enviado en esta forma.' },
+      { t: 'quote', x: 'Este portafolio es una obra de Claude Code: un clon completo del tema VitePress adaptado a dos idiomas — planificado una vez, revisado por mí, enviado en esta forma.' },
       { t: 'h2', x: 'Cómo le paso el brief' },
       { t: 'p', x: 'Cuanto mejor sea el plan que puedo criticar, mejor el resultado. Así que mis briefs para Claude Code declaran el objetivo, las restricciones y la definición de hecho — e invitan explícitamente a un plan antes de ejecutar. Luego hago lo mío: leo el plan, ataco los puntos débiles, y solo entonces lo dejo correr. El patrón está descrito en [El método agéntico](/es/about/how-i-work/).' },
       { t: 'p', x: 'Claude Code también juega el rol de integrador después de los abanicos de [Codex](/es/agentic/codex/): reconcilia diffs, resuelve solapamientos y corre la suite completa antes de que algo llegue a una rama que me importa.' }

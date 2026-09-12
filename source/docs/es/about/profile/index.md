@@ -32,7 +32,7 @@ Construir software genuinamente útil, honesto sobre lo que hace y libre de insp
 
 - **Más de 9 lenguajes de programación** en producción: Python, JavaScript/TypeScript, Go, PHP, C#, SQL, C/C++, Ladder y Texto Estructurado.
 - **Más de 30 repositorios públicos** — puentes de API, routers de modelos, paneles proxy, herramientas de seguridad y este mismo portafolio.
-- **4 idiomas** habla este sitio: English, فارسی, العربية, Español.
+- **2 idiomas** habla este sitio: English y Español — con la capa i18n lista para crecer.
 - **1 regla**: cada proyecto debe ejecutarse, no solo compilar.
 
 Si algo de eso resuena contigo — una idea, un sistema roto, una fecha imposible — mi bandeja está abierta. Las vías más rápidas son Telegram y los datos de contacto al pie de cada página.

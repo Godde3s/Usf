@@ -14,7 +14,7 @@ description: "Claude Code: multi-step planning, tool use and codebase-wide edits
 - **Tool discipline.** It shows its work: commands run, tests executed, diffs staged.
 - **Taste.** In practice, its refactors read like a careful senior engineer wrote them, which minimizes my review surface.
 
-> This portfolio is a Claude Code build: a full VitePress theme clone adapted to four locales with RTL support — planned once, reviewed by me, shipped in this shape.
+> This portfolio is a Claude Code build: a full VitePress theme clone adapted to two locales — planned once, reviewed by me, shipped in this shape.
 
 ## How I brief it
 
