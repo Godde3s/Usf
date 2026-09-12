@@ -23,7 +23,7 @@ const topPromoColorProgress = ref(0)
 let topPromoIntroRaf = 0
 let topPromoColorRaf = 0
 let topPromoColorTimer = 0
-const WELCOME_SEEN_KEY = 'easy-vibe-welcome-seen'
+const WELCOME_SEEN_KEY = 'usf-welcome-seen'
 
 const vibeStoriesSection = ref(null)
 

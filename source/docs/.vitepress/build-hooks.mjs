@@ -7,7 +7,7 @@ import path from 'node:path'
  * Build the build hooks bound to the site-level configuration.
  *
  * @param {object} config
- * @param {string} config.base - VitePress base path ('/' or '/easy-vibe/').
+ * @param {string} config.base - VitePress base path ('/' or '/Usf/').
  * @param {string} config.siteUrl - Canonical site URL.
  * @param {string[]} config.supportedLocaleDirs - Locale directory names.
  * @param {string[]} config.activeSupportedBuildLocales - Locales being built.
@@ -48,7 +48,7 @@ export const createBuildHooks = ({
 
         try {
           hasSeenWelcome =
-            window.localStorage.getItem('easy-vibe-welcome-seen') === '1'
+            window.localStorage.getItem('usf-welcome-seen') === '1'
         } catch {}
 
         const destination = hasSeenWelcome

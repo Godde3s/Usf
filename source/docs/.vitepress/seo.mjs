@@ -6,7 +6,7 @@ import fs from 'node:fs'
  * Build the SEO/locale helpers bound to the site-level configuration.
  *
  * @param {object} config
- * @param {string} config.base - VitePress base path ('/' or '/easy-vibe/').
+ * @param {string} config.base - VitePress base path ('/' or '/Usf/').
  * @param {string} config.siteUrl - Canonical site URL.
  * @param {object} config.localeMap - Locale metadata (ogLocale, twitterSite, ...).
  * @param {string[]} config.supportedLocaleDirs - Locale directory names.

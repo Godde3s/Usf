@@ -4,6 +4,18 @@ import stage2GlmFreeApiCover from '../../assets/home/cards/stage2-3-glmfreeapi.w
 import stage2GhostBrainCover from '../../assets/home/cards/stage2-4-ghostbrain.webp'
 import stage2HermesStackCover from '../../assets/home/cards/stage2-5-hermesstack.webp'
 import stage2UsfPanelCover from '../../assets/home/cards/stage2-6-usfpanel.webp'
+import cardGoftego from '../../assets/home/cards/card-goftego.svg'
+import cardVeilchat from '../../assets/home/cards/card-veilchat.svg'
+import cardBaleforge from '../../assets/home/cards/card-baleforge.svg'
+import cardSnaplink from '../../assets/home/cards/card-snaplink.svg'
+import cardHabitgrid from '../../assets/home/cards/card-habitgrid.svg'
+import cardBalePhp from '../../assets/home/cards/card-bale-php.svg'
+import cardModbuslite from '../../assets/home/cards/card-modbuslite.svg'
+import cardDeepseek from '../../assets/home/cards/card-deepseek.svg'
+import cardQwen from '../../assets/home/cards/card-qwen.svg'
+import cardGemini from '../../assets/home/cards/card-gemini.svg'
+import cardFaGuides from '../../assets/home/cards/card-fa-guides.svg'
+import cardHardwarept from '../../assets/home/cards/card-hardwarept.svg'
 import stage3OpencodeCover from '../../assets/home/cards/stage3-1-opencode.webp'
 import stage3CodexCover from '../../assets/home/cards/stage3-2-codex.webp'
 import stage3ClaudeCodeCover from '../../assets/home/cards/stage3-3-claudecode.webp'
@@ -42,6 +54,79 @@ export const stage1Cards = [
 ]
 
 export const stage2Cards = [
+  // flagship trio — the first three cards someone sees must show peak skill
+  {
+    imageColor: '#4facfe',
+    image: cardGoftego,
+    imageAlt: 'Self-hosted chat platform concept illustration',
+    link: '/en/projects/goftego/'
+  },
+  {
+    imageColor: '#667eea',
+    image: cardVeilchat,
+    imageAlt: 'P2P encrypted messenger concept illustration',
+    link: '/en/projects/veilchat/'
+  },
+  {
+    imageColor: '#f5576c',
+    image: cardBaleforge,
+    imageAlt: 'Bale bot framework concept illustration',
+    link: '/en/projects/baleforge/'
+  },
+  {
+    imageColor: '#30cfd0',
+    image: cardSnaplink,
+    imageAlt: 'URL shortener analytics concept illustration',
+    link: '/en/projects/snaplink/'
+  },
+  {
+    imageColor: '#a8edea',
+    image: cardHabitgrid,
+    imageAlt: 'Expo habit tracker concept illustration',
+    link: '/en/projects/habitgrid/'
+  },
+  {
+    imageColor: '#fcb69f',
+    image: cardBalePhp,
+    imageAlt: 'PHP SDK concept illustration',
+    link: '/en/projects/bale-php/'
+  },
+  {
+    imageColor: '#c3cfe2',
+    image: cardModbuslite,
+    imageAlt: 'Modbus TCP client concept illustration',
+    link: '/en/projects/modbuslite/'
+  },
+  {
+    imageColor: '#E0C3FC',
+    image: cardDeepseek,
+    imageAlt: 'DeepSeek account pool bridge concept illustration',
+    link: '/en/projects/deepseek-free-api/'
+  },
+  {
+    imageColor: '#96E6A1',
+    image: cardQwen,
+    imageAlt: 'Qwen API bridge concept illustration',
+    link: '/en/projects/qwen-free-api/'
+  },
+  {
+    imageColor: '#fbc2eb',
+    image: cardGemini,
+    imageAlt: 'Gemini guest bridge concept illustration',
+    link: '/en/projects/gemini-free-api/'
+  },
+  {
+    imageColor: '#2AF598',
+    image: cardFaGuides,
+    imageAlt: 'Persian guides concept illustration',
+    link: '/en/projects/fa-guides/'
+  },
+  {
+    imageColor: '#4b6cb7',
+    image: cardHardwarept,
+    imageAlt: 'Hardware toolkit concept illustration',
+    link: '/en/projects/hardwarept/'
+  },
   {
     imageColor: '#E0C3FC',
     image: stage2NetpilotCover,

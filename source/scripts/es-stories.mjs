@@ -55,9 +55,9 @@ export const pages = [
   {
     path: 'vibe-stories/story-4.md',
     title: 'Este portafolio: un diseño, dos idiomas',
-    description: 'La metahistoria: cómo este sitio fue especificado, clonado del sistema de diseño de easy-vibe, traducido a dos idiomas y enviado por un equipo de agentes.',
+    description: 'La metahistoria: cómo este sitio fue especificado, clonado del sistema de diseño de Usf, traducido a dos idiomas y enviado por un equipo de agentes.',
     blocks: [
-      { t: 'p', x: 'Estás viendo el proyecto más autorreferencial de mi portafolio: **este sitio web**. Es una reconstrucción fiel del sistema de diseño de [easy-vibe](https://datawhalechina.github.io/easy-vibe/en/) — el mismo tema VitePress, layout y comportamiento — con cada texto e imagen reemplazados por mi propio contenido, en **dos idiomas**: English y Español.' },
+      { t: 'p', x: 'Estás viendo el proyecto más autorreferencial de mi portafolio: **este sitio web**. Es una reconstrucción fiel del sistema de diseño de [Usf](https://Godde3schina.github.io/Usf/en/) — el mismo tema VitePress, layout y comportamiento — con cada texto e imagen reemplazados por mi propio contenido, en **dos idiomas**: English y Español.' },
       { t: 'h2', x: 'Por qué clonar el sitio de un curso' },
       { t: 'p', x: 'Porque es honesto sobre lo que es la buena ingeniería: encuentra algo excelente, entiéndelo por completo, y luego adáptalo con respeto. La portada estilo Apple, la navegación de cristal, el tagline tecleado, el carrusel de historias con marco de MacBook — todo fue estudiado, portado y anclado a una versión más nueva del motor, y luego llenado con una vida para la que nunca fue escrito.' },
       { t: 'h2', x: 'Lo que lo hizo no trivial' },
