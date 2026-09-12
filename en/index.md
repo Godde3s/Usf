@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Usf — Reza Bazdar
-description: Creative full-stack software engineer — projects, agentic coding and networking, in four languages.
+description: Creative full-stack software engineer — projects, agentic coding and networking, in two languages.
 hero:
   name: 'Usf'
   text: 'Creative Software Engineer'
