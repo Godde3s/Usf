@@ -1,4 +1,4 @@
-// Generate cursive "Usf" wordmark SVG paths (Pacifico) matching easy-vibe's
+// Generate cursive "Usf" wordmark SVG paths (Pacifico) matching Usf's
 // easyVibePaths.json format: array of path strings, viewBox 460x220.
 import opentype from 'opentype.js'
 import fs from 'node:fs'

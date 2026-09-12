@@ -52,7 +52,7 @@ onMounted(async () => {
   <div class="github-stars-wrapper">
     <a
       class="github-stars-link"
-      href="https://github.com/datawhalechina/easy-vibe"
+      href="https://github.com/Godde3s/Usf"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="GitHub"

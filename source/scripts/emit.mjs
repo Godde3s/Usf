@@ -48,7 +48,7 @@ function renderPage(page) {
   ]
   if (page.layout) fm.push(`layout: ${page.layout}`)
   fm.push('---')
-  // easy-vibe pages open with an explicit H1
+  // Usf pages open with an explicit H1
   const h1 = page.layout ? '' : `# ${page.title}\n`
   const body = page.blocks.map(renderBlock).join('\n')
   return fm.join('\n') + '\n\n' + h1 + '\n' + body
@@ -56,7 +56,7 @@ function renderPage(page) {
 
 function emit(locale, pages) {
   for (const page of pages) {
-    // easy-vibe style: every page is a directory with index.md so that
+    // Usf style: every page is a directory with index.md so that
     // /locale/section/page/ URLs resolve on GitHub Pages.
     let rel = page.path
     if (rel.endsWith('.md') && !rel.endsWith('index.md')) {

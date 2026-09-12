@@ -69,8 +69,80 @@ export const i18n = {
     stage2: {
       cat: 'Projects · Selected Work',
       title: 'One person,<br><span class="highlight">shipping like a team.</span>',
-      sub: 'API bridges, model routers, agent stacks and proxy panels — every repo runs.',
+      sub: 'Chat platforms, encrypted messengers, bot frameworks, API bridges, Expo apps — 18 repos, every one of them runs.',
       cards: [
+        {
+          title: 'Goftego',
+          headline: 'A chat platform you actually own.',
+          desc: 'Self-hosted chat — channels, realtime WebSocket delivery, JWT auth, bilingual fa/en RTL UI. One SQLite file, one-command deploy.',
+          link: '/en/projects/goftego/'
+        },
+        {
+          title: 'VeilChat',
+          headline: 'Messaging nobody can surveil.',
+          desc: 'P2P end-to-end-encrypted messenger in pure Python — X25519 handshake, ChaCha20-Poly1305 frames, LAN discovery. No servers, no metadata.',
+          link: '/en/projects/veilchat/'
+        },
+        {
+          title: 'BaleForge',
+          headline: 'Bale bots, engineered.',
+          desc: 'Async framework for Bale messenger bots — declarative filters, FSM, middleware and an AI agent bridge for any OpenAI-compatible endpoint.',
+          link: '/en/projects/baleforge/'
+        },
+        {
+          title: 'Snaplink',
+          headline: 'Short links, real analytics.',
+          desc: 'Self-hosted URL shortener with per-click analytics — Next.js 14 App Router, TypeScript, Prisma, SQLite, Tailwind.',
+          link: '/en/projects/snaplink/'
+        },
+        {
+          title: 'HabitGrid',
+          headline: 'Habits that stay on your phone.',
+          desc: 'Offline-first Expo & React Native tracker — streaks, 14-day dot grids and a pure, tested domain layer. Zero accounts.',
+          link: '/en/projects/habitgrid/'
+        },
+        {
+          title: 'BalePhp',
+          headline: 'Bale bots, in PHP.',
+          desc: 'Zero-dependency PHP 8.2 SDK for the Bale Bot API — inline keyboards, webhooks, long polling and first-class Laravel integration.',
+          link: '/en/projects/bale-php/'
+        },
+        {
+          title: 'ModbusLite',
+          headline: 'Talk to real hardware.',
+          desc: 'Minimal Modbus TCP client for .NET 8 — coils, registers and strict MBAP framing, tested against an in-memory slave.',
+          link: '/en/projects/modbuslite/'
+        },
+        {
+          title: 'DeepSeek Free API',
+          headline: 'A free account becomes a pool.',
+          desc: 'OpenAI + Anthropic-compatible bridge for DeepSeek — multi-account pool, function-calling emulation, Persian RTL dashboard.',
+          link: '/en/projects/deepseek-free-api/'
+        },
+        {
+          title: 'Qwen Free API',
+          headline: 'Qwen, no keys attached.',
+          desc: 'Single-file Go bridge for chat.qwen.ai behind OpenAI- and Anthropic-compatible endpoints — real streaming, session rotation.',
+          link: '/en/projects/qwen-free-api/'
+        },
+        {
+          title: 'Gemini Free API',
+          headline: 'Gemini in guest mode.',
+          desc: 'A Go bridge that exposes the Gemini web app without login — OpenAI + Anthropic protocols in one binary, streaming included.',
+          link: '/en/projects/gemini-free-api/'
+        },
+        {
+          title: 'Fa Guides',
+          headline: 'Two books, twelve minutes each.',
+          desc: 'Interactive single-file Persian (RTL) guides — Hermes Agent 2.0 and Node.js Design Patterns, with active-recall quizzes.',
+          link: '/en/projects/fa-guides/'
+        },
+        {
+          title: 'HardwarePT',
+          headline: 'Down to the metal.',
+          desc: 'Low-level hardware probing and pentest toolkit in pure C — enumeration, attack surfaces and stress probes.',
+          link: '/en/projects/hardwarept/'
+        },
         {
           title: 'NetPilot',
           headline: 'One binary, every network answer.',
@@ -275,8 +347,80 @@ export const i18n = {
     stage2: {
       cat: 'Proyectos · Trabajo seleccionado',
       title: 'Una sola persona,<br><span class="highlight">entregando como un equipo.</span>',
-      sub: 'Puentes de API, routers de modelos, stacks de agentes y paneles proxy — cada repo funciona.',
+      sub: 'Plataformas de chat, mensajería cifrada, frameworks de bots, puentes de API, apps Expo — 18 repos, todos funcionan.',
       cards: [
+        {
+          title: 'Goftego',
+          headline: 'Una plataforma de chat que es tuya.',
+          desc: 'Chat autoalojado — canales, entrega WebSocket en tiempo real, auth JWT, interfaz bilingüe fa/en con RTL. Un archivo SQLite, despliegue con un comando.',
+          link: '/es/projects/goftego/'
+        },
+        {
+          title: 'VeilChat',
+          headline: 'Mensajería que nadie puede vigilar.',
+          desc: 'Mensajería P2P con cifrado de extremo a extremo en Python puro — handshake X25519, frames ChaCha20-Poly1305, descubrimiento LAN. Sin servidores.',
+          link: '/es/projects/veilchat/'
+        },
+        {
+          title: 'BaleForge',
+          headline: 'Bots de Bale, con ingeniería.',
+          desc: 'Framework async para bots del mensajero Bale — filtros declarativos, FSM, middleware y puente de agente IA compatible con OpenAI.',
+          link: '/es/projects/baleforge/'
+        },
+        {
+          title: 'Snaplink',
+          headline: 'Enlaces cortos, analítica real.',
+          desc: 'Acortador de URLs autoalojado con analítica por clic — Next.js 14 App Router, TypeScript, Prisma, SQLite y Tailwind.',
+          link: '/es/projects/snaplink/'
+        },
+        {
+          title: 'HabitGrid',
+          headline: 'Hábitos que se quedan en tu teléfono.',
+          desc: 'Tracker offline-first con Expo y React Native — rachas, cuadrículas de 14 días y dominio puro testeado. Cero cuentas.',
+          link: '/es/projects/habitgrid/'
+        },
+        {
+          title: 'BalePhp',
+          headline: 'Bots de Bale, en PHP.',
+          desc: 'SDK de PHP 8.2 sin dependencias para la API de Bale — teclados inline, webhooks, long polling e integración con Laravel.',
+          link: '/es/projects/bale-php/'
+        },
+        {
+          title: 'ModbusLite',
+          headline: 'Hablar con hardware real.',
+          desc: 'Cliente Modbus TCP mínimo para .NET 8 — coils, registros y framing MBAP estricto, testeado contra un esclavo en memoria.',
+          link: '/es/projects/modbuslite/'
+        },
+        {
+          title: 'DeepSeek Free API',
+          headline: 'Una cuenta gratis se vuelve un pool.',
+          desc: 'Puente compatible con OpenAI + Anthropic para DeepSeek — pool multi-cuenta, emulación de function-calling, dashboard persa RTL.',
+          link: '/es/projects/deepseek-free-api/'
+        },
+        {
+          title: 'Qwen Free API',
+          headline: 'Qwen, sin claves.',
+          desc: 'Puente Go de un solo archivo para chat.qwen.ai tras endpoints compatibles con OpenAI y Anthropic — streaming real y rotación de sesiones.',
+          link: '/es/projects/qwen-free-api/'
+        },
+        {
+          title: 'Gemini Free API',
+          headline: 'Gemini en modo invitado.',
+          desc: 'Un puente Go que expone la app web de Gemini sin login — protocolos OpenAI + Anthropic en un binario, con streaming.',
+          link: '/es/projects/gemini-free-api/'
+        },
+        {
+          title: 'Fa Guides',
+          headline: 'Dos libros, doce minutos cada uno.',
+          desc: 'Guías persas (RTL) interactivas en un solo archivo — Hermes Agent 2.0 y Node.js Design Patterns, con quizzes de recuerdo activo.',
+          link: '/es/projects/fa-guides/'
+        },
+        {
+          title: 'HardwarePT',
+          headline: 'Hasta el metal.',
+          desc: 'Toolkit de bajo nivel en C puro para sondeo y pentest de hardware — enumeración, superficies de ataque y pruebas de estrés.',
+          link: '/es/projects/hardwarept/'
+        },
         {
           title: 'NetPilot',
           headline: 'Un binario, todas las respuestas de red.',

@@ -8,7 +8,7 @@ description: Reza Bazdar (Godde3s) — portfolio in English and Spanish.
 import { onMounted } from 'vue'
 import { withBase } from 'vitepress'
 
-const WELCOME_SEEN_KEY = 'easy-vibe-welcome-seen'
+const WELCOME_SEEN_KEY = 'usf-welcome-seen'
 
 onMounted(() => {
   const langMap = {

@@ -1,4 +1,4 @@
-// Usf portfolio — theme entry (slimmed easy-vibe theme).
+// Usf portfolio — theme entry (Usf portfolio theme).
 // Registers the global components used across the docs and reproduces
 // the original runtime behaviors: image viewer, collapsible code blocks
 // and responsive image geometry.

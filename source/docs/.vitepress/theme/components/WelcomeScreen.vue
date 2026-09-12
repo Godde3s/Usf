@@ -3,7 +3,7 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import easyVibePaths from '../data/usfPaths.json'
 
-const WELCOME_SEEN_KEY = 'easy-vibe-welcome-seen'
+const WELCOME_SEEN_KEY = 'usf-welcome-seen'
 const phase = ref('reset')
 const theme = ref('ocean')
 const themes = ['ocean', 'rainbow', 'sunset']

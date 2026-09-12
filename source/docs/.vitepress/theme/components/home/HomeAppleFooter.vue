@@ -93,7 +93,7 @@ const footerBtnLink = computed(() => {
   return withBase(`/${locale}/stage-1/learning-map/`)
 })
 
-const footerRepositoryLink = 'https://github.com/datawhalechina/easy-vibe'
+const footerRepositoryLink = 'https://github.com/Godde3s/Usf'
 
 const footerPolicyLinkMap = {
   '隐私政策': '#',
@@ -121,9 +121,9 @@ const footerColumnLinkMap = {
 }
 
 const footerExternalLinks = {
-  'GitHub 仓库': 'https://github.com/datawhalechina/easy-vibe',
-  'GitHub Repository': 'https://github.com/datawhalechina/easy-vibe',
-  'Changelog': 'https://github.com/datawhalechina/easy-vibe/releases',
+  'GitHub 仓库': 'https://github.com/Godde3s/Usf',
+  'GitHub Repository': 'https://github.com/Godde3s/Usf',
+  'Changelog': 'https://github.com/Godde3s/Usf/releases',
 }
 
 const getFooterLink = (label) => {

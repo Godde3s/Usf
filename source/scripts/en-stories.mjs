@@ -55,9 +55,9 @@ export const pages = [
   {
     path: 'vibe-stories/story-4.md',
     title: 'This Portfolio: One Design, Two Languages',
-    description: 'The meta-story: how this very site was specified, cloned from easy-vibe\'s design system, translated into two languages and shipped by an agent team.',
+    description: 'The meta-story: how this very site was specified, cloned from Usf\'s design system, translated into two languages and shipped by an agent team.',
     blocks: [
-      { t: 'p', x: 'You are looking at the most self-referential project in my portfolio: **this website**. It is a faithful rebuild of the [easy-vibe](https://datawhalechina.github.io/easy-vibe/en/) design system — the exact VitePress theme, layout and behavior — with every text and image replaced by my own content, in **two languages**: English and Spanish.' },
+      { t: 'p', x: 'You are looking at the most self-referential project in my portfolio: **this website**. It is a faithful rebuild of the [Usf](https://Godde3schina.github.io/Usf/en/) design system — the exact VitePress theme, layout and behavior — with every text and image replaced by my own content, in **two languages**: English and Spanish.' },
       { t: 'h2', x: 'Why clone a course site?' },
       { t: 'p', x: 'Because it is honest about what good engineering is: find something excellent, understand it completely, then adapt it with respect. The theme\'s Apple-style home, its glass navigation, the typing tagline, the MacBook-framed story carousel — all of it was studied, ported and re-anchored to a new engine version, then filled with a life it was never written for.' },
       { t: 'h2', x: 'What made it non-trivial' },

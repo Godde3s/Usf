@@ -1,5 +1,5 @@
 // Sidebar / nav builders for the Usf portfolio (en + es).
-// Mirrors easy-vibe's sidebar grouping style: named groups with items.
+// Grouped navigation: named groups with items.
 
 const SECTIONS = {
   about: { en: 'About Me', es: 'Sobre mí' },
@@ -18,6 +18,18 @@ const PAGES = {
     ['principles', { en: 'Engineering Principles', es: 'Principios de ingeniería' }]
   ],
   projects: [
+    ['goftego', { en: 'Goftego — Self-hosted Chat', es: 'Goftego — chat autoalojado' }],
+    ['veilchat', { en: 'VeilChat — P2P E2E Messenger', es: 'VeilChat — mensajería P2P E2E' }],
+    ['baleforge', { en: 'BaleForge — Bale Bot Framework', es: 'BaleForge — framework para bots' }],
+    ['snaplink', { en: 'Snaplink — URL Shortener + Analytics', es: 'Snaplink — acortador + analítica' }],
+    ['habitgrid', { en: 'HabitGrid — Expo Habit Tracker', es: 'HabitGrid — hábitos con Expo' }],
+    ['bale-php', { en: 'BalePhp — PHP 8.2 SDK', es: 'BalePhp — SDK de PHP 8.2' }],
+    ['modbuslite', { en: 'ModbusLite — Modbus TCP for .NET', es: 'ModbusLite — Modbus TCP para .NET' }],
+    ['deepseek-free-api', { en: 'DeepSeek Free API — Account Pool', es: 'DeepSeek Free API — pool de cuentas' }],
+    ['qwen-free-api', { en: 'Qwen Free API — Go Bridge', es: 'Qwen Free API — puente Go' }],
+    ['gemini-free-api', { en: 'Gemini Free API — Guest Bridge', es: 'Gemini Free API — puente invitado' }],
+    ['fa-guides', { en: 'Fa Guides — Persian Guides', es: 'Fa Guides — guías en persa' }],
+    ['hardwarept', { en: 'HardwarePT — C Hardware Toolkit', es: 'HardwarePT — toolkit en C' }],
     ['netpilot', { en: 'NetPilot — Go Network Toolkit', es: 'NetPilot — Kit de red en Go' }],
     ['omnirouter', { en: 'OmniRouter — One Model Endpoint', es: 'OmniRouter — Un endpoint' }],
     ['glm-free-api', { en: 'GLM Free API — Single File Bridge', es: 'GLM Free API — Puente de un archivo' }],
