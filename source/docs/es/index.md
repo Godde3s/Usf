@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Usf — Reza Bazdar
-description: Ingeniero de software full-stack creativo — proyectos, codificación agéntica y redes, en cuatro idiomas.
+description: Ingeniero de software full-stack creativo — proyectos, codificación agéntica y redes, en dos idiomas.
 hero:
   name: 'Usf'
   text: 'Ingeniero de Software Creativo'
