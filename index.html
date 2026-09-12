@@ -16,18 +16,19 @@
       var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
       lang = map[nav] || 'en';
     }
-    var inLangDir = location.pathname.match(/^\/(fa|en|ar|es)\/?/);
+    var base = location.pathname.endsWith('/') ? location.pathname : location.pathname + '/';
+    var inLangDir = location.pathname.match(/\/(fa|en|ar|es)\/?$/);
     if (inLangDir && inLangDir[1] !== lang) {
-      location.replace('/' + lang + '/');
+      location.replace(base.replace(/(fa|en|ar|es)\/$/, lang + '/'));
     } else if (!inLangDir) {
-      location.replace('/' + lang + '/');
+      location.replace(base + lang + '/');
     }
-  } catch (e) { location.replace('/en/'); }
+  } catch (e) { location.replace('./en/'); }
 })();
 </script>
 </head>
 <body>
-<noscript><meta http-equiv="refresh" content="0; url=/en/"></noscript>
-<p style="font-family:sans-serif;padding:40px"><a href="/en/">English</a> · <a href="/fa/">فارسی</a> · <a href="/ar/">العربية</a> · <a href="/es/">Español</a></p>
+<noscript><meta http-equiv="refresh" content="0; url=en/"></noscript>
+<p style="font-family:sans-serif;padding:40px"><a href="en/">English</a> · <a href="fa/">فارسی</a> · <a href="ar/">العربية</a> · <a href="es/">Español</a></p>
 </body>
 </html>
