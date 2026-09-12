@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رضا بازدار — مهندس برمجيات مبدع</title>
+<meta name="description" content="رضا بازدار (Godde3s) — مهندس برمجيات فول-ستاك مبدع، متخصص في الذكاء الاصطناعي والبرمجة الوكيلية، مبرمج PLC ومهندس شبكات. استكشف المشاريع والمهارات والعمل مفتوح المصدر.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="رضا بازدار — مهندس برمجيات مبدع">
+<meta property="og:description" content="رضا بازدار (Godde3s) — مهندس برمجيات فول-ستاك مبدع، متخصص في الذكاء الاصطناعي والبرمجة الوكيلية، مبرمج PLC ومهندس شبكات. استكشف المشاريع والمهارات والعمل مفتوح المصدر.">
+<meta property="og:image" content="https://github.com/Godde3s.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='64' y2='64'%3E%3Cstop offset='0' stop-color='%2306b6d4'/%3E%3Cstop offset='1' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%231b1b1f'/%3E%3Ctext x='32' y='45' font-family='Segoe Script,cursive' font-size='34' font-weight='bold' fill='url(%23g)' text-anchor='middle'%3Eu%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Gulzar&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>window.__langBase = "ar";</script>
+<script src="../assets/app.js" defer></script>
+</head>
+<body>
+<div class="header-block">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/ar/#home">usf</a>
+      <button class="icon-btn nav-burger" id="nav-burger" aria-label="menu"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/></svg></button>
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link active" href="#home">الرئيسية</a>
+        <a class="nav-link" href="#expertise">التخصصات</a>
+        <a class="nav-link" href="#projects">المشاريع</a>
+        <a class="nav-link" href="#agentic">البرمجة الوكيلية</a>
+        <a class="nav-link" href="#skills">المهارات</a>
+        <a class="nav-link" href="#contact">تواصل</a>
+      </nav>
+      <div class="nav-spacer"></div>
+      <div class="nav-actions">
+        <div class="lang-wrap">
+          <button class="icon-btn" id="lang-btn" aria-label="language"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M12.87 15.07l-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z'/></svg></button>
+          <div class="lang-menu" id="lang-menu">
+        <a class="lang-item" href="/en/">English<span class="check">✓</span></a>
+        <a class="lang-item" href="/fa/">فارسی<span class="check">✓</span></a>
+        <a class="lang-item current" href="/ar/">العربية<span class="check">✓</span></a>
+        <a class="lang-item" href="/es/">Español<span class="check">✓</span></a>
+          </div>
+        </div>
+        <a class="icon-btn" href="https://github.com/Godde3s" target="_blank" rel="noopener" aria-label="GitHub" style="display:inline-flex"><svg viewBox='0 0 16 16' aria-hidden='true'><path d='M8 0c4.45 0 8 3.58 8 8a8 8 0 0 1-5.47 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.64-.88 3.64-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.65 7.65 0 0 0-4 0c-1.53-1.04-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.57-2.33-.68-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A8.01 8.01 0 0 1 0 8c0-4.42 3.58-8 8-8Z'/></svg></a>
+        <button class="icon-btn" id="theme-toggle" aria-label="theme"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M20 8.7A8.5 8.5 0 0 1 9.3 19c-3.9 0-7-3.1-7-7A8.5 8.5 0 0 1 14.7 2.3 6.6 6.6 0 0 0 20 8.7z'/></svg></button>
+        <a class="VPButton medium brand" href="#contact" style="margin-inline-start:6px">وظّفني</a>
+      </div>
+    </div>
+  </header>
+  <div class="announcement">متاح للعمل الحر والتعاون — فول-ستاك، ذكاء اصطناعي، PLC وشبكات. <a href="#contact">لنتحدث</a></div>
+</div>
+<section class="hero" id="home">
+  <div class="hero-container">
+    <h1 class="hero-wordmark">رضا بازدار</h1>
+    <p class="tagline"><span id="typed" data-words='["مهندس برمجيات مبدع ومتعدد المواهب.", "مطور فول-ستاك للويب والتطبيقات.", "متخصص ذكاء اصطناعي وبرمجة وكيلية.", "مبرمج PLC وأتمتة صناعية.", "مهندس شبكات وباحث أمن سيبراني."]'></span><span class="caret"></span></p>
+    <div class="actions">
+      <a class="VPButton big brand" href="#projects">استكشف أعمالي</a>
+      <a class="VPButton big alt" href="https://github.com/Godde3s" target="_blank" rel="noopener">جيت هاب</a>
+    </div>
+    <div class="hero-meta">
+        <span>🇮🇷 مقيم في إيران · أعمل مع العالم كله</span>
+        <span>🧩 9 لغات برمجة</span>
+        <span>🤖 برمجة وكيلية منذ اليوم الأول</span>
+    </div>
+  </div>
+</section>
+<section class="section" id="stories">
+  <div class="container">
+    <div class="stories-head reveal">
+      <h2 class="statement">من الفكرة إلى الإنتاج،<br><span class="dim">كومِت تلو الآخر.</span></h2>
+      <p class="section-desc">مشاريع حقيقية ومستخدمون حقيقيون — جسور API وأكياس وكلاء ولوحات تحكم وأدوات أمنية، مبنية من الصفر إلى النهاية علنًا على جيت هاب.</p>
+    </div>
+    <div id="stories" class="reveal">
+      <div class="story-slide">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="terminal">
+              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">glm-free-api — zsh</span></div>
+              <div class="terminal-body"><span class='d'>$</span> <span class='c'>./glm-free-api</span> <span class='y'>--port</span> 8000 <span class='y'>--accounts</span> 5
+<span class='g'>✓</span> مجمع الحسابات جاهز <span class='d'>(5/5 سليم)</span>
+<span class='g'>✓</span> يستمع على <span class='b'>:8000</span> <span class='d'>— مسارات OpenAI و Anthropic</span>
+
+<span class='d'>$</span> curl <span class='b'>localhost:8000/v1/chat/completions</span> \
+    <span class='y'>-d</span> <span class='p'>{"model":"glm-4-plus"}</span>
+
+<span class='g'>{</span> <span class='c'>"model"</span>: <span class='y'>"glm-4-plus"</span>, <span class='c'>"stream"</span>: <span class='b'>true</span>,
+  <span class='c'>"usage"</span>: <span class='g'>{</span> <span class='c'>"total_tokens"</span>: <span class='y'>812</span> <span class='g'>}</span> <span class='g'>}</span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="story-caption">
+          <div class="story-avatar">🧠</div>
+          <div>
+            <h3>API مجاني لـ GLM — ملف واحد، بلا متصفح</h3>
+            <p>glm-free-api · Go · ⭐ متوافق مع OpenAI و Anthropic</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-slide">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="terminal">
+              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">omnirouter — zsh</span></div>
+              <div class="terminal-body"><span class='d'>$</span> <span class='c'>omnirouter</span> <span class='y'>start</span> <span class='y'>--config</span> routes.yaml
+<span class='g'>✓</span> الخدمة <span class='b'>glm</span> <span class='d'>······· سليمة</span>
+<span class='g'>✓</span> الخدمة <span class='b'>qwen</span> <span class='d'>······ سليمة</span>
+<span class='g'>✓</span> الخدمة <span class='b'>deepseek</span> <span class='d'>··· سليمة</span>
+
+<span class='d'>── نقطة النهاية الموحدة ──────────────</span>
+<span class='p'>POST /v1/chat/completions</span>
+<span class='d'>الاستراتيجية:</span> <span class='c'>round-robin</span> <span class='d'>· تجاوز الأعطال:</span> <span class='c'>تلقائي</span>
+
+<span class='d'>req 1,204 · p95 312ms · err 0.0%</span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="story-caption">
+          <div class="story-avatar">🧭</div>
+          <div>
+            <h3>راوتر واحد لكل نماذج الذكاء الاصطناعي</h3>
+            <p>omnirouter · Go · GLM + Qwen + DeepSeek + واجهات مخصصة</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-slide">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="terminal">
+              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">ghostbrain — zsh</span></div>
+              <div class="terminal-body"><span class='d'>$</span> <span class='c'>python ghostbrain.py</span> <span class='y'>serve</span>
+<span class='g'>✓</span> جلسة الويب مربوطة <span class='d'>(كوكيز آمنة)</span>
+<span class='g'>✓</span> المحول: <span class='b'>OpenAI</span> <span class='d'>+</span> <span class='b'>Anthropic</span>
+<span class='g'>✓</span> البث: <span class='c'>SSE</span> مُفعّل
+
+<span class='d'>$</span> curl <span class='b'>:8080/v1/messages</span> <span class='y'>-d</span> <span class='p'>{...}</span>
+
+<span class='g'>event: content_block_delta</span>
+<span class='c'>data</span>: <span class='y'>{"text":"Hello from Gemini"}</span>
+
+<span class='d'>الرموز الموفرة هذا الشهر: 2.1M</span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="story-caption">
+          <div class="story-avatar">👻</div>
+          <div>
+            <h3>حساب Gemini المجاني يتحول إلى API كامل</h3>
+            <p>GhostBrain · Python · بث + تعدد حسابات</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-slide">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="terminal">
+              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">hermes-stack — zsh</span></div>
+              <div class="terminal-body"><span class='d'>$</span> <span class='c'>docker compose up</span> <span class='y'>-d</span>
+<span class='g'>✓</span> hermes-agent <span class='d'>····· </span><span class='g'>جاهز</span>
+<span class='g'>✓</span> 9router <span class='d'>··········· </span><span class='g'>جاهز</span>
+<span class='g'>✓</span> omnirouter <span class='d'>········ </span><span class='g'>جاهز</span>
+
+<span class='d'>── وحدة تحكم هيرميس ──────────────────</span>
+<span class='p'>></span> توجيه glm-4 إلى agent:coder
+<span class='g'>✓</span> المهمة في الطابور <span class='d'>· عمال: 3 · ذاكرة 412MB</span>
+
+<span class='d'>حزمة بتكلفة صفرية · بلا خوادم</span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="story-caption">
+          <div class="story-avatar">🤖</div>
+          <div>
+            <h3>هيرميس أجنت — عقل ذكاء اصطناعي ذاتي الاستضافة</h3>
+            <p>hermes-stack · Python · Space مجاني على Hugging Face</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-slide">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="terminal">
+              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">usf-panel — zsh</span></div>
+              <div class="terminal-body"><span class='d'>$</span> <span class='c'>usf-panel</span> <span class='y'>--deploy</span> huggingface
+<span class='g'>✓</span> بُني الـ space <span class='d'>· sdk: docker · ملف واحد</span>
+<span class='g'>✓</span> جُهز المدخل <span class='b'>vless-ws-tls</span>
+<span class='g'>✓</span> مركز الاشتراكات يعمل
+
+<span class='d'>المستخدمون:</span> <span class='y'>18</span> <span class='d'>· متصلون:</span> <span class='g'>11</span> <span class='d'>· نقل 42.5GB</span>
+<span class='d'>إعدادات متزامنة:</span> <span class='c'>clash · v2ray · sing-box</span>
+
+<span class='d'>جاهزية 99.98% · صفر انحراف في الإعدادات</span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="story-caption">
+          <div class="story-avatar">🛰️</div>
+          <div>
+            <h3>مدير أنفاق واشتراكات متقدم</h3>
+            <p>Usf-panel · Python · لوحة VLESS متعددة المستخدمين</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-slide">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="terminal">
+              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">usf-edge — zsh</span></div>
+              <div class="terminal-body"><span class='d'>$</span> <span class='c'>wrangler deploy</span>
+<span class='g'>✓</span> رُفع خلال 1.8s <span class='d'>(صفر إقلاع بارد)</span>
+<span class='g'>✓</span> مخزن KV مربوط <span class='d'>· Durable Objects مفعلة</span>
+
+<span class='d'>── خريطة الحافة ──────────────────────</span>
+<span class='b'>fra</span> <span class='g'>●</span> <span class='b'>iad</span> <span class='g'>●</span> <span class='b'>sin</span> <span class='g'>●</span> <span class='b'>gru</span> <span class='g'>●</span> <span class='d'>…317 نقطة</span>
+
+<span class='d'>لوحة الإدارة:</span> <span class='c'>/panel</span> <span class='d'>· الدخول: توكن+تحقق ثنائي</span>
+<span class='d'>التكلفة الشهرية:</span> <span class='g'>$0.00</span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="story-caption">
+          <div class="story-avatar">⚡</div>
+          <div>
+            <h3>لوحة بروكسي على الحافة — بلا خوادم</h3>
+            <p>usf-edge · JavaScript · Cloudflare Workers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots"></div>
+  </div>
+</section>
+<section class="section alt-bg" id="expertise">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">التخصصات الأساسية · ماذا أفعل</p>
+      <h2 class="statement">مهندس واحد،<br><span class="dim">كل طبقات المنظومة.</span></h2>
+      <p class="section-desc">من المتحكمات الصناعية إلى وكلاء الذكاء الاصطناعي — أُصمم وأنظم وأسلّم أنظمة كاملة، لا مجرد شيفرة. أربعة تخصصات وعقلية واحدة: افهم المشكلة بعمق، ثم ابنِ أبسط حل يعالجها بالكامل.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="feature-card reveal" style="--ic1:#fecdd3;--ic2:#fde68a">
+        <div class="feature-icon">🌐</div>
+        <h3>فول-ستاك ويب وتطبيقات</h3>
+        <p>أنظمة متعددة المنصات محورها الويب، من البكسل إلى الإنتاج. واجهات أمامية بـ React و Vue و Angular و Next.js؛ خلفيات بـ Node.js و Laravel و .NET و Django و FastAPI و Go؛ وطبقات بيانات على PostgreSQL و MySQL و MongoDB و Redis — تُسلّم كلها كمنتج واحد متماسك مع Docker و CI/CD.</p>
+      </div>
+      <div class="feature-card reveal" style="--ic1:#c7d2fe;--ic2:#bae6fd">
+        <div class="feature-icon">🤖</div>
+        <h3>الذكاء الاصطناعي والأنظمة التوليدية</h3>
+        <p>معالجة اللغة الطبيعية والذكاء الاصطناعي التوليدي في إنتاج حقيقي لا عروض تجريبية: خطوط LangChain وقواعد معرفة RAG وجسور API للنماذج اللغوية وتنسيق متعدد الوكلاء. أربط نماذج مثل GLM و Qwen و DeepSeek و Gemini بخدمات متوافقة مع OpenAI تبني عليها البرمجيات الأخرى.</p>
+      </div>
+      <div class="feature-card reveal" style="--ic1:#bbf7d0;--ic2:#a5f3fc">
+        <div class="feature-icon">🏭</div>
+        <h3>PLC والأتمتة الصناعية</h3>
+        <p>أتمتة والتحكم بالعمليات بلغة مخطط السلم (LD) والنص المهيكل (ST) وفق معيار IEC 61131-3 — من منطق الحساسات والمشغلات إلى برامج تحكم جاهزة للـ HMI تُبقي الآلات الحقيقية تعمل بأمان وتوقع وبشكل دائم.</p>
+      </div>
+      <div class="feature-card reveal" style="--ic1:#ddd6fe;--ic2:#fbcfe8">
+        <div class="feature-icon">🔬</div>
+        <h3>البحث والأمن</h3>
+        <p>بحث تطبيقي في الأمن السيبراني وعلم النفس المعرفي والهندسة الاجتماعية — إضافة إلى التاريخ والمنطق والفلسفة. فهم كيف تتصرف الأنظمة والشبكات والبشر فعلًا هو ما يمكّنني من تصميم برمجيات تنجو عند ملامسة الواقع.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">مشاريع مختارة · مفتوح المصدر</p>
+      <h2 class="statement">مبنية علنًا،<br><span class="dim">مستخدمة في الإنتاج.</span></h2>
+      <p class="section-desc">مجموعة من مستودعات github.com/Godde3s — جسور API مجانية للذكاء الاصطناعي، موجّهات نماذج، أكياس وكلاء، لوحات بروكسي وأدوات أمنية. كل مستودع حقيقي وموثق وقابل للتشغيل اليوم.</p>
+    </div>
+    <div class="scroll-wrap reveal" data-scroller>
+      <div class="scroll-row">
+        <div class="scroll-card" style="--ic1:#99f6e4;--ic2:#a5b4fc">
+          <div class="thumb">🧠</div>
+          <div class="body">
+            <h3>glm-free-api</h3>
+            <span class="lang-tag">Go</span>
+            <p>واجهة API كاملة ومتوافقة مع OpenAI و Anthropic لـ GLM في ملف Go واحد — بلا متصفح وبلا كروم مقنّع وبلا خادم حسابات. مجمع حسابات مدمج واستجابات بث ونشر بأمر واحد أينما يعمل Go.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/glm-free-api" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#bae6fd;--ic2:#c4b5fd">
+          <div class="thumb">🧭</div>
+          <div class="body">
+            <h3>omnirouter</h3>
+            <span class="lang-tag">Go</span>
+            <p>موجّه ذكي واحد لكل نماذج الذكاء الاصطناعي: GLM و Qwen و DeepSeek وواجهات مخصصة خلف نقطة نهاية موحدة مع موازنة حمل دائرية وتجاوز أعطال تلقائي وحصص لكل مسير. تطبيقك يتعامل مع بروتوكول واحد؛ والراوتر يتكفل بالبقية.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/omnirouter" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#c7d2fe;--ic2:#fbcfe8">
+          <div class="thumb">👻</div>
+          <div class="body">
+            <h3>GhostBrain</h3>
+            <span class="lang-tag">Python</span>
+            <p>يُعيد إحياء حساب Gemini الويب المجاني كواجهة API حقيقية متوافقة مع OpenAI و Anthropic — بربط جلسات آمن ومجمعات متعددة الحسابات وبث SSE وتخزين دائم. الجسر الذي يحوّل «صفحة محادثة» إلى بنية تحتية.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/GhostBrain" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#fecdd3;--ic2:#fde68a">
+          <div class="thumb">🤖</div>
+          <div class="body">
+            <h3>hermes-stack</h3>
+            <span class="lang-tag">Python</span>
+            <p>هيرميس أجنت + 9Router + OmniRouter في Space مجاني واحد على Hugging Face — عقل ذكاء اصطناعي ذاتي الاستضافة في السحابة بتكلفة صفرية. وكلاء وتوجيه نماذج وأتمتة، يُنشر في دقائق ويُدار من وحدة تحكم واحدة.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/hermes-stack" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#bbf7d0;--ic2:#a5f3fc">
+          <div class="thumb">🛰️</div>
+          <div class="body">
+            <h3>Usf-panel</h3>
+            <span class="lang-tag">Python</span>
+            <p>مدير أنفاق VLESS واشتراكات متقدم: لوحة بروكسي متعددة المستخدمين والبروتوكولات مع مزامنة إعدادات Clash / v2ray / sing-box، تُنشر بأمر واحد على Hugging Face و Railway و Render و Fly.io و Koyeb.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/Usf-panel" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#fef08a;--ic2:#86efac">
+          <div class="thumb">⚡</div>
+          <div class="body">
+            <h3>usf-edge</h3>
+            <span class="lang-tag">JavaScript</span>
+            <p>لوحة إدارة بروكسي من الجيل التالي تعمل بالكامل على Cloudflare Workers — صفر خوادم وصفر إقلاع بارد وأكثر من 317 نقطة حضور. حالة مخزنة على KV ولوحة إدارة بتوكن وتحقق ثنائي ونقاط اشتراك تُخدم من الحافة.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/usf-edge" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#fed7aa;--ic2:#fecdd3">
+          <div class="thumb">🔌</div>
+          <div class="body">
+            <h3>HardwarePT</h3>
+            <span class="lang-tag">C</span>
+            <p>ماسح منافذ عتادي وأداة متعددة منخفضة المستوى مكتوبة بلغة C خالصة — قريب من المعدن وبلا اعتماديات. بُني لفهم ما يحدث فعلًا على السلك وعلى اللوحة.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/HardwarePT" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="scroll-card" style="--ic1:#ddd6fe;--ic2:#bae6fd">
+          <div class="thumb">🛡️</div>
+          <div class="body">
+            <h3>explorer</h3>
+            <span class="lang-tag">Python</span>
+            <p>محلل أمني ساكن يصطاد الأنماط الهشة ومسارات الشيفرة غير الآمنة في المستودعات — الانضباط ذاته الذي أطبقه عند تدقيق شيفرة وكلائي قبل نشرها.</p>
+            <a class="learn-more" href="https://github.com/Godde3s/explorer" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-nav">
+        <button class="scroll-btn prev" aria-label="prev"><svg viewBox='0 0 24 24'><path d='M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6 4.6-4.6z'/></svg></button>
+        <button class="scroll-btn next" aria-label="next"><svg viewBox='0 0 24 24'><path d='M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z'/></svg></button>
+        <div class="scroll-progress"><div class="bar"></div></div>
+      </div>
+    </div>
+    <div style="margin-top:26px"><a class="VPButton medium alt" href="https://github.com/Godde3s?tab=repositories" target="_blank" rel="noopener">عرض كل المستودعات →</a></div>
+  </div>
+</section>
+<section class="section alt-bg" id="agentic">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">البرمجة الوكيلية · قوتي الخارقة</p>
+      <h2 class="statement">أنا لا أستخدم الذكاء الاصطناعي فحسب.<br><span class="dim">أقود فرقًا من الوكلاء.</span></h2>
+      <p class="section-desc">أدواتي اليومية هي OpenCode و Codex و Claude Code — منسّقة عبر حزمة هيرميس أجنت الخاصة بي. أسلّم برمجيات إنتاجية بتوجيه وكلاء برمجة مستقلين عبر المواصفات وإعادة الهيكلة متعددة الملفات والاختبارات والمراجعات والنشر. هذه الصفحة نفسها بُنيت بهذه الطريقة.</p>
+    </div>
+    <div class="cards-grid cols4">
+      <div class="feature-card reveal" style="--ic1:#bae6fd;--ic2:#bbf7d0">
+        <div class="feature-icon">🔛</div>
+        <h3>OpenCode</h3>
+        <p>وكيل برمجة مفتوح المصدر في الطرفية — خياري الأول للبرمجة الثنائية السريعة والمستقلة عن النموذج في أي مستودع. قابل لتبديل المزود في منتصف المهمة، ما يجعله مثاليًا للتوجيه عبر omnirouter الخاص بي.</p>
+      </div>
+      <div class="feature-card reveal" style="--ic1:#fef08a;--ic2:#fed7aa">
+        <div class="feature-icon">⚡</div>
+        <h3>Codex</h3>
+        <p>وكيل البرمجة من OpenAI للتنفيذ الموازي للمهام — من الإصلاحات السريعة إلى إعادة الهيكلة الطويلة. مثالي حين يتفرع تغيير عبر ملفات كثيرة يمكن معالجتها في بيئات معزولة.</p>
+      </div>
+      <div class="feature-card reveal" style="--ic1:#c7d2fe;--ic2:#ddd6fe">
+        <div class="feature-icon">🎩</div>
+        <h3>Claude Code</h3>
+        <p>واجهة Anthropic الوكيلية — تخطيط متعدد الخطوات واستخدام أدوات وتحرير يمتد لكامل الشيفرة بدقة جراحية. يخطط كمهندس أول وينفذ كفريق كامل؛ وهذا الموقع أحد أعماله.</p>
+      </div>
+      <div class="feature-card reveal" style="--ic1:#fecdd3;--ic2:#c4b5fd">
+        <div class="feature-icon">🤖</div>
+        <h3>Hermes Agent</h3>
+        <p>بنيتي التحتية الخاصة بالوكلاء (github.com/Godde3s/hermes-stack) — عقل ذكاء اصطناعي ذاتي الاستضافة يوجّه النماذج ويشغّل الأتمتة ويغذي بقية الوكلاء بالنموذج الصحيح في اللحظة الصحيحة.</p>
+      </div>
+    </div>
+    <h3 class="chips-title reveal" style="font-size:18px;color:var(--vp-c-text-1);margin-top:48px">كيف تُسلّم ميزة جديدة هنا</h3>
+    <div class="agent-flow reveal">
+        <div class="agent-step"><span class="num">٠١</span><h4>إحاطة الوكلاء</h4><p>أحوّل الفكرة إلى تعليمات دقيقة قابلة للاختبار.</p></div>
+        <div class="agent-step"><span class="num">٠٢</span><h4>توليد وتكرار</h4><p>الوكلاء ينفذون بالتوازي؛ وأنا أوجّه وأصقل.</p></div>
+        <div class="agent-step"><span class="num">٠٣</span><h4>مراجعة بشرية</h4><p>أدقّق كل فرق — أمنًا ومعمارية وحالات حدية.</p></div>
+        <div class="agent-step"><span class="num">٠٤</span><h4>نشر ومراقبة</h4><p>أنشر على الحافة وأراقب المقاييس وأعيد التغذية للدورة.</p></div>
+    </div>
+    <p class="agent-quote reveal">مهارة العقد القادم ليست الكتابة أسرع — بل <b>قيادة الوكلاء الأذكياء</b> بدقة مهندس أول وذوق مصمم منتجات. هذا ما أتمرن عليه كل يوم.</p>
+  </div>
+</section>
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">مصفوفة المهارات · صندوق الأدوات</p>
+      <h2 class="statement">عميق في اللب،<br><span class="dim">واسع عند الأطراف.</span></h2>
+      <p class="section-desc">النسب المئوية تقييم صادق للجاهزية الإنتاجية — لا شهادات إتمام دورات. كل ما هو مدرج هنا سلّم عملًا حقيقيًا.</p>
+    </div>
+    <h3 class="chips-title reveal">اللغات</h3>
+    <div class="scroll-wrap reveal" data-scroller>
+      <div class="skills-scroll">
+        <div class="skill-item"><div class="emoji">🟨</div><div class="name">جافاسكربت / TS</div><div class="pct">98%</div><div class="bar"><i style="--w:98%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🐍</div><div class="name">بايثون</div><div class="pct">99%</div><div class="bar"><i style="--w:99%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🐹</div><div class="name">جو</div><div class="pct">94%</div><div class="bar"><i style="--w:94%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🎯</div><div class="name">سي شارب</div><div class="pct">93%</div><div class="bar"><i style="--w:93%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🐘</div><div class="name">PHP</div><div class="pct">98%</div><div class="bar"><i style="--w:98%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🔧</div><div class="name">سي بلس بلس</div><div class="pct">78%</div><div class="bar"><i style="--w:78%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🗄️</div><div class="name">SQL</div><div class="pct">100%</div><div class="bar"><i style="--w:100%"></i></div></div>
+        <div class="skill-item"><div class="emoji">🪜</div><div class="name">LD · سلم</div><div class="pct">96%</div><div class="bar"><i style="--w:96%"></i></div></div>
+        <div class="skill-item"><div class="emoji">📝</div><div class="name">ST · مهيكل</div><div class="pct">96%</div><div class="bar"><i style="--w:96%"></i></div></div>
+      </div>
+      <div class="scroll-nav">
+        <button class="scroll-btn prev" aria-label="prev"><svg viewBox='0 0 24 24'><path d='M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6 4.6-4.6z'/></svg></button>
+        <button class="scroll-btn next" aria-label="next"><svg viewBox='0 0 24 24'><path d='M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z'/></svg></button>
+        <div class="scroll-progress"><div class="bar"></div></div>
+      </div>
+    </div>
+    <div class="scroll-wrap reveal" data-scroller style="margin-top:14px">
+      <div class="skills-scroll">
+        <div class="skill-item"><div class="emoji">🖼️</div><div class="name">الواجهات الأمامية</div><div class="detail">React · Vue · Angular · Next.js</div></div>
+        <div class="skill-item"><div class="emoji">📱</div><div class="name">الجوال</div><div class="detail">React Native · Expo · Flutter · Ionic</div></div>
+        <div class="skill-item"><div class="emoji">🖥️</div><div class="name">سطح المكتب</div><div class="detail">Electron · Tauri · WPF / MAUI</div></div>
+        <div class="skill-item"><div class="emoji">⚙️</div><div class="name">الخلفية</div><div class="detail">Express · Laravel · .NET · Django · FastAPI · Gin</div></div>
+        <div class="skill-item"><div class="emoji">🗃️</div><div class="name">قواعد البيانات</div><div class="detail">PostgreSQL · MySQL · MongoDB · Redis · Firebase</div></div>
+        <div class="skill-item"><div class="emoji">🧠</div><div class="name">ذكاء اصطناعي / ML</div><div class="detail">TensorFlow · PyTorch · LangChain · OpenCV · HF</div></div>
+        <div class="skill-item"><div class="emoji">🧰</div><div class="name">أدوات التطوير</div><div class="detail">Git · Docker · WSL2 · Linux CLI · Vite · Postman</div></div>
+        <div class="skill-item"><div class="emoji">🌍</div><div class="name">الشبكات</div><div class="detail">TCP/IP · بروكسي · VLESS · Cloudflare Edge</div></div>
+        <div class="skill-item"><div class="emoji">🛡️</div><div class="name">الأمن</div><div class="detail">أدوات اختبار اختراق · XSS · تحليل ساكن</div></div>
+        <div class="skill-item"><div class="emoji">🏭</div><div class="name">صناعي</div><div class="detail">PLC · HMI · منطق SCADA · IEC 61131-3</div></div>
+      </div>
+      <div class="scroll-nav">
+        <button class="scroll-btn prev" aria-label="prev"><svg viewBox='0 0 24 24'><path d='M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6 4.6-4.6z'/></svg></button>
+        <button class="scroll-btn next" aria-label="next"><svg viewBox='0 0 24 24'><path d='M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z'/></svg></button>
+        <div class="scroll-progress"><div class="bar"></div></div>
+      </div>
+    </div>
+    <h3 class="chips-title reveal" style="font-size:18px;color:var(--vp-c-text-1);margin-top:48px">ما وراء لوحة المفاتيح</h3>
+    <div class="hobbies">
+      <div class="hobby reveal"><div class="emoji">📜</div><div><h4>التاريخ والحضارات</h4><p>دراسة كيف تنهض الحضارات وتنهار وتولد من جديد — تفكير طويل المدى كأداة تنقيح للحاضر.</p></div></div>
+      <div class="hobby reveal"><div class="emoji">🧠</div><div><h4>علم النفس المعرفي</h4><p>السلوك البشري والهندسة الاجتماعية — لأن أضعف بروتوكول في أي نظام ما يزال هو الإنسان الذي يستخدمه.</p></div></div>
+      <div class="hobby reveal"><div class="emoji">♟️</div><div><h4>الشطرنج</h4><p>التفكير الاستراتيجي والتعرف على الأنماط تحت الضغط — العضلات نفسها المستخدمة في قرارات المعمارية.</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="cta alt-bg" id="contact">
+  <div class="container reveal">
+    <h2>لنبنِ شيئًا استثنائيًا.</h2>
+    <p>لديك فكرة؟ نظام معطل؟ موعد تسليم مستحيل؟ أحوّل المشكلات الغامضة إلى برمجيات مسلّمة — مع فريق وكلاء خلفي.</p>
+    <div class="actions">
+      <a class="VPButton big brand" href="https://t.me/ZENDANBAN_BOT" target="_blank" rel="noopener"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M9.04 15.51 8.9 19.1c.37 0 .53-.16.72-.35l1.73-1.66 3.58 2.62c.66.36 1.13.17 1.3-.61l2.37-11.1c.21-.97-.35-1.35-.99-1.11L3.3 12.15c-.95.37-.93.9-.16 1.14l3.5 1.09 8.13-5.12c.38-.25.73-.11.45.14l-6.18 5.61z'/></svg>تيليجرام</a>
+      <a class="VPButton big alt" href="https://github.com/Godde3s" target="_blank" rel="noopener"><svg viewBox='0 0 16 16' aria-hidden='true'><path d='M8 0c4.45 0 8 3.58 8 8a8 8 0 0 1-5.47 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.64-.88 3.64-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.65 7.65 0 0 0-4 0c-1.53-1.04-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.57-2.33-.68-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A8.01 8.01 0 0 1 0 8c0-4.42 3.58-8 8-8Z'/></svg>GitHub</a>
+      <a class="VPButton big alt" href="tel:+989928123943"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z'/></svg>‎+98 992 812 3943</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="crumbs">🧩 › <a href="/ar/#home">الرئيسية</a> › Reza Bazdar — Godde3s</div>
+    <ol class="footer-notes">
+      <li>جميع المشاريع مفتوحة المصدر على جيت هاب وحرة الاستخدام وفق تراخيصها.</li>
+      <li>هذه الصفحة نفسها مبنية بالبرمجة الوكيلية — Claude Code + هيرميس أجنت، بلا شيفرة نمطية يدوية.</li>
+      <li>متاحة بأربع لغات: English و فارسی و العربية و Español.</li>
+    </ol>
+    <div class="footer-cols">
+      <div>
+        <h4>استكشف</h4>
+          <a href="#expertise">التخصصات الأساسية</a>
+          <a href="#projects">مشاريع مختارة</a>
+          <a href="#agentic">البرمجة الوكيلية</a>
+          <a href="#skills">مصفوفة المهارات</a>
+      </div>
+      <div>
+        <h4>تواصل</h4>
+          <a href="https://github.com/Godde3s" target="_blank" rel="noopener">جيت هاب — @Godde3s</a>
+          <a href="https://t.me/ZENDANBAN_BOT" target="_blank" rel="noopener">تيليجرام — @ZENDANBAN_BOT</a>
+          <a href="tel:+989928123943">‎+98 992 812 3943</a>
+      </div>
+      <div>
+        <h4>حول</h4>
+          <span>مهندس برمجيات مبدع ومتعدد المواهب</span>
+          <span>فول-ستاك · ذكاء اصطناعي · PLC · شبكات</span>
+          <span>متاح للعمل الحر والتعاون</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="made">تصميم وبناء بـ <b>البرمجة الوكيلية</b> — Claude Code + هيرميس أجنت · واجهة مستوحاة من easy-vibe</p>
+      <div class="row">
+        <span class="copyright">حقوق النشر © <span class="yr">2026</span> رضا بازدار. جميع الحقوق محفوظة.</span>
+        <span>fa · en · ar · es</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

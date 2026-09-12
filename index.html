@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reza Bazdar — Creative Software Engineer</title>
+<meta name="description" content="Reza Bazdar (Godde3s) — creative full-stack software engineer. FA / EN / AR / ES.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1b1f'/%3E%3Ctext x='32' y='45' font-family='Segoe Script,cursive' font-size='34' font-weight='bold' fill='%230ea5e9' text-anchor='middle'%3Eu%3C/text%3E%3C/svg%3E">
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem('usf-lang');
+    var map = { fa: 'fa', ar: 'ar', es: 'es' };
+    var lang = saved;
+    if (!lang || !map[lang] && lang !== 'en') {
+      var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      lang = map[nav] || 'en';
+    }
+    var inLangDir = location.pathname.match(/^\/(fa|en|ar|es)\/?/);
+    if (inLangDir && inLangDir[1] !== lang) {
+      location.replace('/' + lang + '/');
+    } else if (!inLangDir) {
+      location.replace('/' + lang + '/');
+    }
+  } catch (e) { location.replace('/en/'); }
+})();
+</script>
+</head>
+<body>
+<noscript><meta http-equiv="refresh" content="0; url=/en/"></noscript>
+<p style="font-family:sans-serif;padding:40px"><a href="/en/">English</a> · <a href="/fa/">فارسی</a> · <a href="/ar/">العربية</a> · <a href="/es/">Español</a></p>
+</body>
+</html>
