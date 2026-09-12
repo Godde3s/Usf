@@ -1,0 +1,18 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# 禁止搜索引擎抓取旧版内容（已迁移到新目录结构）
+Disallow: /extra/
+Disallow: /examples/
+Disallow: /project/
+Disallow: /en/extra/
+Disallow: /en/examples/
+Disallow: /en/project/
+
+# 禁止抓取 VitePress 缓存和构建文件
+Disallow: /.vitepress/
+Disallow: /@fs/
+
+# Sitemap 位置
+Sitemap: https://godde3s.github.io/Usf/sitemap.xml

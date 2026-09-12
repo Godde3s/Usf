@@ -1,505 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reza Bazdar — Creative Software Engineer</title>
-<meta name="description" content="Reza Bazdar (Godde3s) — creative full-stack software engineer, AI &amp; agentic coding specialist, PLC programmer and network engineer. Explore projects, skills and open-source work.">
-<meta name="theme-color" content="#ffffff">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Reza Bazdar — Creative Software Engineer">
-<meta property="og:description" content="Reza Bazdar (Godde3s) — creative full-stack software engineer, AI &amp; agentic coding specialist, PLC programmer and network engineer. Explore projects, skills and open-source work.">
-<meta property="og:image" content="https://github.com/Godde3s.png">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='64' y2='64'%3E%3Cstop offset='0' stop-color='%2306b6d4'/%3E%3Cstop offset='1' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%231b1b1f'/%3E%3Ctext x='32' y='45' font-family='Segoe Script,cursive' font-size='34' font-weight='bold' fill='url(%23g)' text-anchor='middle'%3Eu%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Gulzar&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
-<script>window.__langBase = "en";</script>
-<script src="../assets/app.js" defer></script>
-</head>
-<body>
-<div class="header-block">
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="nav-logo" href="/en/#home">usf</a>
-      <button class="icon-btn nav-burger" id="nav-burger" aria-label="menu"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/></svg></button>
-      <nav class="nav-links" id="nav-links">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#expertise">Expertise</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#agentic">Agentic Coding</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
-      <div class="nav-spacer"></div>
-      <div class="nav-actions">
-        <div class="lang-wrap">
-          <button class="icon-btn" id="lang-btn" aria-label="language"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M12.87 15.07l-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z'/></svg></button>
-          <div class="lang-menu" id="lang-menu">
-        <a class="lang-item current" href="../en/">English<span class="check">✓</span></a>
-        <a class="lang-item" href="../fa/">فارسی<span class="check">✓</span></a>
-        <a class="lang-item" href="../ar/">العربية<span class="check">✓</span></a>
-        <a class="lang-item" href="../es/">Español<span class="check">✓</span></a>
-          </div>
-        </div>
-        <a class="icon-btn" href="https://github.com/Godde3s" target="_blank" rel="noopener" aria-label="GitHub" style="display:inline-flex"><svg viewBox='0 0 16 16' aria-hidden='true'><path d='M8 0c4.45 0 8 3.58 8 8a8 8 0 0 1-5.47 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.64-.88 3.64-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.65 7.65 0 0 0-4 0c-1.53-1.04-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.57-2.33-.68-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A8.01 8.01 0 0 1 0 8c0-4.42 3.58-8 8-8Z'/></svg></a>
-        <button class="icon-btn" id="theme-toggle" aria-label="theme"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M20 8.7A8.5 8.5 0 0 1 9.3 19c-3.9 0-7-3.1-7-7A8.5 8.5 0 0 1 14.7 2.3 6.6 6.6 0 0 0 20 8.7z'/></svg></button>
-        <a class="VPButton medium brand" href="#contact" style="margin-inline-start:6px">Hire Me</a>
-      </div>
-    </div>
-  </header>
-  <div class="announcement">Open for freelance &amp; collaboration — Full-Stack, AI, PLC &amp; Networks. <a href="#contact">Let's talk</a></div>
-</div>
-<section class="hero" id="home">
-  <div class="hero-container">
-    <h1 class="hero-wordmark">Reza Bazdar</h1>
-    <p class="tagline"><span id="typed" data-words='["Creative Software Engineer.", "Full-Stack Web & App Developer.", "AI & Agentic Coding Specialist.", "PLC & Industrial Automation Programmer.", "Network Engineer & Security Researcher."]'></span><span class="caret"></span></p>
-    <div class="actions">
-      <a class="VPButton big brand" href="#projects">Explore My Work</a>
-      <a class="VPButton big alt" href="https://github.com/Godde3s" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <div class="hero-meta">
-        <span>🇮🇷 Based in Iran · Working worldwide</span>
-        <span>🧩 9 programming languages</span>
-        <span>🤖 Agentic coding since day one</span>
-    </div>
-  </div>
-</section>
-<section class="section" id="stories">
-  <div class="container">
-    <div class="stories-head reveal">
-      <h2 class="statement">From idea to production,<br><span class="dim">one commit at a time.</span></h2>
-      <p class="section-desc">Real projects, real users — API bridges, agent stacks, panels and security tools, built end-to-end in public on GitHub.</p>
-    </div>
-    <div id="stories" class="reveal">
-      <div class="story-slide">
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="terminal">
-              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">glm-free-api — zsh</span></div>
-              <div class="terminal-body"><span class='d'>$</span> <span class='c'>./glm-free-api</span> <span class='y'>--port</span> 8000 <span class='y'>--accounts</span> 5
-<span class='g'>✓</span> account pool ready <span class='d'>(5/5 alive)</span>
-<span class='g'>✓</span> listening on <span class='b'>:8000</span> <span class='d'>— OpenAI & Anthropic routes</span>
-
-<span class='d'>$</span> curl <span class='b'>localhost:8000/v1/chat/completions</span> \
-    <span class='y'>-d</span> <span class='p'>{"model":"glm-4-plus"}</span>
-
-<span class='g'>{</span> <span class='c'>"model"</span>: <span class='y'>"glm-4-plus"</span>, <span class='c'>"stream"</span>: <span class='b'>true</span>,
-  <span class='c'>"usage"</span>: <span class='g'>{</span> <span class='c'>"total_tokens"</span>: <span class='y'>812</span> <span class='g'>}</span> <span class='g'>}</span></div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-        <div class="story-caption">
-          <div class="story-avatar">🧠</div>
-          <div>
-            <h3>Free GLM API — one file, zero browser</h3>
-            <p>glm-free-api · Go · ⭐ OpenAI &amp; Anthropic compatible</p>
-          </div>
-        </div>
-      </div>
-      <div class="story-slide">
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="terminal">
-              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">omnirouter — zsh</span></div>
-              <div class="terminal-body"><span class='d'>$</span> <span class='c'>omnirouter</span> <span class='y'>start</span> <span class='y'>--config</span> routes.yaml
-<span class='g'>✓</span> upstream <span class='b'>glm</span> <span class='d'>······· healthy</span>
-<span class='g'>✓</span> upstream <span class='b'>qwen</span> <span class='d'>······ healthy</span>
-<span class='g'>✓</span> upstream <span class='b'>deepseek</span> <span class='d'>··· healthy</span>
-
-<span class='d'>── unified endpoint ──────────────────</span>
-<span class='p'>POST /v1/chat/completions</span>
-<span class='d'>strategy:</span> <span class='c'>round-robin</span> <span class='d'>· failover:</span> <span class='c'>auto</span>
-
-<span class='d'>req 1,204 · p95 312ms · err 0.0%</span></div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-        <div class="story-caption">
-          <div class="story-avatar">🧭</div>
-          <div>
-            <h3>One router for every AI model</h3>
-            <p>omnirouter · Go · GLM + Qwen + DeepSeek + custom APIs</p>
-          </div>
-        </div>
-      </div>
-      <div class="story-slide">
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="terminal">
-              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">ghostbrain — zsh</span></div>
-              <div class="terminal-body"><span class='d'>$</span> <span class='c'>python ghostbrain.py</span> <span class='y'>serve</span>
-<span class='g'>✓</span> web session bound <span class='d'>(secure cookies)</span>
-<span class='g'>✓</span> adapter: <span class='b'>OpenAI</span> <span class='d'>+</span> <span class='b'>Anthropic</span>
-<span class='g'>✓</span> streaming: <span class='c'>SSE</span> enabled
-
-<span class='d'>$</span> curl <span class='b'>:8080/v1/messages</span> <span class='y'>-d</span> <span class='p'>{...}</span>
-
-<span class='g'>event: content_block_delta</span>
-<span class='c'>data</span>: <span class='y'>{"text":"Hello from Gemini"}</span>
-
-<span class='d'>tokens saved this month: 2.1M</span></div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-        <div class="story-caption">
-          <div class="story-avatar">👻</div>
-          <div>
-            <h3>A free Gemini account becomes a full API</h3>
-            <p>GhostBrain · Python · streaming + multi-account</p>
-          </div>
-        </div>
-      </div>
-      <div class="story-slide">
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="terminal">
-              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">hermes-stack — zsh</span></div>
-              <div class="terminal-body"><span class='d'>$</span> <span class='c'>docker compose up</span> <span class='y'>-d</span>
-<span class='g'>✓</span> hermes-agent <span class='d'>····· </span><span class='g'>ready</span>
-<span class='g'>✓</span> 9router <span class='d'>··········· </span><span class='g'>ready</span>
-<span class='g'>✓</span> omnirouter <span class='d'>········ </span><span class='g'>ready</span>
-
-<span class='d'>── hermes console ────────────────────</span>
-<span class='p'>></span> route glm-4 to agent:coder
-<span class='g'>✓</span> task queued <span class='d'>· workers: 3 · mem 412MB</span>
-
-<span class='d'>zero-cost stack · zero servers</span></div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-        <div class="story-caption">
-          <div class="story-avatar">🤖</div>
-          <div>
-            <h3>Hermes Agent — a self-hosted AI brain</h3>
-            <p>hermes-stack · Python · free Hugging Face Space</p>
-          </div>
-        </div>
-      </div>
-      <div class="story-slide">
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="terminal">
-              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">usf-panel — zsh</span></div>
-              <div class="terminal-body"><span class='d'>$</span> <span class='c'>usf-panel</span> <span class='y'>--deploy</span> huggingface
-<span class='g'>✓</span> space built <span class='d'>· sdk: docker · 1 file</span>
-<span class='g'>✓</span> inbound <span class='b'>vless-ws-tls</span> provisioned
-<span class='g'>✓</span> subscription hub live
-
-<span class='d'>users:</span> <span class='y'>18</span> <span class='d'>· online:</span> <span class='g'>11</span> <span class='d'>· tx 42.5GB</span>
-<span class='d'>configs synced:</span> <span class='c'>clash · v2ray · sing-box</span>
-
-<span class='d'>uptime 99.98% · 0 config drift</span></div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-        <div class="story-caption">
-          <div class="story-avatar">🛰️</div>
-          <div>
-            <h3>Premium tunnel &amp; subscription manager</h3>
-            <p>Usf-panel · Python · multi-user VLESS panel</p>
-          </div>
-        </div>
-      </div>
-      <div class="story-slide">
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="terminal">
-              <div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">usf-edge — zsh</span></div>
-              <div class="terminal-body"><span class='d'>$</span> <span class='c'>wrangler deploy</span>
-<span class='g'>✓</span> uploaded in 1.8s <span class='d'>(zero cold starts)</span>
-<span class='g'>✓</span> KV store bound <span class='d'>· Durable Objects on</span>
-
-<span class='d'>── edge map ──────────────────────────</span>
-<span class='b'>fra</span> <span class='g'>●</span> <span class='b'>iad</span> <span class='g'>●</span> <span class='b'>sin</span> <span class='g'>●</span> <span class='b'>gru</span> <span class='g'>●</span> <span class='d'>…317 PoPs</span>
-
-<span class='d'>admin panel:</span> <span class='c'>/panel</span> <span class='d'>· auth: token+2FA</span>
-<span class='d'>monthly cost:</span> <span class='g'>$0.00</span></div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
-        <div class="story-caption">
-          <div class="story-avatar">⚡</div>
-          <div>
-            <h3>Proxy panel at the edge — no servers</h3>
-            <p>usf-edge · JavaScript · Cloudflare Workers</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-dots"></div>
-  </div>
-</section>
-<section class="section alt-bg" id="expertise">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Core Expertise · What I Do</p>
-      <h2 class="statement">One engineer,<br><span class="dim">every layer of the stack.</span></h2>
-      <p class="section-desc">From industrial controllers to AI agents — I design, build and ship complete systems, not just code. Four disciplines, one mindset: understand the problem deeply, then build the simplest thing that solves it completely.</p>
-    </div>
-    <div class="cards-grid">
-      <div class="feature-card reveal" style="--ic1:#fecdd3;--ic2:#fde68a">
-        <div class="feature-icon">🌐</div>
-        <h3>Full-Stack Web &amp; App</h3>
-        <p>Cross-platform, web-centric systems from pixel to production. Frontend with React, Vue, Angular and Next.js; backends with Node.js, Laravel, .NET, Django, FastAPI and Go; data layers on PostgreSQL, MySQL, MongoDB and Redis — all shipped as one coherent product with Docker and CI/CD.</p>
-      </div>
-      <div class="feature-card reveal" style="--ic1:#c7d2fe;--ic2:#bae6fd">
-        <div class="feature-icon">🤖</div>
-        <h3>AI &amp; Generative Systems</h3>
-        <p>NLP and Generative AI in real production, not demos: LangChain pipelines, RAG knowledge bases, LLM API bridges and multi-agent orchestration. I wire models like GLM, Qwen, DeepSeek and Gemini into reliable OpenAI-compatible services that other software can build on.</p>
-      </div>
-      <div class="feature-card reveal" style="--ic1:#bbf7d0;--ic2:#a5f3fc">
-        <div class="feature-icon">🏭</div>
-        <h3>PLC &amp; Industrial Automation</h3>
-        <p>Automation and process control programmed in Ladder Diagram (LD) and Structured Text (ST) under the IEC 61131-3 standard — from sensor and actuator logic to HMI-ready control programs that keep real machinery running safely, predictably and around the clock.</p>
-      </div>
-      <div class="feature-card reveal" style="--ic1:#ddd6fe;--ic2:#fbcfe8">
-        <div class="feature-icon">🔬</div>
-        <h3>Research &amp; Security</h3>
-        <p>Applied research across cybersecurity, cognitive psychology and social engineering — plus history, logic and philosophy. Understanding how systems, networks and people actually behave is what lets me design software that survives contact with reality.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section" id="projects">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Featured Projects · Open Source</p>
-      <h2 class="statement">Built in public,<br><span class="dim">used in production.</span></h2>
-      <p class="section-desc">A selection of repositories from github.com/Godde3s — free AI API bridges, model routers, agent stacks, proxy panels and security tooling. Every repo below is real, documented and runnable today.</p>
-    </div>
-    <div class="scroll-wrap reveal" data-scroller>
-      <div class="scroll-row">
-        <div class="scroll-card" style="--ic1:#99f6e4;--ic2:#a5b4fc">
-          <div class="thumb">🧠</div>
-          <div class="body">
-            <h3>glm-free-api</h3>
-            <span class="lang-tag">Go</span>
-            <p>A complete OpenAI- and Anthropic-compatible API for GLM in a single Go file — no browser, no headless Chrome, no account server. Built-in account pool, streaming responses and one-command deployment anywhere Go runs.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/glm-free-api" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#bae6fd;--ic2:#c4b5fd">
-          <div class="thumb">🧭</div>
-          <div class="body">
-            <h3>omnirouter</h3>
-            <span class="lang-tag">Go</span>
-            <p>One intelligent router for every AI model: GLM, Qwen, DeepSeek and custom APIs behind a single unified endpoint with round-robin load balancing, automatic failover and per-route quotas. Your app speaks one protocol; the router handles the rest.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/omnirouter" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#c7d2fe;--ic2:#fbcfe8">
-          <div class="thumb">👻</div>
-          <div class="body">
-            <h3>GhostBrain</h3>
-            <span class="lang-tag">Python</span>
-            <p>Resurrect a free Gemini web account as a real OpenAI + Anthropic-compatible API — with secure session binding, multi-account pools, SSE streaming and persistence. The bridge that turns 'just a chat page' into infrastructure.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/GhostBrain" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#fecdd3;--ic2:#fde68a">
-          <div class="thumb">🤖</div>
-          <div class="body">
-            <h3>hermes-stack</h3>
-            <span class="lang-tag">Python</span>
-            <p>Hermes Agent + 9Router + OmniRouter packed into one free Hugging Face Space — a self-hosted AI brain in the cloud at zero cost. Agents, model routing and automations, deployable in minutes and controlled from a single console.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/hermes-stack" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#bbf7d0;--ic2:#a5f3fc">
-          <div class="thumb">🛰️</div>
-          <div class="body">
-            <h3>Usf-panel</h3>
-            <span class="lang-tag">Python</span>
-            <p>Premium VLESS tunnel and subscription manager: multi-user, multi-protocol proxy panel with Clash / v2ray / sing-box config sync, deployable in one command to Hugging Face, Railway, Render, Fly.io or Koyeb.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/Usf-panel" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#fef08a;--ic2:#86efac">
-          <div class="thumb">⚡</div>
-          <div class="body">
-            <h3>usf-edge</h3>
-            <span class="lang-tag">JavaScript</span>
-            <p>Next-generation edge proxy management panel running entirely on Cloudflare Workers — zero servers, zero cold starts, 317+ PoPs. KV-backed state, token+2FA admin panel and subscription endpoints served from the edge.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/usf-edge" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#fed7aa;--ic2:#fecdd3">
-          <div class="thumb">🔌</div>
-          <div class="body">
-            <h3>HardwarePT</h3>
-            <span class="lang-tag">C</span>
-            <p>Low-level hardware port scanner and toolkit written in pure C — close to the metal, no dependencies. Built for understanding what actually happens on the wire and on the board.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/HardwarePT" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="scroll-card" style="--ic1:#ddd6fe;--ic2:#bae6fd">
-          <div class="thumb">🛡️</div>
-          <div class="body">
-            <h3>explorer</h3>
-            <span class="lang-tag">Python</span>
-            <p>Static security analyzer that hunts vulnerable patterns and unsafe code paths across source repositories — the same discipline I apply when auditing my own agent-built code before it ships.</p>
-            <a class="learn-more" href="https://github.com/Godde3s/explorer" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-nav">
-        <button class="scroll-btn prev" aria-label="prev"><svg viewBox='0 0 24 24'><path d='M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6 4.6-4.6z'/></svg></button>
-        <button class="scroll-btn next" aria-label="next"><svg viewBox='0 0 24 24'><path d='M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z'/></svg></button>
-        <div class="scroll-progress"><div class="bar"></div></div>
-      </div>
-    </div>
-    <div style="margin-top:26px"><a class="VPButton medium alt" href="https://github.com/Godde3s?tab=repositories" target="_blank" rel="noopener">View all repositories →</a></div>
-  </div>
-</section>
-<section class="section alt-bg" id="agentic">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Agentic Coding · My Superpower</p>
-      <h2 class="statement">I don't just use AI.<br><span class="dim">I command agent teams.</span></h2>
-      <p class="section-desc">My daily drivers are OpenCode, Codex and Claude Code — orchestrated by my own Hermes Agent stack. I ship production software by directing autonomous coding agents through specs, multi-file refactors, tests, reviews and deploys. My portfolio itself is built this way.</p>
-    </div>
-    <div class="cards-grid cols4">
-      <div class="feature-card reveal" style="--ic1:#bae6fd;--ic2:#bbf7d0">
-        <div class="feature-icon">🔛</div>
-        <h3>OpenCode</h3>
-        <p>Open-source terminal coding agent — my go-to for fast, model-agnostic pair programming in any repo. Provider-switchable mid-task, which makes it perfect for routing through my own omnirouter.</p>
-      </div>
-      <div class="feature-card reveal" style="--ic1:#fef08a;--ic2:#fed7aa">
-        <div class="feature-icon">⚡</div>
-        <h3>Codex</h3>
-        <p>OpenAI's coding agent for parallel task execution — from quick fixes to long-running refactors. Ideal when a change fans out across many files that can be handled in isolated sandboxes.</p>
-      </div>
-      <div class="feature-card reveal" style="--ic1:#c7d2fe;--ic2:#ddd6fe">
-        <div class="feature-icon">🎩</div>
-        <h3>Claude Code</h3>
-        <p>Anthropic's agentic CLI — multi-step planning, tool use and codebase-wide edits with surgical precision. It plans like a senior engineer and executes like a whole team; this site is one of its builds.</p>
-      </div>
-      <div class="feature-card reveal" style="--ic1:#fecdd3;--ic2:#c4b5fd">
-        <div class="feature-icon">🤖</div>
-        <h3>Hermes Agent</h3>
-        <p>My own agent infrastructure (github.com/Godde3s/hermes-stack) — a self-hosted AI brain that routes models, runs automations and keeps every other agent supplied with the right model at the right time.</p>
-      </div>
-    </div>
-    <h3 class="chips-title reveal" style="font-size:18px;color:var(--vp-c-text-1);margin-top:48px">How a feature ships here</h3>
-    <div class="agent-flow reveal">
-        <div class="agent-step"><span class="num">01</span><h4>Brief the agents</h4><p>Spec the idea into precise, testable instructions.</p></div>
-        <div class="agent-step"><span class="num">02</span><h4>Generate &amp; iterate</h4><p>Agents implement in parallel; I steer and refine.</p></div>
-        <div class="agent-step"><span class="num">03</span><h4>Human review</h4><p>I audit every diff — security, architecture, edge cases.</p></div>
-        <div class="agent-step"><span class="num">04</span><h4>Deploy &amp; monitor</h4><p>Ship to the edge, watch metrics, feed learnings back.</p></div>
-    </div>
-    <p class="agent-quote reveal">The skill of the next decade isn't typing faster — it's <b>directing intelligent agents</b> with the precision of a senior engineer and the taste of a product designer. That is what I practice every single day.</p>
-  </div>
-</section>
-<section class="section" id="skills">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Skills Matrix · Toolbox</p>
-      <h2 class="statement">Deep in the core,<br><span class="dim">wide at the edges.</span></h2>
-      <p class="section-desc">Percentages are honest self-assessment of production readiness — not course completion badges. Everything listed here has shipped real work.</p>
-    </div>
-    <h3 class="chips-title reveal">Languages</h3>
-    <div class="scroll-wrap reveal" data-scroller>
-      <div class="skills-scroll">
-        <div class="skill-item"><div class="emoji">🟨</div><div class="name">JavaScript / TS</div><div class="pct">98%</div><div class="bar"><i style="--w:98%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🐍</div><div class="name">Python</div><div class="pct">99%</div><div class="bar"><i style="--w:99%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🐹</div><div class="name">Go</div><div class="pct">94%</div><div class="bar"><i style="--w:94%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🎯</div><div class="name">C#</div><div class="pct">93%</div><div class="bar"><i style="--w:93%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🐘</div><div class="name">PHP</div><div class="pct">98%</div><div class="bar"><i style="--w:98%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🔧</div><div class="name">C++</div><div class="pct">78%</div><div class="bar"><i style="--w:78%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🗄️</div><div class="name">SQL</div><div class="pct">100%</div><div class="bar"><i style="--w:100%"></i></div></div>
-        <div class="skill-item"><div class="emoji">🪜</div><div class="name">LD · Ladder</div><div class="pct">96%</div><div class="bar"><i style="--w:96%"></i></div></div>
-        <div class="skill-item"><div class="emoji">📝</div><div class="name">ST · Struct. Text</div><div class="pct">96%</div><div class="bar"><i style="--w:96%"></i></div></div>
-      </div>
-      <div class="scroll-nav">
-        <button class="scroll-btn prev" aria-label="prev"><svg viewBox='0 0 24 24'><path d='M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6 4.6-4.6z'/></svg></button>
-        <button class="scroll-btn next" aria-label="next"><svg viewBox='0 0 24 24'><path d='M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z'/></svg></button>
-        <div class="scroll-progress"><div class="bar"></div></div>
-      </div>
-    </div>
-    <div class="scroll-wrap reveal" data-scroller style="margin-top:14px">
-      <div class="skills-scroll">
-        <div class="skill-item"><div class="emoji">🖼️</div><div class="name">Frontend</div><div class="detail">React · Vue · Angular · Next.js</div></div>
-        <div class="skill-item"><div class="emoji">📱</div><div class="name">Mobile</div><div class="detail">React Native · Expo · Flutter · Ionic</div></div>
-        <div class="skill-item"><div class="emoji">🖥️</div><div class="name">Desktop</div><div class="detail">Electron · Tauri · WPF / MAUI</div></div>
-        <div class="skill-item"><div class="emoji">⚙️</div><div class="name">Backend</div><div class="detail">Express · Laravel · .NET · Django · FastAPI · Gin</div></div>
-        <div class="skill-item"><div class="emoji">🗃️</div><div class="name">Databases</div><div class="detail">PostgreSQL · MySQL · MongoDB · Redis · Firebase</div></div>
-        <div class="skill-item"><div class="emoji">🧠</div><div class="name">AI / ML</div><div class="detail">TensorFlow · PyTorch · LangChain · OpenCV · HF</div></div>
-        <div class="skill-item"><div class="emoji">🧰</div><div class="name">Dev Tools</div><div class="detail">Git · Docker · WSL2 · Linux CLI · Vite · Postman</div></div>
-        <div class="skill-item"><div class="emoji">🌍</div><div class="name">Networking</div><div class="detail">TCP/IP · Proxies · VLESS · Cloudflare Edge</div></div>
-        <div class="skill-item"><div class="emoji">🛡️</div><div class="name">Security</div><div class="detail">Pentest toolkit · XSS · Static analysis</div></div>
-        <div class="skill-item"><div class="emoji">🏭</div><div class="name">Industrial</div><div class="detail">PLC · HMI · SCADA logic · IEC 61131-3</div></div>
-      </div>
-      <div class="scroll-nav">
-        <button class="scroll-btn prev" aria-label="prev"><svg viewBox='0 0 24 24'><path d='M15.4 7.4 14 6l-6 6 6 6 1.4-1.4-4.6-4.6 4.6-4.6z'/></svg></button>
-        <button class="scroll-btn next" aria-label="next"><svg viewBox='0 0 24 24'><path d='M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z'/></svg></button>
-        <div class="scroll-progress"><div class="bar"></div></div>
-      </div>
-    </div>
-    <h3 class="chips-title reveal" style="font-size:18px;color:var(--vp-c-text-1);margin-top:48px">Beyond the keyboard</h3>
-    <div class="hobbies">
-      <div class="hobby reveal"><div class="emoji">📜</div><div><h4>History &amp; Civilizations</h4><p>Studying how civilizations rise, collapse and reinvent — long-term thinking as a debugging tool for the present.</p></div></div>
-      <div class="hobby reveal"><div class="emoji">🧠</div><div><h4>Cognitive Psychology</h4><p>Human behavior and social engineering — because every system's weakest protocol is still the human using it.</p></div></div>
-      <div class="hobby reveal"><div class="emoji">♟️</div><div><h4>Chess</h4><p>Strategic thinking and pattern recognition under pressure — the same muscles used in architecture decisions.</p></div></div>
-    </div>
-  </div>
-</section>
-<section class="cta alt-bg" id="contact">
-  <div class="container reveal">
-    <h2>Let's build something extraordinary.</h2>
-    <p>Have an idea? A broken system? An impossible deadline? I turn ambiguous problems into shipped software — with an agent team at my back.</p>
-    <div class="actions">
-      <a class="VPButton big brand" href="https://t.me/ZENDANBAN_BOT" target="_blank" rel="noopener"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M9.04 15.51 8.9 19.1c.37 0 .53-.16.72-.35l1.73-1.66 3.58 2.62c.66.36 1.13.17 1.3-.61l2.37-11.1c.21-.97-.35-1.35-.99-1.11L3.3 12.15c-.95.37-.93.9-.16 1.14l3.5 1.09 8.13-5.12c.38-.25.73-.11.45.14l-6.18 5.61z'/></svg>Telegram</a>
-      <a class="VPButton big alt" href="https://github.com/Godde3s" target="_blank" rel="noopener"><svg viewBox='0 0 16 16' aria-hidden='true'><path d='M8 0c4.45 0 8 3.58 8 8a8 8 0 0 1-5.47 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.64-.88 3.64-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.65 7.65 0 0 0-4 0c-1.53-1.04-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.57-2.33-.68-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.46-.55.38A8.01 8.01 0 0 1 0 8c0-4.42 3.58-8 8-8Z'/></svg>GitHub</a>
-      <a class="VPButton big alt" href="tel:+989928123943"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z'/></svg>+98 992 812 3943</a>
-    </div>
-  </div>
-</section>
-<footer class="footer">
-  <div class="container">
-    <div class="crumbs">🧩 › <a href="../en/#home">Home</a> › Reza Bazdar — Godde3s</div>
-    <ol class="footer-notes">
-      <li>All projects are open-source on GitHub and free to use under their licenses.</li>
-      <li>This portfolio is itself agentic-coded — Claude Code + Hermes Agent, zero hand-written boilerplate.</li>
-      <li>Available in English, فارسی, العربية and Español.</li>
-    </ol>
-    <div class="footer-cols">
-      <div>
-        <h4>Explore</h4>
-          <a href="#expertise">Core Expertise</a>
-          <a href="#projects">Featured Projects</a>
-          <a href="#agentic">Agentic Coding</a>
-          <a href="#skills">Skills Matrix</a>
-      </div>
-      <div>
-        <h4>Connect</h4>
-          <a href="https://github.com/Godde3s" target="_blank" rel="noopener">GitHub — @Godde3s</a>
-          <a href="https://t.me/ZENDANBAN_BOT" target="_blank" rel="noopener">Telegram — @ZENDANBAN_BOT</a>
-          <a href="tel:+989928123943">+98 992 812 3943</a>
-      </div>
-      <div>
-        <h4>About</h4>
-          <span>Creative &amp; versatile software engineer</span>
-          <span>Full-stack · AI · PLC · Networks</span>
-          <span>Open to freelance &amp; collaboration</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="made">Designed & built with <b>agentic coding</b> — Claude Code + Hermes Agent · UI inspired by easy-vibe</p>
-      <div class="row">
-        <span class="copyright">Copyright © <span class="yr">2026</span> Reza Bazdar. All rights reserved.</span>
-        <span>fa · en · ar · es</span>
-      </div>
-    </div>
-  </div>
-</footer>
-</body>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Usf — Reza Bazdar</title>
+    <meta name="description" content="Creative full-stack software engineer — projects, agentic coding and networking, in four languages.">
+    <meta name="generator" content="VitePress v2.0.0-alpha.20">
+    
+    <link rel="preload stylesheet" href="/Usf/assets/style.5zSr9m5f.css" as="style">
+    <script type="module" src="/Usf/assets/chunks/metadata.3f51d167.js"></script>
+    <script type="module" src="/Usf/assets/app.DmkYuoOU.js"></script>
+    <link rel="preload" href="/Usf/assets/inter-roman-latin.q5rAVC0E.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/Usf/assets/chunks/theme.CgObvS6C.js">
+    <link rel="modulepreload" href="/Usf/assets/chunks/framework.C8R-a4p3.js">
+    <link rel="modulepreload" href="/Usf/assets/en_index.md.CdIK6N4e.lean.js">
+    <script id="check-dark-mode">(()=>{let e=localStorage.getItem(`vitepress-theme-appearance`)||`auto`,t=window.matchMedia(`(prefers-color-scheme: dark)`).matches;(!e||e===`auto`?t:e===`dark`)&&document.documentElement.classList.add(`dark`)})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle(`mac`,/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <link rel="icon" href="/Usf/favicon.png">
+    <link rel="apple-touch-icon" href="/Usf/favicon.png">
+    <meta name="theme-color" content="#0071e3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://godde3s.github.io/Usf/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Usf — Reza Bazdar">
+    <meta property="og:title" content="Usf — Reza Bazdar">
+    <meta property="og:description" content="Reza Bazdar (Godde3s) — creative full-stack software engineer. Projects, agentic coding with OpenCode, Codex, Claude Code and Hermes, networking, skills.">
+    <meta property="og:image" content="https://godde3s.github.io/Usf/Usf/logo.png">
+    <meta property="og:image:alt" content="Usf — Reza Bazdar">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://godde3s.github.io/Usf/en/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Godde3s">
+    <meta name="twitter:creator" content="@Godde3s">
+    <meta name="twitter:title" content="Usf — Reza Bazdar">
+    <meta name="twitter:description" content="Reza Bazdar (Godde3s) — creative full-stack software engineer. Projects, agentic coding with OpenCode, Codex, Claude Code and Hermes, networking, skills.">
+    <meta name="twitter:image" content="https://godde3s.github.io/Usf/Usf/logo.png">
+    <meta name="twitter:image:alt" content="Usf — Reza Bazdar">
+    <meta name="keywords" content="AI编程,Vibe Coding,Claude Code,Cursor,Trae,AI IDE,零基础学编程,AI辅助开发,产品经理,全栈开发,编程教程,编程工具,Datawhale,Supabase,React,大模型,LLM,人工智能,微信小程序,Android开发,iOS开发,MCP,RAG,LangGraph,Dify,跨平台开发,AI应用开发">
+    <meta name="author" content="Datawhale">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="baiduspider" content="index,follow">
+    <meta name="bingbot" content="index,follow">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <link rel="alternate" hreflang="en" href="https://godde3s.github.io/Usf/en/">
+    <link rel="alternate" hreflang="es" href="https://godde3s.github.io/Usf/es/">
+    <link rel="alternate" hreflang="x-default" href="https://godde3s.github.io/Usf/zh-cn/">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Usf — Reza Bazdar","description":"Reza Bazdar (Godde3s) — creative full-stack software engineer. Projects, agentic coding with OpenCode, Codex, Claude Code and Hermes, networking, skills.","url":"https://godde3s.github.io/Usf","inLanguage":"en_US","potentialAction":{"@type":"SearchAction","target":"https://godde3s.github.io/Usf/search?q={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@type":"Organization","name":"Reza Bazdar (Godde3s)","url":"https://github.com/Godde3s","logo":{"@type":"ImageObject","url":"https://godde3s.github.io/Usf/Usf/logo.png"},"sameAs":["https://github.com/Godde3s/Usf"]},"mainEntity":{"@type":"Course","name":"Usf — Reza Bazdar","description":"Reza Bazdar (Godde3s) — creative full-stack software engineer. Projects, agentic coding with OpenCode, Codex, Claude Code and Hermes, networking, skills.","provider":{"@type":"Organization","name":"Reza Bazdar (Godde3s)","sameAs":"https://github.com/Godde3s/Usf"},"educationalLevel":"Beginner to Advanced","learningResourceType":"Course"}}</script>
+    <script type="application/ld+json" class="breadcrumb-jsonld">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://godde3s.github.io/Usf/en/"}]}</script>
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="Layout" data-v-7aa807ef><!--[--><!--]--><!--[--><span tabindex="-1" data-v-426d5ecb></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-426d5ecb>Skip to content</a><!--]--><!----><header class="VPNav" data-v-7aa807ef data-v-f733e610><div class="VPNavBar home top" data-v-f733e610 data-v-dac69e74><div class="wrapper" data-v-dac69e74><div class="container" data-v-dac69e74><div class="title" data-v-dac69e74><div class="VPNavBarTitle" data-v-dac69e74 data-v-3cb61e0b><a class="title" href="/Usf/en/" data-v-3cb61e0b><!--[--><!--]--><!--[--><img class="VPImage logo" src="/Usf/assets/usf-logo-hd.svg" alt data-v-453cd2d1><!--]--><!----><!--[--><!--]--></a></div></div><div class="content" data-v-dac69e74><div class="content-body" data-v-dac69e74><!--[--><!--]--><div class="VPNavBarSearch search" data-v-dac69e74 data-v-b09c5db8><!----></div><nav aria-label="Main Navigation" class="VPNavMenu VPNavBarMenu menu" data-v-dac69e74 data-v-0474edcd><ul class="list" data-v-0474edcd><!--[--><li class="" data-v-0474edcd><a class="VPLink link VPNavMenuLink VPNavBarMenuLink active" href="/Usf/en/" aria-current="page" data-v-0474edcd data-v-60fe87c8><!--[--><span data-v-60fe87c8>Home</span><!--]--></a></li><li class="" data-v-0474edcd><a class="VPLink link VPNavMenuLink VPNavBarMenuLink" href="/Usf/en/about/profile/" data-v-0474edcd data-v-60fe87c8><!--[--><span data-v-60fe87c8>About</span><!--]--></a></li><li class="" data-v-0474edcd><a class="VPLink link VPNavMenuLink VPNavBarMenuLink" href="/Usf/en/projects/netpilot/" data-v-0474edcd data-v-60fe87c8><!--[--><span data-v-60fe87c8>Projects</span><!--]--></a></li><li class="" data-v-0474edcd><a class="VPLink link VPNavMenuLink VPNavBarMenuLink" href="/Usf/en/agentic/overview/" data-v-0474edcd data-v-60fe87c8><!--[--><span data-v-60fe87c8>Agentic Coding</span><!--]--></a></li><li class="" data-v-0474edcd><a class="VPLink link VPNavMenuLink VPNavBarMenuLink" href="/Usf/en/skills/languages/" data-v-0474edcd data-v-60fe87c8><!--[--><span data-v-60fe87c8>Skills</span><!--]--></a></li><li class="" data-v-0474edcd><a class="VPLink link VPNavMenuLink VPNavBarMenuLink" href="/Usf/en/vibe-stories/story-1.html" data-v-0474edcd data-v-60fe87c8><!--[--><span data-v-60fe87c8>Stories</span><!--]--></a></li><!--]--></ul></nav><div class="VPFlyout VPNavTranslations VPNavBarTranslations translations" data-v-dac69e74 data-v-ef80053b data-v-92ecaa7c><button type="button" class="button" aria-expanded="false" aria-controls="v-1" aria-label="Change language" data-v-92ecaa7c><span class="text" data-v-92ecaa7c><span class="vpi-languages option-icon" aria-hidden="true" data-v-92ecaa7c></span><!----><span class="vpi-chevron-down text-icon" aria-hidden="true" data-v-92ecaa7c></span></span></button><div class="menu" id="v-1" data-v-92ecaa7c><div class="VPMenu" data-v-92ecaa7c data-v-a835e0c5><!----><!--[--><!--[--><p class="title" data-v-ef80053b>English</p><ul class="items" data-v-ef80053b><!--[--><li class="VPMenuLink" data-v-ef80053b data-v-d7165732><a class="VPLink link active" href="/Usf/en/" rel="alternate" lang="en-US" hreflang="en-US" data-allow-mismatch="attribute" aria-current="page" data-v-d7165732><!--[--><span data-v-d7165732></span><!--]--></a></li><li class="VPMenuLink" data-v-ef80053b data-v-d7165732><a class="VPLink link" href="/Usf/es/" rel="alternate" lang="es-ES" hreflang="es-ES" data-allow-mismatch="attribute" data-v-d7165732><!--[--><span data-v-d7165732>Español</span><!--]--></a></li><!--]--></ul><!--]--><!--]--></div></div></div><div class="VPNavAppearance VPNavBarAppearance appearance" data-v-dac69e74 data-v-b1d5eb1e><!----><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-label="Appearance" aria-checked="false" data-v-b1d5eb1e data-v-2e76c223 data-v-127358ab><span class="check" data-v-127358ab><span class="icon" data-v-127358ab><!--[--><span class="vpi-sun sun" aria-hidden="true" data-v-2e76c223></span><span class="vpi-moon moon" aria-hidden="true" data-v-2e76c223></span><!--]--></span></span></button></div><!----><!----><!--[--><!--[--><!--[--><div class="github-stars-wrapper" data-v-854fe952><a class="github-stars-link" href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-v-854fe952><span class="icon" data-v-854fe952><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-v-854fe952><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" data-v-854fe952></path></svg></span><!----></a></div><!----><!----><!--]--><!--]--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="Menu" aria-expanded="false" data-v-dac69e74 data-v-f895b5e0><span class="container" aria-hidden="true" data-v-f895b5e0><span class="top" data-v-f895b5e0></span><span class="middle" data-v-f895b5e0></span><span class="bottom" data-v-f895b5e0></span></span></button></div></div></div></div><div class="divider" data-v-dac69e74><div class="divider-line" data-v-dac69e74></div></div></div><!----></header><!----><!----><div class="VPContent is-home" id="VPContent" data-v-7aa807ef data-v-b934d83e><div class="VPHome" data-v-b934d83e data-v-c6199a69><!--[--><!--]--><div class="VPHero VPHomeHero" data-v-c6199a69 data-v-32cafb29><div class="container" data-v-32cafb29><div class="main" data-v-32cafb29><!--[--><!--[--><!--[--><!--[--><!--[--><button class="vp-home-wordmark" type="button" aria-label="Reading settings"><svg viewBox="0 0 460 220" class="vp-home-wordmark-svg"><defs><linearGradient id="home-hero-ocean" x1="0" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#06b6d4"></stop><stop offset="50%" stop-color="#0ea5e9"></stop><stop offset="100%" stop-color="#3b82f6"></stop></linearGradient></defs><!--[--><path d="M89.04 184.01Q67.84 184.01 56.99 172.27Q46.14 160.53 46.14 140.85L46.14 140.85Q46.14 129.74 49.42 113.84L49.42 113.84L65.07 41.66Q65.57 39.64 67.46 30.56Q69.36 21.47 69.36 10.87L69.36 10.87Q69.36 4.81 66.96 1.78Q64.56 -1.24 60.52 -1.24L60.52 -1.24Q52.95 -1.24 42.86 5.95Q32.76 13.14 21.66 28.03L21.66 28.03Q18.12 32.83 13.83 32.83L13.83 32.83Q10.3 32.83 7.65 29.42Q5 26.01 5 21.72L5 21.72Q5 13.9 12.07 4.06L12.07 4.06Q37.81 -31.28 72.39 -31.28L72.39 -31.28Q87.78 -31.28 96.49 -21.94Q105.2 -12.6 105.2 5.57L105.2 5.57Q105.2 18.44 103.43 29.29Q101.66 40.15 97.37 58.82L97.37 58.82L87.02 105.01Q86.52 107.28 85.26 113.09Q84 118.89 83.24 124.06Q82.48 129.24 82.48 134.29L82.48 134.29Q82.48 142.36 87.02 147.16Q91.57 151.95 99.9 151.95L99.9 151.95Q115.04 151.95 130.56 135.8Q146.08 119.65 159.33 83.68Q172.58 47.72 179.9 -8.31L179.9 -8.31Q181.67 -21.18 185.08 -26.23Q188.48 -31.28 198.33 -31.28L198.33 -31.28Q207.16 -31.28 211.45 -25.98Q215.74 -20.68 215.74 -8.82L215.74 -8.82Q215.74 -2 214.1 9.1Q212.46 20.21 209.18 40.15L209.18 40.15Q202.36 78.76 198.33 111.07L198.33 111.07Q196.31 125.7 196.31 132.77L196.31 132.77Q196.31 143.12 200.98 148.55Q205.64 153.97 213.47 153.97L213.47 153.97Q221.8 153.97 229.75 148.42Q237.7 142.87 248.55 130L248.55 130Q251.58 126.46 255.36 126.46L255.36 126.46Q258.65 126.46 260.54 129.49Q262.43 132.52 262.43 137.82L262.43 137.82Q262.43 147.66 257.64 153.47L257.64 153.47Q244.51 169.37 231.64 176.69Q218.77 184.01 204.64 184.01L204.64 184.01Q183.69 184.01 172.58 173.28Q161.48 162.55 161.48 145.39L161.48 145.39Q161.48 135.8 165.52 108.04L165.52 108.04Q152.9 145.14 133.59 164.57Q114.28 184.01 89.04 184.01L89.04 184.01Z" class="vp-home-wordmark-path"></path><path d="M288.93 189.56Q275.81 189.56 268.87 183.5Q261.93 177.44 261.93 169.87L261.93 169.87Q261.93 163.31 266.72 158.51Q271.52 153.72 280.86 153.72L280.86 153.72Q284.14 153.72 288.55 154.35Q292.97 154.98 295.24 155.23L295.24 155.23Q294.99 148.67 292.34 142.87Q289.69 137.06 285.65 131.64Q281.61 126.21 278.08 122.17L278.08 122.17Q270.26 137.06 262.56 146.91Q254.86 156.75 245.77 165.58L245.77 165.58Q241.23 170.12 236.18 170.12L236.18 170.12Q232.15 170.12 229.62 167.22Q227.1 164.32 227.1 160.03L227.1 160.03Q227.1 154.98 230.63 150.69L230.63 150.69L233.91 146.65Q247.79 129.49 254.86 118.39L254.86 118.39Q259.15 111.07 264.96 98.83Q270.76 86.59 276.31 73.46L276.31 73.46Q281.11 62.36 296.25 62.36L296.25 62.36Q303.32 62.36 306.09 63.62Q308.87 64.88 308.87 67.66L308.87 67.66Q308.87 69.17 307.86 72.45Q306.85 75.73 305.08 79.01L305.08 79.01Q300.54 88.1 300.54 94.41L300.54 94.41Q300.54 98.2 303.19 102.74Q305.84 107.28 311.39 114.1L311.39 114.1Q319.47 124.7 323.63 132.14Q327.8 139.59 327.8 148.42L327.8 148.42Q327.8 150.94 327.29 155.49L327.29 155.49Q339.66 150.69 356.32 130L356.32 130Q359.35 126.46 363.13 126.46L363.13 126.46Q366.41 126.46 368.31 129.49Q370.2 132.52 370.2 137.82L370.2 137.82Q370.2 147.41 365.4 153.47L365.4 153.47Q352.78 169.11 341.3 174.79Q329.82 180.47 312.91 180.98L312.91 180.98Q302.81 189.56 288.93 189.56L288.93 189.56Z" class="vp-home-wordmark-path"></path><path d="M450.46 112.08Q457.52 112.08 457.52 122.68L457.52 122.68Q457.52 142.61 426.23 142.61L426.23 142.61Q420.17 142.61 408.81 140.34L408.81 140.34Q412.09 155.99 414.24 175.05Q416.39 194.1 416.39 206.47L416.39 206.47Q416.39 233.73 407.55 248.11Q398.72 262.5 384.33 262.5L384.33 262.5Q366.16 262.5 358.46 236.75Q350.77 211.01 350.77 159.02L350.77 159.02Q350.77 110.56 361.24 60.72Q371.71 10.87 390.01 -21.81Q408.31 -54.5 430.27 -54.5L430.27 -54.5Q442.13 -54.5 448.82 -43.9Q455.5 -33.3 455.5 -15.38L455.5 -15.38Q455.5 43.93 384.58 113.84L384.58 113.84Q382.06 138.58 382.06 157.25L382.06 157.25Q382.06 183.25 383.83 210.63Q385.59 238.02 389.63 238.02L389.63 238.02Q397.2 238.02 397.2 211.77L397.2 211.77Q397.2 192.08 394.55 173.66Q391.9 155.23 387.36 134.79L387.36 134.79Q387.11 131.51 389.51 126.46Q391.9 121.41 395.44 117.63Q398.97 113.84 401.75 113.84L401.75 113.84Q406.79 113.84 413.86 114.35L413.86 114.35Q416.13 114.6 419.16 114.6L419.16 114.6Q429.26 114.6 441.62 112.83L441.62 112.83Q443.64 112.58 445.91 112.33Q448.19 112.08 450.46 112.08L450.46 112.08ZM424.97 -29.51Q420.42 -29.51 413.74 -14.12Q407.05 1.28 400.49 26.64Q393.92 52.01 389.13 80.28L389.13 80.28Q409.32 57.31 420.17 32.45Q431.02 7.59 431.28 -14.12L431.28 -14.12Q431.28 -29.51 424.97 -29.51L424.97 -29.51Z" class="vp-home-wordmark-path"></path><!--]--></svg></button><!--]--><!--]--><!--]--><!--]--><!--]--><!--[--><h1 class="heading" data-v-32cafb29><span class="name clip" data-v-32cafb29>Usf</span><span class="text" data-v-32cafb29>Creative Software Engineer</span></h1><p class="tagline" data-v-32cafb29>Full-stack web, networking, industrial automation and AI infrastructure — designed, built and shipped end-to-end by one engineer.</p><!--]--><!--[--><!--[--><!--[--><!--[--><!--[--><div class="vp-typed-tagline"><!----></div><!--]--><!--]--><!--]--><!--]--><!--]--><div class="actions" data-v-32cafb29><!--[--><!--]--><!--[--><div class="action" data-v-32cafb29><a class="VPButton no-icon medium brand" href="/Usf/en/projects/netpilot/" data-v-32cafb29 data-v-6356dfe3><!--[-->Explore My Work<!--]--></a></div><div class="action" data-v-32cafb29><a class="VPButton no-icon medium alt" href="https://github.com/Godde3s" target="_blank" rel="noreferrer" data-v-32cafb29 data-v-6356dfe3><!--[-->GitHub<!--]--></a></div><!--]--></div><!--[--><!--]--></div><!----></div></div><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><div class="VPHomeContent vp-doc container" data-v-c6199a69 data-v-24cfbf57><!--[--><div style="position:relative;" data-v-c6199a69><div><div class="apple-container" data-v-3c10325c><nav class="sticky-nav glass" data-v-3c10325c><div class="nav-content" data-v-3c10325c><div class="nav-cluster" data-v-3c10325c><div class="nav-title" aria-label="Usf — Reza Bazdar" data-v-3c10325c><img class="nav-title-logo no-viewer" src="/Usf/assets/usf-logo-hd.svg" alt="Usf — Reza Bazdar" width="64" height="30" decoding="async" draggable="false" data-v-3c10325c></div><div class="nav-links" data-v-3c10325c><button class="active nav-link-item" data-v-3c10325c>Home</button><button class="nav-link-item" data-v-3c10325c>Stories</button><button class="nav-link-item" data-v-3c10325c>About</button><button class="nav-link-item" data-v-3c10325c>Projects</button><button class="nav-link-item" data-v-3c10325c>Agentic Coding</button><button class="nav-link-item" data-v-3c10325c>Skills</button></div><div class="nav-action" data-v-3c10325c><div class="nav-icons" data-v-3c10325c><div class="lang-switch-wrapper" data-v-3c10325c><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language" data-v-3c10325c><span class="text" data-v-3c10325c><span class="vpi-languages option-icon" data-v-3c10325c></span><span class="vpi-chevron-down text-icon" data-v-3c10325c></span></span></button><!----></div><div class="github-stars-wrapper nav-github-stars" data-v-3c10325c data-v-854fe952><a class="github-stars-link" href="https://github.com/datawhalechina/easy-vibe" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-v-854fe952><span class="icon" data-v-854fe952><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" data-v-854fe952><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" data-v-854fe952></path></svg></span><!----></a></div></div><a class="buy-btn" href="/Usf/en/about/profile/" data-v-3c10325c>&gt;_ Hire Me</a></div></div></div><div class="nav-promo" style="opacity:0;transform:translateY(0%);max-height:0px;background-color:rgb(0, 113, 227);color:rgb(255, 255, 255);--top-promo-link-color:rgb(255, 255, 255);pointer-events:none;" data-v-3c10325c><span data-v-3c10325c>Need this kind of engineering? Browse the projects and hire me.</span><a href="/Usf/en/projects/netpilot/" data-v-3c10325c>See the work ›</a></div></nav><div id="home" style="height:0;" data-v-3c10325c></div><section id="vibe-stories" class="section-container" data-v-3c10325c><div class="vibe-stories-container" data-v-3c10325c data-v-255d3a5f><div class="section-header" data-v-255d3a5f><h3 class="section-headline" data-v-255d3a5f>Real projects,<br><span class="highlight">built in public.</span></h3><p class="section-sub" data-v-255d3a5f>Every card leads to a working repository — no mockups, no vaporware.</p></div><div class="laptop-wrapper" data-v-255d3a5f><div class="laptop-container" data-v-255d3a5f><button class="nav-btn prev" aria-label="Previous story" data-v-255d3a5f><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-255d3a5f><path d="m15 18-6-6 6-6" data-v-255d3a5f></path></svg></button><button class="nav-btn next" aria-label="Next story" data-v-255d3a5f><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-255d3a5f><path d="m9 18 6-6-6-6" data-v-255d3a5f></path></svg></button><div class="screen-content" style="--screen-left:10%;--screen-top:1.5%;--screen-width:80%;--screen-height:87.5%;" data-v-255d3a5f><a href="/Usf/en/vibe-stories/story-1" class="screen-link" data-v-255d3a5f><div class="screen-image-wrapper" data-v-255d3a5f><img src="/Usf/assets/story-1.Di0zlWjo.webp" srcset="/Usf/assets/story-1-640.CGcVg5Fl.webp 640w, /Usf/assets/story-1.Di0zlWjo.webp 1280w" sizes="(max-width: 760px) 62vw, 440px" class="screen-image" style="object-position:center center;" alt="Story cover" width="1280" height="959" loading="lazy" decoding="async" fetchpriority="low" data-v-255d3a5f></div></a></div><img src="/Usf/assets/macbook-frame.BgUQZxhy.webp" class="laptop-frame" alt="MacBook Frame" width="1400" height="813" loading="lazy" decoding="async" fetchpriority="low" data-v-255d3a5f></div><div class="story-info" data-v-255d3a5f><div class="story-avatar" data-v-255d3a5f><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-255d3a5f data-v-858ed5b1><!--[--><!--[--><path d="M22 12h-4l-3 9L9 3l-3 9H2" data-v-858ed5b1></path><!--]--><!--]--></svg></div><div class="story-text" data-v-255d3a5f><a href="/Usf/en/vibe-stories/story-1" class="story-title" data-v-255d3a5f>One binary that answers every network question</a><div class="story-author" data-v-255d3a5f>Built with: netpilot · Go</div></div></div><div class="indicators" data-v-255d3a5f><!--[--><button class="active indicator-dot" aria-label="View this story" data-v-255d3a5f></button><button class="indicator-dot" aria-label="View this story" data-v-255d3a5f></button><button class="indicator-dot" aria-label="View this story" data-v-255d3a5f></button><button class="indicator-dot" aria-label="View this story" data-v-255d3a5f></button><!--]--></div></div></div></section><div class="section-band section-band-learning" data-v-3c10325c><section id="pm" class="section-container section-pm" data-v-3c10325c data-v-86986a6d><div class="section-header" data-v-86986a6d><h2 class="section-category" data-v-86986a6d>About · Who I Am</h2><h3 class="section-headline" data-v-86986a6d>Creative by instinct,<br><span class="highlight">engineer by discipline.</span></h3><p class="section-sub" data-v-86986a6d>Reza Bazdar — a full-stack software engineer from Iran who builds end-to-end: web, apps, networks, industrial automation and AI infrastructure.</p></div><div class="feature-grid" data-v-86986a6d><!--[--><a href="/Usf/en/about/profile/" class="feature-card glass" data-v-86986a6d><div class="feature-icon" style="background:linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%);" data-v-86986a6d><svg class="ui-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-86986a6d data-v-858ed5b1><!--[--><!--[--><circle cx="12" cy="12" r="10" data-v-858ed5b1></circle><!--]--><!--[--><circle cx="12" cy="12" r="6" data-v-858ed5b1></circle><!--]--><!--[--><circle cx="12" cy="12" r="2" data-v-858ed5b1></circle><!--]--><!--]--></svg></div><div class="feature-content" data-v-86986a6d><h4 data-v-86986a6d>Profile &amp; Mission</h4><p data-v-86986a6d>A versatile engineer who codes in any language the job demands — and ships.</p></div></a><a href="/Usf/en/about/how-i-work/" class="feature-card glass" data-v-86986a6d><div class="feature-icon" style="background:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);" data-v-86986a6d><svg class="ui-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-86986a6d data-v-858ed5b1><!--[--><!--[--><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" data-v-858ed5b1></path><!--]--><!--]--></svg></div><div class="feature-content" data-v-86986a6d><h4 data-v-86986a6d>The Agentic Method</h4><p data-v-86986a6d>How OpenCode, Codex, Claude Code and my own Hermes agent ship production software.</p></div></a><a href="/Usf/en/about/networking/" class="feature-card glass" data-v-86986a6d><div class="feature-icon" style="background:linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);" data-v-86986a6d><svg class="ui-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-86986a6d data-v-858ed5b1><!--[--><!--[--><circle cx="12" cy="12" r="10" data-v-858ed5b1></circle><!--]--><!--[--><line x1="2" y1="12" x2="22" y2="12" data-v-858ed5b1></line><!--]--><!--[--><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" data-v-858ed5b1></path><!--]--><!--]--></svg></div><div class="feature-content" data-v-86986a6d><h4 data-v-86986a6d>Networks &amp; Freedom</h4><p data-v-86986a6d>Proxies, tunnels and edge infrastructure for an open internet.</p></div></a><!--]--></div></section><section id="junior" class="section-container section-junior" data-v-3c10325c data-v-c0faef14><div class="section-header" data-v-c0faef14><h2 class="section-category" data-v-c0faef14>Projects · Selected Work</h2><h3 class="section-headline" data-v-c0faef14>One person,<br><span class="highlight">shipping like a team.</span></h3><p class="section-sub" data-v-c0faef14>API bridges, model routers, agent stacks and proxy panels — every repo runs.</p></div><div class="comm-grid" data-v-c0faef14><!--[--><a href="/Usf/en/projects/netpilot/" class="comm-card glass" data-v-c0faef14><div class="comm-visual" style="background-color:#E0C3FC;" data-v-c0faef14><img src="/Usf/assets/stage2-1-netpilot.DHHO7byv.webp" alt="Network toolkit concept illustration" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-c0faef14></div><div class="comm-text" data-v-c0faef14><h4 class="comm-title" data-v-c0faef14>NetPilot</h4><p class="comm-desc" data-v-c0faef14>A pure-Go network toolkit — port scanner, TCP ping and HTTP health checks, cross-compiled into a single static binary.</p><span class="comm-note" data-v-c0faef14>Read the build notes ›</span></div></a><a href="/Usf/en/projects/omnirouter/" class="comm-card glass" data-v-c0faef14><div class="comm-visual" style="background-color:#D8C4F8;" data-v-c0faef14><img src="/Usf/assets/stage2-2-omnirouter.B42DWfxQ.webp" alt="Model router concept illustration" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-c0faef14></div><div class="comm-text" data-v-c0faef14><h4 class="comm-title" data-v-c0faef14>OmniRouter</h4><p class="comm-desc" data-v-c0faef14>GLM, Qwen, DeepSeek and custom APIs behind one OpenAI-compatible router with load balancing and automatic failover.</p><span class="comm-note" data-v-c0faef14>Read the build notes ›</span></div></a><a href="/Usf/en/projects/glm-free-api/" class="comm-card glass" data-v-c0faef14><div class="comm-visual" style="background-color:#C7DDFB;" data-v-c0faef14><img src="/Usf/assets/stage2-3-glmfreeapi.Cybphed6.webp" alt="API bridge concept illustration" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-c0faef14></div><div class="comm-text" data-v-c0faef14><h4 class="comm-title" data-v-c0faef14>GLM Free API</h4><p class="comm-desc" data-v-c0faef14>A complete OpenAI- and Anthropic-compatible API for GLM in a single Go file — account pool, streaming responses, one-command deploy.</p><span class="comm-note" data-v-c0faef14>Read the build notes ›</span></div></a><a href="/Usf/en/projects/ghost-brain/" class="comm-card glass" data-v-c0faef14><div class="comm-visual" style="background-color:#8EC5FC;" data-v-c0faef14><img src="/Usf/assets/stage2-4-ghostbrain.CQexe9xm.webp" alt="Ghost hologram API concept illustration" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-c0faef14></div><div class="comm-text" data-v-c0faef14><h4 class="comm-title" data-v-c0faef14>GhostBrain</h4><p class="comm-desc" data-v-c0faef14>Turn a free Gemini web account into a real OpenAI + Anthropic-compatible API — secure sessions, multi-account pools, SSE streaming.</p><span class="comm-note" data-v-c0faef14>Read the build notes ›</span></div></a><a href="/Usf/en/projects/hermes-stack/" class="comm-card glass" data-v-c0faef14><div class="comm-visual" style="background-color:#96E6A1;" data-v-c0faef14><img src="/Usf/assets/stage2-5-hermesstack.Dj52vV0E.webp" alt="Agent cloud stack concept illustration" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-c0faef14></div><div class="comm-text" data-v-c0faef14><h4 class="comm-title" data-v-c0faef14>Hermes Stack</h4><p class="comm-desc" data-v-c0faef14>Hermes Agent + 9Router + OmniRouter packed into one free Hugging Face Space — deployable in minutes, driven from one console.</p><span class="comm-note" data-v-c0faef14>Read the build notes ›</span></div></a><a href="/Usf/en/projects/usf-panel/" class="comm-card glass" data-v-c0faef14><div class="comm-visual" style="background-color:#A7F3D0;" data-v-c0faef14><img src="/Usf/assets/stage2-6-usfpanel.BCmkFF5k.webp" alt="Proxy panel concept illustration" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-c0faef14></div><div class="comm-text" data-v-c0faef14><h4 class="comm-title" data-v-c0faef14>Usf Panel</h4><p class="comm-desc" data-v-c0faef14>Premium VLESS tunnel and subscription manager — multi-user, Clash / v2ray / sing-box sync, one-command deploy anywhere.</p><span class="comm-note" data-v-c0faef14>Read the build notes ›</span></div></a><!--]--></div></section></div><section id="senior" class="section-container section-senior" data-v-3c10325c data-v-96a935a8><div class="section-header" data-v-96a935a8><h2 class="section-category" data-v-96a935a8>Agentic Coding · My Superpower</h2><h3 class="section-headline" data-v-96a935a8>I don’t just use AI.<br><span class="highlight">I direct agent teams.</span></h3><p class="section-sub" data-v-96a935a8>My daily drivers are OpenCode, Codex and Claude Code — orchestrated by my own Hermes stack.</p></div><div class="scroll-container" data-v-96a935a8><div class="scroll-track" data-v-96a935a8><!--[--><a href="/Usf/en/agentic/opencode/" class="prod-card glass" data-v-96a935a8><div class="prod-tag" data-v-96a935a8>Terminal</div><h4 data-v-96a935a8>OpenCode</h4><p data-v-96a935a8>My go-to terminal agent — model-agnostic pair programming that routes through my own omnirouter.</p><div class="prod-visual" data-v-96a935a8><img src="/Usf/assets/stage3-1-opencode.CHRH64_n.webp" alt="Terminal coding agent concept illustration" class="" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-96a935a8></div></a><a href="/Usf/en/agentic/codex/" class="prod-card glass" data-v-96a935a8><div class="prod-tag" data-v-96a935a8>Parallel</div><h4 data-v-96a935a8>Codex</h4><p data-v-96a935a8>Parallel execution across sandboxes — perfect when a change fans out over many files.</p><div class="prod-visual" data-v-96a935a8><img src="/Usf/assets/stage3-2-codex.BQPGv34y.webp" alt="Parallel agent execution concept illustration" class="" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-96a935a8></div></a><a href="/Usf/en/agentic/claude-code/" class="prod-card glass" data-v-96a935a8><div class="prod-tag" data-v-96a935a8>Agentic</div><h4 data-v-96a935a8>Claude Code</h4><p data-v-96a935a8>Multi-step planning and codebase-wide edits with surgical precision. This site is one of its builds.</p><div class="prod-visual" data-v-96a935a8><img src="/Usf/assets/stage3-3-claudecode.BMGOpSjG.webp" alt="Agent conductor concept illustration" class="" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-96a935a8></div></a><a href="/Usf/en/agentic/hermes/" class="prod-card glass" data-v-96a935a8><div class="prod-tag" data-v-96a935a8>Mine</div><h4 data-v-96a935a8>Hermes Agent</h4><p data-v-96a935a8>My own infrastructure — it routes models and automations so every agent gets the right brain at the right time.</p><div class="prod-visual" data-v-96a935a8><img src="/Usf/assets/stage3-4-hermes.BG7t21gp.webp" alt="Messenger AI brain concept illustration" class="" width="1672" height="941" loading="lazy" decoding="async" fetchpriority="low" data-v-96a935a8></div></a><!--]--></div></div></section><section id="appendix" class="section-container section-appendix" data-v-3c10325c data-v-b145219e><div class="section-header" data-v-b145219e><h2 class="section-category" data-v-b145219e>Skills · The Toolbox</h2><h3 class="section-headline" data-v-b145219e>Deep in the core,<br><span class="highlight">wide at the edges.</span></h3><p class="section-sub" data-v-b145219e>Twelve pages of honest, production-tested skills — from SQL to SCADA.</p></div><div class="appendix-scroll-wrapper" data-v-b145219e><div class="appendix-track" data-v-b145219e><!--[--><a href="/Usf/en/skills/languages/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><polyline points="16 18 22 12 16 6" data-v-858ed5b1></polyline><!--]--><!--[--><polyline points="8 6 2 12 8 18" data-v-858ed5b1></polyline><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Languages</span></a><a href="/Usf/en/skills/web/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><rect x="3" y="3" width="18" height="18" rx="2" data-v-858ed5b1></rect><!--]--><!--[--><line x1="3" y1="9" x2="21" y2="9" data-v-858ed5b1></line><!--]--><!--[--><line x1="9" y1="21" x2="9" y2="9" data-v-858ed5b1></line><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Web Frontend</span></a><a href="/Usf/en/skills/backend/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><rect x="2" y="2" width="20" height="8" rx="2" data-v-858ed5b1></rect><!--]--><!--[--><rect x="2" y="14" width="20" height="8" rx="2" data-v-858ed5b1></rect><!--]--><!--[--><line x1="6" y1="6" x2="6.01" y2="6" data-v-858ed5b1></line><!--]--><!--[--><line x1="6" y1="18" x2="6.01" y2="18" data-v-858ed5b1></line><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Backend &amp; APIs</span></a><a href="/Usf/en/skills/networking/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><rect x="16" y="16" width="6" height="6" rx="1" data-v-858ed5b1></rect><!--]--><!--[--><rect x="2" y="16" width="6" height="6" rx="1" data-v-858ed5b1></rect><!--]--><!--[--><rect x="9" y="2" width="6" height="6" rx="1" data-v-858ed5b1></rect><!--]--><!--[--><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" data-v-858ed5b1></path><!--]--><!--[--><line x1="12" y1="12" x2="12" y2="8" data-v-858ed5b1></line><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Networking</span></a><a href="/Usf/en/skills/security/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" data-v-858ed5b1></path><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Security</span></a><a href="/Usf/en/skills/ai-llm/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><rect x="4" y="4" width="16" height="16" rx="2" data-v-858ed5b1></rect><!--]--><!--[--><rect x="9" y="9" width="6" height="6" rx="0" data-v-858ed5b1></rect><!--]--><!--[--><line x1="9" y1="1" x2="9" y2="4" data-v-858ed5b1></line><!--]--><!--[--><line x1="15" y1="1" x2="15" y2="4" data-v-858ed5b1></line><!--]--><!--[--><line x1="9" y1="20" x2="9" y2="23" data-v-858ed5b1></line><!--]--><!--[--><line x1="15" y1="20" x2="15" y2="23" data-v-858ed5b1></line><!--]--><!--[--><line x1="20" y1="9" x2="23" y2="9" data-v-858ed5b1></line><!--]--><!--[--><line x1="20" y1="14" x2="23" y2="14" data-v-858ed5b1></line><!--]--><!--[--><line x1="1" y1="9" x2="4" y2="9" data-v-858ed5b1></line><!--]--><!--[--><line x1="1" y1="14" x2="4" y2="14" data-v-858ed5b1></line><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>AI &amp; LLM Infra</span></a><a href="/Usf/en/skills/devops/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" data-v-858ed5b1></path><!--]--><!--[--><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" data-v-858ed5b1></path><!--]--><!--[--><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" data-v-858ed5b1></path><!--]--><!--[--><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" data-v-858ed5b1></path><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>DevOps &amp; Deploy</span></a><a href="/Usf/en/skills/plc/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" data-v-858ed5b1></path><!--]--><!--[--><circle cx="12" cy="12" r="3" data-v-858ed5b1></circle><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Industrial PLC</span></a><a href="/Usf/en/skills/databases/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><ellipse cx="12" cy="5" rx="9" ry="3" data-v-858ed5b1></ellipse><!--]--><!--[--><path d="M3 5v14a9 3 0 0 0 18 0V5" data-v-858ed5b1></path><!--]--><!--[--><path d="M3 12a9 3 0 0 0 18 0" data-v-858ed5b1></path><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Databases</span></a><a href="/Usf/en/skills/git/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><line x1="6" y1="3" x2="6" y2="15" data-v-858ed5b1></line><!--]--><!--[--><circle cx="18" cy="6" r="3" data-v-858ed5b1></circle><!--]--><!--[--><circle cx="6" cy="18" r="3" data-v-858ed5b1></circle><!--]--><!--[--><path d="M18 9a9 9 0 0 1-9 9" data-v-858ed5b1></path><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Git &amp; Workflow</span></a><a href="/Usf/en/skills/terminal/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><polyline points="4 17 10 11 4 5" data-v-858ed5b1></polyline><!--]--><!--[--><line x1="12" y1="19" x2="20" y2="19" data-v-858ed5b1></line><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Terminal &amp; Linux</span></a><a href="/Usf/en/skills/architecture/" class="appendix-card" data-v-b145219e><span class="appendix-emoji" data-v-b145219e><svg class="ui-icon" width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-v-b145219e data-v-858ed5b1><!--[--><!--[--><path d="M12 2 2 7l10 5 10-5-10-5z" data-v-858ed5b1></path><!--]--><!--[--><path d="M2 17l10 5 10-5" data-v-858ed5b1></path><!--]--><!--[--><path d="M2 12l10 5 10-5" data-v-858ed5b1></path><!--]--><!--]--></svg></span><span class="appendix-title" data-v-b145219e>Architecture</span></a><!--]--></div></div><!----></section><!--[--><div class="footer-callout" data-v-2cb6da2a><h2 data-v-2cb6da2a>Your idea,<br>live right now.</h2><p data-v-2cb6da2a>From spark to production — why not start today.</p><a class="buy-btn large" href="/Usf/en/stage-1/learning-map/" data-v-2cb6da2a>&gt;_ Hire Me</a></div><div class="apple-site-footer" data-v-2cb6da2a><div class="apple-site-footer-inner" data-v-2cb6da2a><div class="apple-footer-breadcrumb" data-v-2cb6da2a><span data-v-2cb6da2a>⌘</span><span data-v-2cb6da2a>›</span><span data-v-2cb6da2a>Easy-Vibe</span><span data-v-2cb6da2a>›</span><span data-v-2cb6da2a>Learning Navigation</span></div><div class="apple-footer-notes" data-v-2cb6da2a><!--[--><p data-v-2cb6da2a>1. Learning paths and chapters are continuously updated.</p><p data-v-2cb6da2a>2. Screenshots and demo projects are for educational illustration.</p><p data-v-2cb6da2a>3. Some chapter links may change as the course evolves.</p><p data-v-2cb6da2a>4. The page is optimized for modern desktop browsers and responsive layouts.</p><!--]--></div><div class="apple-footer-grid" data-v-2cb6da2a><!--[--><div class="apple-footer-column" data-v-2cb6da2a><h4 data-v-2cb6da2a>Explore</h4><!--[--><a href="/Usf/en/stage-1/learning-map/" data-v-2cb6da2a>Foundations</a><a href="/Usf/en/stage-2/" data-v-2cb6da2a>Junior/Mid Dev</a><a href="/Usf/en/stage-3/" data-v-2cb6da2a>Senior Dev</a><a href="/Usf/en/appendix/" data-v-2cb6da2a>Appendix</a><a href="/Usf/en/stage-1/learning-map/" data-v-2cb6da2a>Learning Map</a><a href="/Usf/en/stage-1/learning-map/" data-v-2cb6da2a>Course Outline</a><!--]--></div><div class="apple-footer-column" data-v-2cb6da2a><h4 data-v-2cb6da2a>Support</h4><!--[--><a href="#" data-v-2cb6da2a>FAQ</a><a href="#" data-v-2cb6da2a>Learning Tips</a><a href="#" data-v-2cb6da2a>Errata</a><a href="#" data-v-2cb6da2a>Release Notes</a><!--]--></div><div class="apple-footer-column" data-v-2cb6da2a><h4 data-v-2cb6da2a>Resources</h4><!--[--><a href="https://github.com/datawhalechina/easy-vibe" data-v-2cb6da2a>GitHub Repository</a><a href="#" data-v-2cb6da2a>License</a><a href="#" data-v-2cb6da2a>Report Issue</a><a href="#" data-v-2cb6da2a>Contribution Guide</a><!--]--></div><div class="apple-footer-column" data-v-2cb6da2a><h4 data-v-2cb6da2a>Community</h4><!--[--><a href="#" data-v-2cb6da2a>Community</a><a href="#" data-v-2cb6da2a>Discussions</a><a href="#" data-v-2cb6da2a>Feedback</a><!--]--></div><div class="apple-footer-column" data-v-2cb6da2a><h4 data-v-2cb6da2a>About Easy-Vibe</h4><!--[--><a href="/Usf/en/stage-1/learning-map/" data-v-2cb6da2a>Overview</a><a href="https://github.com/datawhalechina/easy-vibe/releases" data-v-2cb6da2a>Changelog</a><a href="#" data-v-2cb6da2a>Contact</a><!--]--></div><!--]--></div><div class="apple-footer-more" data-v-2cb6da2a>More ways to learn: visit <a href="https://github.com/datawhalechina/easy-vibe" data-v-2cb6da2a>GitHub Repository</a>  for updates and community discussions.</div><div class="apple-footer-bottom" data-v-2cb6da2a><p data-v-2cb6da2a>Copyright © 2026 Easy-Vibe. All rights reserved.</p><div class="apple-footer-policy" data-v-2cb6da2a><!--[--><a href="#" data-v-2cb6da2a>Privacy Policy</a><a href="#" data-v-2cb6da2a>Terms of Use</a><a href="#" data-v-2cb6da2a>Sitemap</a><!--]--></div></div></div></div><!--]--></div></div></div><!--]--></div></div></div><footer class="VPFooter" data-v-7aa807ef data-v-0fe63196><div class="container" data-v-0fe63196><!----><p class="copyright" data-v-0fe63196>© 2026 Reza Bazdar (Godde3s) — designed and built with VitePress, agentic coding and a lot of coffee.</p></div></footer><!--[--><!--]--></div><!----><!----><!--]--></div>
+    
+    
+  </body>
 </html>
