@@ -1,37 +1,24 @@
 ---
-title: "TaskFlow API: seguridad comprobable"
-description: "Construir un backend donde cada afirmación de seguridad tiene una prueba — la historia detrás de la rotación JWT, RBAC y rate limiting de TaskFlow API."
+title: "TextSense: ML Que Se Despliega Como un Servicio Real"
+description: "Por qué la mayoría de repos de NLP son notebooks — y cómo TextSense envuelve un transformer en el andamiaje operativo que un servicio real necesita."
 ---
 
-# TaskFlow API: seguridad comprobable
+# TextSense: ML Que Se Despliega Como un Servicio Real
 
-Todos los portafolios backend tienen "autenticación JWT" en el README. Muy pocos pueden mostrarte la prueba que reutiliza un refresh token rotado y afirma que **toda la familia de tokens muere**. Esa diferencia — entre mencionar seguridad y demostrarla — es por qué construí [TaskFlow API](/es/projects/taskflow-api/).
+La mayoría de los repos de "NLP API" son un notebook detrás de un Flask `if __name__ == "__main__"`. Mueren en cuanto alguien hace una pregunta de producción: ¿dónde están las métricas? ¿qué pasa si el modelo no carga? ¿cómo escalas? **[TextSense](https://github.com/Godde3s/textsense)** es mi respuesta — un modelo de ML envuelto en el andamiaje operativo que un servicio real necesita.
 
-## Empieza por el modelo de amenazas
+## La apuesta de ingeniería
 
-Escribí el modelo de amenazas antes de la primera ruta: credenciales robadas, tokens reutilizados, ráfagas de fuerza bruta, vecinos curiosos leyendo tareas ajenas y — el clásico — una página 500 filtrando un stack trace. Cada amenaza se mapea a un control específico y probable:
+Análisis de sentimiento e intención sobre HTTP, con backend transformer (DistilBERT SST-2). Eso es lo básico. La apuesta estaba en todo lo que rodea al modelo:
 
-- **¿Refresh token robado?** Rotación con detección de reuso familiar. Una repetición revoca todo lo que el atacante tiene.
-- **¿Fuerza bruta?** Un limitador de ventana deslizante responde el sexto intento con `429` y `Retry-After`.
-- **¿Vecino entrometido?** Las verificaciones de propiedad viven en un solo lugar — `_owned_task`.
-- **¿Fugas de información?** Los handlers devuelven 500 genéricos; los detalles van a logs estructurados con request id.
+- **Degradación elegante** — un patrón `ModelProvider` prueba `transformers` primero; si los pesos no están disponibles, un motor léxico determinista responde con el *mismo contrato de API*. El servicio nunca falla en seco porque un modelo no se descargó.
+- **Disciplina de latencia** — inferencia de calentamiento al arrancar, un endpoint batch con micro-batching interno, y caché para que las entradas repetidas no se recalculen.
+- **Observabilidad desde el día uno** — `/metrics` en formato Prometheus con contadores de peticiones, histogramas de latencia, aciertos de caché y el backend de modelo activo como etiqueta.
 
-## La prueba que vende el diseño
+## Respuestas honestas
 
-```python
-async def test_refresh_rotation_and_reuse_detection(client, user_tokens):
-    old = user_tokens["refresh_token"]
-    r1 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
-    assert r1.status_code == 200                      # rotado
-    r2 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
-    assert r2.status_code == 401                      # reuso rechazado
-    new = r1.json()["refresh_token"]
-    r3 = await client.post("/api/v1/auth/refresh", json={"refresh_token": new})
-    assert r3.status_code == 401                      # familia revocada
-```
+Cada respuesta lleva el id del modelo que la produjo — `distilbert-sst2` o `lexicon-v1` — porque un score sin procedencia es una suposición que finge ser dato. Autenticación opcional por API-key, límites de tamaño de payload y sanitización de entrada completan la superficie.
 
-Trece pruebas, cero contenedores, pocos segundos. CI las corre en cada push: la historia de seguridad se mantiene cierta por construcción, no por documentación.
+## Lo que demuestra
 
-## Lo que los años de paneles me enseñaron
-
-Publicar infraestructura para redes hostiles me enseñó que los paneles de administración y los flujos de auth son los objetivos más jugosos de cualquier sistema. TaskFlow es donde esa cicatriz se volvió código: las decisiones de endurecimiento están documentadas en `SECURITY.md` — incluidos los trade-offs que decidí conservar, porque fingir que no existen es la vulnerabilidad real.
+Los 15+ tests de pytest corren offline en menos de cinco segundos contra el backend léxico — sin GPU, sin gigas de descargas, CI en verde en cada push. TextSense es el raro repo de ML escrito desde la silla de un ingeniero de backend: la elección del modelo importa menos que el contrato, las métricas y la historia de fallos. Esa es la mentalidad que aporto a cualquier equipo cercano a la IA — el modelo es un componente, el servicio es el producto.

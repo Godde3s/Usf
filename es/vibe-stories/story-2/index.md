@@ -1,20 +1,22 @@
 ---
-title: "OmniRouter: domando el caos de modelos"
-description: "Por qué construí OmniRouter — la historia de convertir la rotación de modelos en un archivo de config, con balanceo y failover en un binario Go."
+title: "VeilChat: Un Mensajero Sin Servidores Que Vulnerar"
+description: "La historia de construir VeilChat — un mensajero P2P serverless con cifrado de extremo a extremo, conexiones TCP directas y cero metadatos."
 ---
 
-# OmniRouter: domando el caos de modelos
+# VeilChat: Un Mensajero Sin Servidores Que Vulnerar
 
-El ecosistema de IA avanza a velocidad de scroll. El modelo que impulsó mi semana queda obsoleto el viernes, los precios giran, los tiers gratuitos aparecen y desaparecen. Mis apps se rompían por razones que no tenían nada que ver con mi código — así que convertí ese caos en problema de otro. Ese otro es **[OmniRouter](https://github.com/Godde3s/omnirouter)**.
+Todos los mensajeros convencionales dependen en silencio de una infraestructura que sabe *quién* habla con *quién*, incluso cuando no puede leer el contenido. Los metadatos son el modelo de negocio. Quise saber hasta dónde podía empujar en la dirección contraria — así nació **[VeilChat](https://github.com/Godde3s/veilchat)**: dos pares, una conexión TCP directa y un canal cifrado que nunca toca a un tercero.
 
-## La idea clave
+## La restricción de diseño
 
-El formato chat-completions de OpenAI ganó. Es la interfaz que todo cliente ya habla. OmniRouter presenta exactamente esa interfaz a tu app, y habla cualquier dialecto que cada upstream necesite del otro lado — GLM, Qwen, DeepSeek, endpoints propios. Tu código **nunca** cambia; el archivo de config cambia semanalmente.
+Sin cuentas. Sin servidores. Sin números de teléfono. Sin metadatos. Esa restricción lo decidió todo. No hay flujo de registro porque no hay nada en qué registrarse; no hay relay de mensajes porque no existe una empresa de relays. Dos pares se descubren — por LAN o marcado directo — ejecutan un intercambio de claves con autenticación mutua, y desde ese momento cada byte en el cable es una trama AEAD cifrada.
 
 ## Las partes difíciles
 
-- **Honestidad del streaming** — retransmitir SSE token por token sin sorpresas de buffering exigió plomería cuidadosa.
-- **Detección de fallos** — distinguir "el modelo va lento" de "el modelo se está muriendo" necesita ventanas de salud móviles, no sondeos de un tiro.
-- **Rotación justa** — round-robin ponderado con cuotas, para gastar la capacidad barata antes que los tokens premium.
+- **Intercambio de claves bien hecho** — handshake X25519 con autenticación mutua, claves de sesión derivadas con HKDF y verificación de transcript, para que ni un escuchador pasivo ni un impostor activo aprendan nada.
+- **El protocolo de cable** — una cabecera de nonce de 24 bytes más tramas ChaCha20-Poly1305: protección contra replay e integridad sin un solo byte de metadatos en claro.
+- **Entrega NAT-friendly** — descubrimiento por LAN para el caso común, marcado directo para todo lo demás, con el handshake reintentado hasta que ambos lados confirman.
 
-OmniRouter junto a los [puentes free-api](/es/projects/glm-free-api/) me da algo absurdo en papel y esencial en la práctica: un stack de IA multi-modelo con **costo mensual cero** y un archivo de config que manda sobre todos.
+## Lo que demuestra
+
+VeilChat son aproximadamente 1.000 líneas de Python legible y auditable — CLI y librería importable. Construí desde cero las partes difíciles de un mensajero: gestión de claves, diseño del handshake, protocolo de cable, entrega cifrada. Es la diferencia entre *usar* librerías de criptografía y *diseñar con* ellas, y es el proyecto al que recurro cuando alguien pregunta si entiendo la seguridad como ingeniería y no como una lista de verificación.

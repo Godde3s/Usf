@@ -39,9 +39,9 @@ const storyLink = (id) => `/${storyLocale.value}/vibe-stories/story-${id}`
 const tStories = computed(() => [
   {
     id: 1,
-    title: t.value?.stories?.s1?.title || 'One binary that answers every network question',
-    author: t.value?.stories?.s1?.author || 'netpilot · Go',
-    avatar: 'activity',
+    title: t.value?.stories?.s1?.title || 'A backend where every security claim has a test',
+    author: t.value?.stories?.s1?.author || 'taskflow-api · Python',
+    avatar: 'shield',
     image: story1Cover,
     imageSrcset: `${story1CoverSmall} 640w, ${story1Cover} 1280w`,
     imageHeight: 959,
@@ -52,12 +52,12 @@ const tStories = computed(() => [
   },
   {
     id: 2,
-    title: t.value?.stories?.s2?.title || 'One router in front of every AI model',
-    author: t.value?.stories?.s2?.author || 'omnirouter · Go',
+    title: t.value?.stories?.s2?.title || 'A messenger with no server to breach',
+    author: t.value?.stories?.s2?.author || 'veilchat · Python',
     avatar: 'network',
     image: story2Cover,
     imageSrcset: `${story2CoverSmall} 640w, ${story2Cover} 1280w`,
-    imageHeight: 700,
+    imageHeight: 959,
     imageStyle: {
       objectPosition: 'center center'
     },
@@ -65,25 +65,25 @@ const tStories = computed(() => [
   },
   {
     id: 3,
-    title: t.value?.stories?.s3?.title || 'A VLESS panel that survives real censorship',
-    author: t.value?.stories?.s3?.author || 'Usf Panel · Python',
-    avatar: 'shield',
+    title: t.value?.stories?.s3?.title || 'NLP that ships like a real service',
+    author: t.value?.stories?.s3?.author || 'textsense · Python',
+    avatar: 'activity',
     image: story3Cover,
     imageSrcset: `${story3CoverSmall} 640w, ${story3Cover} 1280w`,
-    imageHeight: 768,
+    imageHeight: 959,
     imageStyle: {
-      objectPosition: '34% center'
+      objectPosition: 'center center'
     },
     link: storyLink(3)
   },
   {
     id: 4,
-    title: t.value?.stories?.s4?.title || 'This portfolio — four languages, one VitePress',
-    author: t.value?.stories?.s4?.author || 'Usf · Vue',
+    title: t.value?.stories?.s4?.title || 'Realtime chat you self-host in one command',
+    author: t.value?.stories?.s4?.author || 'goftego · Node.js',
     avatar: 'layout',
     image: story4Cover,
     imageSrcset: `${story4CoverSmall} 640w, ${story4Cover} 1280w`,
-    imageHeight: 992,
+    imageHeight: 959,
     imageStyle: {
       objectPosition: 'center center'
     },

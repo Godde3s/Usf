@@ -1,37 +1,24 @@
 ---
-title: "TaskFlow API: Security You Can Test"
-description: "Building a backend where every security claim has a test — the story behind TaskFlow API's refresh rotation, RBAC and rate limiting."
+title: "TextSense: ML That Ships Like a Real Service"
+description: "Why most NLP repos are notebooks — and how TextSense wraps a transformer in the operational scaffolding a real service needs."
 ---
 
-# TaskFlow API: Security You Can Test
+# TextSense: ML That Ships Like a Real Service
 
-Every backend portfolio has "JWT authentication" in the README. Very few can show you the test that replays a rotated refresh token and asserts the **whole token family dies**. That difference — between mentioning security and proving it — is why I built [TaskFlow API](/en/projects/taskflow-api/).
+Most "NLP API" repos you find are a notebook behind a Flask `if __name__ == "__main__"`. They die the moment someone asks a production question: what are the metrics? what happens when the model can't load? how do you scale it? **[TextSense](https://github.com/Godde3s/textsense)** is my answer — an ML model wrapped in the operational scaffolding a real service needs.
 
-## Start from the threat model
+## The engineering bet
 
-I wrote the threat model before the first route: stolen credentials, replayed tokens, brute-force login bursts, curious neighbors reading each other's tasks, and — the classic — a 500 page leaking a stack trace. Each threat maps to a specific, testable control in the codebase:
+Sentiment and intent analysis over HTTP, with a transformer backend (DistilBERT SST-2). That part is table stakes. The bet was in everything around the model:
 
-- **Stolen refresh token?** Rotation with family reuse detection. One replay revokes everything the attacker holds.
-- **Brute force?** A sliding-window limiter answers the sixth burst attempt with `429` and `Retry-After`.
-- **Neighbor snooping?** Ownership checks sit in one place — `_owned_task` — so a forgotten guard is a bug you fix once, not a habit you audit forever.
-- **Info leaks?** Exception handlers return generic 500s; the details go to structured JSON logs with a request id you can grep.
+- **Graceful degradation** — a `ModelProvider` pattern tries `transformers` first; if weights are unavailable, a deterministic lexicon engine answers with the *identical API contract*. The service never hard-fails because a model didn't download.
+- **Latency discipline** — warm-up inference at startup, a batch endpoint with internal micro-batching, and caching so repeated inputs don't recompute.
+- **Observability from day one** — Prometheus-format `/metrics` with request counters, latency histograms, cache hits and the active model backend as a label.
 
-## The test that sells the design
+## Honest responses
 
-```python
-async def test_refresh_rotation_and_reuse_detection(client, user_tokens):
-    old = user_tokens["refresh_token"]
-    r1 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
-    assert r1.status_code == 200                      # rotated
-    r2 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
-    assert r2.status_code == 401                      # replay refused
-    new = r1.json()["refresh_token"]
-    r3 = await client.post("/api/v1/auth/refresh", json={"refresh_token": new})
-    assert r3.status_code == 401                      # family revoked
-```
+Every response carries the model id that produced it — `distilbert-sst2` or `lexicon-v1` — because a score without provenance is a guess pretending to be data. Optional API-key auth, payload size caps and input sanitization round out the surface.
 
-Thirteen tests, zero containers, a few seconds of wall time. CI runs them on every push, which means the security story stays true by construction instead of by documentation.
+## What it proves
 
-## What the panel years taught me
-
-Shipping infrastructure for hostile networks taught me that admin panels and auth flows are the juiciest targets in any system. TaskFlow is where that scar tissue turned into code: hardening decisions are documented in `SECURITY.md` — including the trade-offs I *chose* to keep, because pretending a trade-off doesn't exist is the real vulnerability.
+The 15+ pytest cases run offline in under five seconds against the lexicon backend — no GPU, no gigabytes of downloads, CI green on every push. TextSense is the rare ML repo written from the backend engineer's chair: model choices matter less than the contract, the metrics and the failure story. That is the mindset I bring to any AI-adjacent team — the model is a component, the service is the product.
