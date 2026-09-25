@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import markdownItKatex from 'markdown-it-katex'
 import { createSeo } from './seo.mjs'
 import { createBuildHooks } from './build-hooks.mjs'
 import { buildSidebar, navFor, docFooterFor, notFoundFor } from './sidebars/index.mjs'
@@ -99,7 +98,7 @@ export default defineConfig({
   srcExclude: ['plans/**'],
   markdown: {
     config: (md) => {
-      md.use(markdownItKatex)
+      md
     }
   },
   base,
