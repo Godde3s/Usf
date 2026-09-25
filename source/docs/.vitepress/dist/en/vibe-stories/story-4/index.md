@@ -1,21 +1,22 @@
 ---
-title: "This Portfolio: One Design, Two Languages"
-description: "The meta-story: how this very site was specified, built on a custom VitePress design system, translated into two languages and shipped by an agent team."
+title: "Goftego: Realtime Chat, One Command Away"
+description: "The story of building Goftego — a self-hosted chat platform with realtime channels, presence and typing indicators in one SQLite file."
 ---
 
-# This Portfolio: One Design, Two Languages
+# Goftego: Realtime Chat, One Command Away
 
-You are looking at the most self-referential project in my portfolio: **this website**. It is a custom VitePress build — an Apple-style home, glass navigation, a typing tagline and a story carousel — implemented end to end with every text and image being my own content, in **two languages**: English and Spanish.
+Hosted chat SaaS locks your community behind someone else's storage, pricing and jurisdiction. For small teams that just want a room, the trade is absurd: your conversations, their database. **Goftego** ([GitHub](https://github.com/Godde3s/goftego)) — *goftego* means "conversation" — is my answer: a modern chat platform you host yourself, in one command.
 
-## Why this design?
+## The one-file bet
 
-Because it is honest about what good engineering is: find something excellent, understand it completely, then adapt it with discipline. The Apple-style home, the glass chrome, the animated welcome, the MacBook-framed story carousel — all of it was studied, implemented and re-anchored to a current engine version, then filled with a life it was never written for.
+The whole state of a deployment lives in **one SQLite file** with WAL mode. No database server to babysit, no external services to trust. Backup is `cp`; migration is moving the file. That single constraint shaped everything else: it forced efficient queries, careful transaction design, and a deploy story that is literally `docker compose up`.
 
-## What made it non-trivial
+## Realtime is a product feature, not a checkbox
 
-- **A real i18n layer** — the language switcher, per-locale routes and localized UI chrome (settings panel, slides, code toggles) all work end to end.
-- **Custom wordmark** — the script "Usf" logo is generated from a real font into SVG paths so the animated welcome screen could keep its draw-on effect.
-- **Eighteen project covers and story illustrations** — every card and story cover generated to match the theme's pastel aesthetic.
-- **Agent-team assembly** — theme, content, translations and deployment ran as parallel agent workstreams, coordinated the [Hermes way](/en/agentic/hermes/).
+- **WebSocket fan-out** — channel messages land on every subscriber without polling, with presence counts and typing indicators that make the room feel alive.
+- **Auth that respects the data** — bcrypt (cost 12) password hashing and JWT sessions, because "self-hosted" must not mean "insecure".
+- **A UI for humans** — a Vue 3 SPA, dark by default, bilingual Persian/English with proper RTL. For a Persian-speaking team, an interface that reads right is not a nice-to-have.
 
-The source of truth lives at [github.com/Godde3s/Usf](https://github.com/Godde3s/Usf) — public, naturally. If you are reading this on the live site, the deploy pipeline worked; if you are reading it on GitHub, the pipeline is one `vitepress build` away.
+## What it proves
+
+Goftego is full-stack product work: realtime protocol design on the backend, state management on the frontend, and an opinionated data model underneath. It shows I can take a product from "wouldn't it be nice" to `docker compose up` — and that I treat self-hosted users with the same security bar as a public SaaS. Your community's data stays on your box, where it belongs.

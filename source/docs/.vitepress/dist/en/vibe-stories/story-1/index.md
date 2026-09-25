@@ -1,20 +1,37 @@
 ---
-title: "NetPilot: One Binary, Every Answer"
-description: "The story of building NetPilot — a pure-Go network toolkit that compresses five admin tools into one static binary."
+title: "TaskFlow API: Security You Can Test"
+description: "Building a backend where every security claim has a test — the story behind TaskFlow API's refresh rotation, RBAC and rate limiting."
 ---
 
-# NetPilot: One Binary, Every Answer
+# TaskFlow API: Security You Can Test
 
-Every sysadmin has that folder of half-installed tools: one for port scanning, one for pinging, one for health checks, all with different flags and output formats. **NetPilot** ([GitHub](https://github.com/Godde3s/netpilot)) started when I got tired of being that sysadmin.
+Every backend portfolio has "JWT authentication" in the README. Very few can show you the test that replays a rotated refresh token and asserts the **whole token family dies**. That difference — between mentioning security and proving it — is why I built [TaskFlow API](/en/projects/taskflow-api/).
 
-## The constraint that shaped it
+## Start from the threat model
 
-I gave myself one rule: **the deliverable is a single static binary**. No runtime, no dependencies, no installer. That single constraint decided the language (Go), the architecture (stdlib first), and the UX (subcommands that read like sentences). It also made the project the perfect testbed for agent-team development — the spec was crisp enough that [agents](/en/agentic/overview/) could implement commands in parallel while I reviewed.
+I wrote the threat model before the first route: stolen credentials, replayed tokens, brute-force login bursts, curious neighbors reading each other's tasks, and — the classic — a 500 page leaking a stack trace. Each threat maps to a specific, testable control in the codebase:
 
-## What building it taught me
+- **Stolen refresh token?** Rotation with family reuse detection. One replay revokes everything the attacker holds.
+- **Brute force?** A sliding-window limiter answers the sixth burst attempt with `429` and `Retry-After`.
+- **Neighbor snooping?** Ownership checks sit in one place — `_owned_task` — so a forgotten guard is a bug you fix once, not a habit you audit forever.
+- **Info leaks?** Exception handlers return generic 500s; the details go to structured JSON logs with a request id you can grep.
 
-- **Concurrency design beats concurrency folklore** — a worker pool with real timeouts outperformed three "optimized" drafts.
-- **Output is an API** — stable JSON output turned the CLI into a building block other scripts (and agents) can consume.
-- **Restraint scales** — five well-made commands beat thirty half-made ones.
+## The test that sells the design
 
-Today NetPilot is the first thing I deploy on any new box, and the standard by which I judge every CLI I build — including the ones agents build for me.
+```python
+async def test_refresh_rotation_and_reuse_detection(client, user_tokens):
+    old = user_tokens["refresh_token"]
+    r1 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
+    assert r1.status_code == 200                      # rotated
+    r2 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
+    assert r2.status_code == 401                      # replay refused
+    new = r1.json()["refresh_token"]
+    r3 = await client.post("/api/v1/auth/refresh", json={"refresh_token": new})
+    assert r3.status_code == 401                      # family revoked
+```
+
+Thirteen tests, zero containers, a few seconds of wall time. CI runs them on every push, which means the security story stays true by construction instead of by documentation.
+
+## What it proves
+
+TaskFlow is the reference backend for my API work — it pairs with the [Postman toolkit](/en/projects/postman-api-testing-toolkit/) that contract-tests it in CI. FastAPI, PostgreSQL 16 and Redis 7 behind Docker Compose; SQLAlchemy 2.0 async with Alembic migrations; caching with invalidation on writes; structured logs ready for Loki or ELK. It is the answer to a simple interview question: *show me how you ship a backend in 2026.* This is how — hardened, tested, observable, and running.

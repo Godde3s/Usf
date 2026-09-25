@@ -1,21 +1,22 @@
 ---
-title: "Este portafolio: un diseño, dos idiomas"
-description: "La metahistoria: cómo este sitio fue especificado, construido sobre un sistema de diseño VitePress propio, traducido a dos idiomas y enviado por un equipo de agentes."
+title: "Goftego: Chat en Tiempo Real, a Un Comando de Distancia"
+description: "La historia de construir Goftego — una plataforma de chat self-hosted con canales en tiempo real, presencia e indicadores de escritura en un solo archivo SQLite."
 ---
 
-# Este portafolio: un diseño, dos idiomas
+# Goftego: Chat en Tiempo Real, a Un Comando de Distancia
 
-Estás viendo el proyecto más autorreferencial de mi portafolio: **este sitio web**. Es una construcción VitePress propia — portada estilo Apple, navegación de cristal, un tagline tecleado y un carrusel de historias — implementada de punta a punta con cada texto e imagen siendo mi propio contenido, en **dos idiomas**: English y Español.
+El SaaS de chat alojado encierra a tu comunidad detrás del almacenamiento, los precios y la jurisdicción de otra persona. Para equipos pequeños que solo quieren una sala, el intercambio es absurdo: tus conversaciones, su base de datos. **Goftego** ([GitHub](https://github.com/Godde3s/goftego)) — *goftego* significa "conversación" — es mi respuesta: una plataforma de chat moderna que hospedas tú, en un solo comando.
 
-## Por qué este diseño
+## La apuesta del archivo único
 
-Porque es honesto sobre lo que es la buena ingeniería: encuentra algo excelente, entiéndelo por completo, y luego adáptalo con disciplina. La portada estilo Apple, el cristal, la bienvenida animada, el carrusel con marco de MacBook — todo fue estudiado, implementado y anclado a una versión actual del motor, y luego llenado con una vida para la que nunca fue escrito.
+Todo el estado de un despliegue vive en **un solo archivo SQLite** con modo WAL. Ni un servidor de base de datos que cuidar, ni servicios externos de los que depender. Backup es `cp`; migración es mover el archivo. Esa única restricción moldeó todo lo demás: forzó consultas eficientes, un diseño cuidadoso de transacciones y una historia de despliegue que es literalmente `docker compose up`.
 
-## Lo que lo hizo no trivial
+## El tiempo real es una característica de producto, no un checkbox
 
-- **Una capa i18n real** — el selector de idioma, las rutas por locale y el chrome de UI localizado (panel de ajustes, diapositivas, toggles de código) funcionan de punta a punta.
-- **Wordmark personalizado** — el logo caligráfico "Usf" se generó de una fuente real a paths SVG para que la pantalla de bienvenida conservara su efecto de dibujo animado.
-- **Dieciocho portadas de proyecto e ilustraciones** — cada portada de tarjeta e historia se generó para coincidir con la estética pastel del tema.
-- **Ensamblado por equipo de agentes** — el tema, el contenido, las traducciones y el despliegue corrieron como flujos de trabajo de agentes paralelos, coordinados a la manera [Hermes](/es/agentic/hermes/).
+- **Fan-out por WebSocket** — los mensajes de canal llegan a cada suscriptor sin polling, con conteos de presencia e indicadores de escritura que hacen que la sala se sienta viva.
+- **Auth que respeta los datos** — hashing de contraseñas con bcrypt (coste 12) y sesiones JWT, porque "self-hosted" no puede significar "inseguro".
+- **Una UI para humanos** — una SPA en Vue 3, oscura por defecto, bilingüe persa/inglés con RTL correcto. Para un equipo de habla persa, una interfaz que se lee correctamente no es un lujo.
 
-La fuente de la verdad vive en [github.com/Godde3s/Usf](https://github.com/Godde3s/Usf) — pública, naturalmente. Si estás leyendo esto en el sitio en vivo, el pipeline funcionó; si lo lees en GitHub, el pipeline está a un `vitepress build` de distancia.
+## Lo que demuestra
+
+Goftego es trabajo de producto full-stack: diseño de protocolos en tiempo real en el backend, gestión de estado en el frontend, y un modelo de datos con opiniones debajo. Demuestra que puedo llevar un producto desde "no estaría mal" hasta `docker compose up` — y que aplico a usuarios self-hosted la misma barra de seguridad que a un SaaS público. Los datos de tu comunidad se quedan en tu máquina, donde les corresponde.

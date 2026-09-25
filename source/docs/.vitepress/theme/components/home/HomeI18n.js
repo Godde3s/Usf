@@ -21,20 +21,20 @@ export const i18n = {
       title: 'Real projects,<br><span class="highlight">built in public.</span>',
       sub: 'Every card leads to a working repository — no mockups, no vaporware.',
       s1: {
-        title: 'One binary that answers every network question',
-        author: 'netpilot · Go'
+        title: 'A backend where every security claim has a test',
+        author: 'taskflow-api · Python'
       },
       s2: {
-        title: 'One router in front of every AI model',
-        author: 'omnirouter · Go'
+        title: 'A messenger with no server to breach',
+        author: 'veilchat · Python'
       },
       s3: {
-        title: 'A VLESS panel that survives real censorship',
-        author: 'TaskFlow API · Python'
+        title: 'NLP that ships like a real service',
+        author: 'textsense · Python'
       },
       s4: {
-        title: 'This portfolio — two languages, one VitePress',
-        author: 'Usf · Vue'
+        title: 'Realtime chat you self-host in one command',
+        author: 'goftego · Node.js'
       },
       authorPrefix: 'Built with:',
       ui: {
@@ -299,20 +299,20 @@ export const i18n = {
       title: 'Proyectos reales,<br><span class="highlight">construidos en público.</span>',
       sub: 'Cada tarjeta lleva a un repositorio que funciona — sin maquetas ni promesas vacías.',
       s1: {
-        title: 'Un binario que responde cada pregunta de red',
-        author: 'netpilot · Go'
+        title: 'Un backend donde cada claim de seguridad tiene su test',
+        author: 'taskflow-api · Python'
       },
       s2: {
-        title: 'Un router frente a todos los modelos de IA',
-        author: 'omnirouter · Go'
+        title: 'Un mensajero sin servidores que vulnerar',
+        author: 'veilchat · Python'
       },
       s3: {
-        title: 'Un panel VLESS que sobrevive a la censura real',
-        author: 'TaskFlow API · Python'
+        title: 'NLP que se despliega como un servicio real',
+        author: 'textsense · Python'
       },
       s4: {
-        title: 'Este portafolio — dos idiomas, un solo VitePress',
-        author: 'Usf · Vue'
+        title: 'Chat en tiempo real, self-hosted en un solo comando',
+        author: 'goftego · Node.js'
       },
       authorPrefix: 'Construido con:',
       ui: {
