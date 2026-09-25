@@ -4,6 +4,7 @@ import stage2GlmFreeApiCover from '../../assets/home/cards/stage2-3-glmfreeapi.w
 import stage2GhostBrainCover from '../../assets/home/cards/stage2-4-ghostbrain.webp'
 import stage2HermesStackCover from '../../assets/home/cards/stage2-5-hermesstack.webp'
 import stage2UsfPanelCover from '../../assets/home/cards/stage2-6-usfpanel.webp'
+import cardTaskflow from '../../assets/home/cards/card-taskflow.svg'
 import cardGoftego from '../../assets/home/cards/card-goftego.svg'
 import cardVeilchat from '../../assets/home/cards/card-veilchat.svg'
 import cardBaleforge from '../../assets/home/cards/card-baleforge.svg'
@@ -159,9 +160,9 @@ export const stage2Cards = [
   },
   {
     imageColor: '#A7F3D0',
-    image: stage2UsfPanelCover,
-    imageAlt: 'Proxy panel concept illustration',
-    link: '/en/projects/usf-panel/'
+    image: cardTaskflow,
+    imageAlt: 'Backend API concept illustration',
+    link: '/en/projects/taskflow-api/'
   }
 ]
 

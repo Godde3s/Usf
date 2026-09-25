@@ -30,7 +30,7 @@ const appleFooterInfo = computed(() => {
         },
         {
           title: 'More Projects',
-          links: ['BalePhp', 'ModbusLite', 'NetPilot', 'OmniRouter', 'Usf Panel']
+          links: ['BalePhp', 'ModbusLite', 'NetPilot', 'OmniRouter', 'TaskFlow API']
         },
         {
           title: 'Resources',
@@ -66,7 +66,7 @@ const appleFooterInfo = computed(() => {
         },
         {
           title: 'Más proyectos',
-          links: ['BalePhp', 'ModbusLite', 'NetPilot', 'OmniRouter', 'Usf Panel']
+          links: ['BalePhp', 'ModbusLite', 'NetPilot', 'OmniRouter', 'TaskFlow API']
         },
         {
           title: 'Recursos',
@@ -125,7 +125,7 @@ const footerColumnLinkMap = {
   'ModbusLite': '/en/projects/modbuslite/',
   'NetPilot': '/en/projects/netpilot/',
   'OmniRouter': '/en/projects/omnirouter/',
-  'Usf Panel': '/en/projects/usf-panel/',
+  'TaskFlow API': '/en/projects/taskflow-api/',
   'Sitemap': '/sitemap.xml'
 }
 

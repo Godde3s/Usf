@@ -17,7 +17,7 @@ El frontend es donde los usuarios juzgan todo lo que nunca verán. Construyo int
 | Móvil y escritorio | React Native, Expo, Flutter, Ionic, Electron, Tauri |
 | Rendimiento | Code splitting, presupuesto de imágenes, Core Web Vitals |
 
-Este mismo sitio es una demostración en funcionamiento: un clon del tema VitePress adaptado a dos idiomas con un sistema de iconos SVG propio y un set de ilustraciones generado. Mis paneles de administración para [Usf Panel](/es/projects/usf-panel/) siguen las mismas reglas bajo restricciones mucho más duras: backends de un solo archivo con frontends pulidos y responsivos.
+Este mismo sitio es una demostración en funcionamiento: un clon del tema VitePress adaptado a dos idiomas con un sistema de iconos SVG propio y un set de ilustraciones generado. El dashboard de [TaskFlow API](/es/projects/taskflow-api/) sigue las mismas reglas bajo restricciones mucho más duras: APIs rápidas con frontends pulidos y responsivos.
 
 ::: tip Lo responsivo es una función
 La mayoría de mis visitantes llega desde un teléfono y una red lenta. Tratar la responsividad y el peso como una ocurrencia tardía es enviar un producto roto — así que diseño para ambos desde el primer commit.

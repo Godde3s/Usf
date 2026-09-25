@@ -24,4 +24,4 @@ Mi filosofía de backend es aburrida a propósito: contratos claros, fallos expl
 - **Logs estructurados** desde el día uno, porque depurar por vibras no escala más allá de las 2 AM.
 - **Tests de contrato** para todo lo que otros sistemas dependen — incluidos los agentes.
 
-El patrón se repite en mis proyectos: los [puentes free-api](/es/projects/glm-free-api/) lidiar con upstreams hostiles y limitados; los [paneles](/es/projects/usf-panel/) con estado multiusuario; los [routers](/es/projects/omnirouter/) con el fallo entre ellos. Mismos principios, distintos puntos de presión.
+El patrón se repite en mis proyectos: los [puentes free-api](/es/projects/glm-free-api/) lidiar con upstreams hostiles y limitados; [TaskFlow API](/es/projects/taskflow-api/) con estado multiusuario; los [routers](/es/projects/omnirouter/) con el fallo entre ellos. Mismos principios, distintos puntos de presión.

@@ -30,7 +30,7 @@ export const i18n = {
       },
       s3: {
         title: 'A VLESS panel that survives real censorship',
-        author: 'Usf Panel · Python'
+        author: 'TaskFlow API · Python'
       },
       s4: {
         title: 'This portfolio — two languages, one VitePress',
@@ -174,10 +174,10 @@ export const i18n = {
           link: '/en/projects/hermes-stack/'
         },
         {
-          title: 'Usf Panel',
-          headline: 'Tunnels that survive reality.',
-          desc: 'Premium VLESS tunnel and subscription manager — multi-user, Clash / v2ray / sing-box sync, one-command deploy anywhere.',
-          link: '/en/projects/usf-panel/'
+          title: 'TaskFlow API',
+          headline: 'Backend security you can test.',
+          desc: 'Production-grade FastAPI task API — JWT rotation with reuse detection, RBAC, rate limiting, Docker Compose. Every claim ships with a pytest.',
+          link: '/en/projects/taskflow-api/'
         }
       ],
       more: 'Read the build notes'
@@ -308,7 +308,7 @@ export const i18n = {
       },
       s3: {
         title: 'Un panel VLESS que sobrevive a la censura real',
-        author: 'Usf Panel · Python'
+        author: 'TaskFlow API · Python'
       },
       s4: {
         title: 'Este portafolio — dos idiomas, un solo VitePress',
@@ -452,10 +452,10 @@ export const i18n = {
           link: '/es/projects/hermes-stack/'
         },
         {
-          title: 'Usf Panel',
-          headline: 'Túneles que sobreviven a la realidad.',
-          desc: 'Panel premium de túneles VLESS y suscripciones — multiusuario, sincronización Clash / v2ray / sing-box, despliegue con un comando.',
-          link: '/es/projects/usf-panel/'
+          title: 'TaskFlow API',
+          headline: 'Seguridad de backend comprobable.',
+          desc: 'API de tareas en FastAPI de grado producción — rotación JWT con detección de reuso, RBAC, rate limiting, Docker Compose. Cada afirmación llega con su pytest.',
+          link: '/es/projects/taskflow-api/'
         }
       ],
       more: 'Leer las notas de construcción'

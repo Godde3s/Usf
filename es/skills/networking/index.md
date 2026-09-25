@@ -17,6 +17,6 @@ Las redes son mi especialidad bajo presión: construyo para redes que resisten a
 | Diagnóstico | Escaneo de puertos, TCP ping, inspección TLS ([NetPilot](/es/projects/netpilot/)) |
 | Operaciones | Redundancia multiplataforma, migraciones sin downtime |
 
-Este es el dominio donde vive mi [familia de paneles](/es/projects/usf-panel/), y moldea todo lo demás: mis puentes de API asumen throttling, mis routers asumen la muerte de upstreams, y mis despliegues asumen que cualquier plataforma puede desaparecer de la noche a la mañana. La redundancia no es paranoia — es el SLA mínimo de una conexión libre y abierta.
+Este es el dominio donde viven mis [herramientas de red](/es/projects/netpilot/), y moldea todo lo demás: mis puentes de API asumen throttling, mis routers asumen la muerte de upstreams, y mis despliegues asumen que cualquier plataforma puede desaparecer de la noche a la mañana. La redundancia no es paranoia — es el SLA mínimo de una conexión libre y abierta.
 
 > Una red de la que puedes fiarte se construye, no se espera.

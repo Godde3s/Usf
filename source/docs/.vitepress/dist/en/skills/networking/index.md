@@ -17,6 +17,6 @@ Networking is my specialty under pressure: I build for networks that actively fi
 | Diagnostics | Port scanning, TCP ping, TLS inspection ([NetPilot](/en/projects/netpilot/)) |
 | Operations | Multi-platform redundancy, zero-downtime migrations |
 
-This is the domain where my [panel family](/en/projects/usf-panel/) lives, and it shapes everything else: my API bridges assume throttling, my routers assume upstream death, and my deploys assume any single platform can disappear overnight. Redundancy is not paranoia — it is the baseline SLA of a free and open connection.
+This is the domain where my [network tooling](/en/projects/netpilot/) lives, and it shapes everything else: my API bridges assume throttling, my routers assume upstream death, and my deploys assume any single platform can disappear overnight. Redundancy is not paranoia — it is the baseline SLA of a free and open connection.
 
 > A network you can trust is built, not hoped for.

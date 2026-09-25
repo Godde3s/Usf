@@ -7,7 +7,7 @@ description: "Proxies, VLESS tunnels, subscription panels and edge deployments �
 
 I grew up behind filters. Where I live, parts of the internet are routinely unreachable — not because servers are down, but because someone decided they should be. That reality turned networking from a hobby into a survival skill, and the survival skill into a specialty: building infrastructure that keeps people connected.
 
-My work in this area is practical rather than theoretical. I design and operate **VLESS tunnels and proxy panels**, manage multi-user subscription systems with Clash, v2ray and sing-box compatibility, and deploy edge infrastructure across Cloudflare Workers, Hugging Face Spaces, Railway, Render, Fly.io and Koyeb. Each of my panel projects — [Usf Panel](/en/projects/usf-panel/), usf-edge, edge-pp, Render-usf — attacks the same problem from a different platform, because blocking is an arms race and single points of failure get people cut off.
+My work in this area is practical rather than theoretical. I design and operate **VLESS tunnels and proxy panels**, manage multi-user subscription systems with Clash, v2ray and sing-box compatibility, and deploy edge infrastructure across Cloudflare Workers, Hugging Face Spaces, Railway, Render, Fly.io and Koyeb. My edge deployments span Cloudflare Workers, Hugging Face Spaces, Railway, Render, Fly.io and Koyeb — because blocking is an arms race and single points of failure get people cut off.
 
 ## What I actually build
 
