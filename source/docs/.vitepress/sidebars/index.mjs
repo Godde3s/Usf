@@ -18,6 +18,9 @@ const PAGES = {
     ['principles', { en: 'Engineering Principles', es: 'Principios de ingeniería' }]
   ],
   projects: [
+    ['taskflow-api', { en: 'TaskFlow API — FastAPI Backend', es: 'TaskFlow API — backend FastAPI' }],
+    ['postman-api-testing-toolkit', { en: 'Postman Toolkit — API Testing', es: 'Postman Toolkit — testing de APIs' }],
+    ['textsense', { en: 'TextSense — NLP Microservice', es: 'TextSense — microservicio NLP' }],
     ['goftego', { en: 'Goftego — Self-hosted Chat', es: 'Goftego — chat autoalojado' }],
     ['veilchat', { en: 'VeilChat — P2P E2E Messenger', es: 'VeilChat — mensajería P2P E2E' }],
     ['baleforge', { en: 'BaleForge — Bale Bot Framework', es: 'BaleForge — framework para bots' }],
@@ -34,8 +37,7 @@ const PAGES = {
     ['omnirouter', { en: 'OmniRouter — One Model Endpoint', es: 'OmniRouter — Un endpoint' }],
     ['glm-free-api', { en: 'GLM Free API — Single File Bridge', es: 'GLM Free API — Puente de un archivo' }],
     ['ghost-brain', { en: 'GhostBrain — Gemini to API', es: 'GhostBrain — de Gemini a API' }],
-    ['hermes-stack', { en: 'Hermes Stack — Self-hosted Brain', es: 'Hermes Stack — cerebro autoalojado' }],
-    ['usf-panel', { en: 'Usf Panel — VLESS Manager', es: 'Usf Panel — gestor VLESS' }]
+    ['hermes-stack', { en: 'Hermes Stack — Self-hosted Brain', es: 'Hermes Stack — cerebro autoalojado' }]
   ],
   agentic: [
     ['overview', { en: 'Overview — Directing Agent Teams', es: 'Visión general — Dirigiendo equipos' }],
@@ -63,7 +65,7 @@ const PAGES = {
   stories: [
     ['story-1', { en: 'NetPilot: One Binary, Every Answer', es: 'NetPilot: un binario, todas las respuestas' }],
     ['story-2', { en: 'OmniRouter: Taming Model Chaos', es: 'OmniRouter: domando el caos de modelos' }],
-    ['story-3', { en: 'Usf Panel: Tunnels vs. Censorship', es: 'Usf Panel: túneles contra la censura' }],
+    ['story-3', { en: 'TaskFlow API: Security You Can Test', es: 'TaskFlow API: seguridad comprobable' }],
     ['story-4', { en: 'This Portfolio: One Design, Two Languages', es: 'Este portafolio: un diseño, dos idiomas' }]
   ]
 }

@@ -17,7 +17,7 @@ The frontend is where users judge everything they will never see. I build interf
 | Mobile & Desktop | React Native, Expo, Flutter, Ionic, Electron, Tauri |
 | Performance | Code splitting, image budgets, Core Web Vitals |
 
-This very site is a working demonstration: a cloned VitePress theme adapted to two locales with a custom SVG icon system and generated illustration set. My admin panels for [Usf Panel](/en/projects/usf-panel/) follow the same rules under far tighter constraints: single-file backends with polished, responsive frontends.
+This very site is a working demonstration: a cloned VitePress theme adapted to two locales with a custom SVG icon system and generated illustration set. The dashboard for [TaskFlow API](/en/projects/taskflow-api/) follows the same rules under far tighter constraints: fast APIs with polished, responsive frontends.
 
 ::: tip Responsive is a feature
 Most of my visitors arrive on a phone over a slow network. Treating responsiveness and payload size as afterthoughts is shipping a broken product — so I design for both from the first commit.

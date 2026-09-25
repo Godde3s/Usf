@@ -7,7 +7,7 @@ description: "Proxies, túneles VLESS, paneles de suscripción y despliegues de 
 
 Crecí detrás de filtros. Donde vivo, partes de internet están fuera de alcance con regularidad — no porque los servidores estén caídos, sino porque alguien decidió que debían estarlo. Esa realidad convirtió las redes de un pasatiempo en una habilidad de supervivencia, y la habilidad de supervivencia en una especialidad: construir infraestructura que mantiene a la gente conectada.
 
-Mi trabajo en esta área es práctico, no teórico. Diseño y opero **túneles VLESS y paneles proxy**, gestiono sistemas de suscripción multiusuario compatibles con Clash, v2ray y sing-box, y despliego infraestructura de borde en Cloudflare Workers, Hugging Face Spaces, Railway, Render, Fly.io y Koyeb. Cada uno de mis proyectos de paneles — [Usf Panel](/es/projects/usf-panel/), usf-edge, edge-pp, Render-usf — ataca el mismo problema desde una plataforma distinta, porque el bloqueo es una carrera armamentista y los puntos únicos de fallo dejan a la gente sin acceso.
+Mi trabajo en esta área es práctico, no teórico. Diseño y opero **túneles VLESS y paneles proxy**, gestiono sistemas de suscripción multiusuario compatibles con Clash, v2ray y sing-box, y despliego infraestructura de borde en Cloudflare Workers, Hugging Face Spaces, Railway, Render, Fly.io y Koyeb. Mis despliegues de infraestructura edge abarcan Cloudflare Workers, Hugging Face Spaces, Railway, Render, Fly.io y Koyeb — porque el bloqueo es una carrera armamentista y los puntos únicos de fallo dejan a la gente sin acceso.
 
 ## Lo que realmente construyo
 

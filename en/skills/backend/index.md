@@ -24,4 +24,4 @@ My backend philosophy is boring on purpose: clear contracts, explicit failure, a
 - **Structured logs** from day one, because debugging by vibes does not scale past 2 AM.
 - **Contract tests** for anything another system depends on — including agents.
 
-The pattern across my projects: the [free-api bridges](/en/projects/glm-free-api/) handle hostile, rate-limited upstreams; the [panels](/en/projects/usf-panel/) handle multi-user state; the [routers](/en/projects/omnirouter/) handle failure between them. Same principles, different pressure points.
+The pattern across my projects: the [free-api bridges](/en/projects/glm-free-api/) handle hostile, rate-limited upstreams; [TaskFlow API](/en/projects/taskflow-api/) handles multi-user state behind auth; the [routers](/en/projects/omnirouter/) handle failure between them. Same principles, different pressure points.
