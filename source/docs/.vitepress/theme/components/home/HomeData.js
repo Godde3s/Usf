@@ -3,7 +3,6 @@ import stage2OmnirouterCover from '../../assets/home/cards/stage2-2-omnirouter.w
 import stage2GlmFreeApiCover from '../../assets/home/cards/stage2-3-glmfreeapi.webp'
 import stage2GhostBrainCover from '../../assets/home/cards/stage2-4-ghostbrain.webp'
 import stage2HermesStackCover from '../../assets/home/cards/stage2-5-hermesstack.webp'
-import stage2UsfPanelCover from '../../assets/home/cards/stage2-6-usfpanel.webp'
 import cardTaskflow from '../../assets/home/cards/card-taskflow.svg'
 import cardGoftego from '../../assets/home/cards/card-goftego.svg'
 import cardVeilchat from '../../assets/home/cards/card-veilchat.svg'
@@ -16,7 +15,6 @@ import cardDeepseek from '../../assets/home/cards/card-deepseek.svg'
 import cardQwen from '../../assets/home/cards/card-qwen.svg'
 import cardGemini from '../../assets/home/cards/card-gemini.svg'
 import cardFaGuides from '../../assets/home/cards/card-fa-guides.svg'
-import cardHardwarept from '../../assets/home/cards/card-hardwarept.svg'
 import stage3OpencodeCover from '../../assets/home/cards/stage3-1-opencode.webp'
 import stage3CodexCover from '../../assets/home/cards/stage3-2-codex.webp'
 import stage3ClaudeCodeCover from '../../assets/home/cards/stage3-3-claudecode.webp'
@@ -121,12 +119,6 @@ export const stage2Cards = [
     image: cardFaGuides,
     imageAlt: 'Persian guides concept illustration',
     link: '/en/projects/fa-guides/'
-  },
-  {
-    imageColor: '#4b6cb7',
-    image: cardHardwarept,
-    imageAlt: 'Hardware toolkit concept illustration',
-    link: '/en/projects/hardwarept/'
   },
   {
     imageColor: '#E0C3FC',

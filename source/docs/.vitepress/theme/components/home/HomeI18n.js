@@ -21,20 +21,20 @@ export const i18n = {
       title: 'Real projects,<br><span class="highlight">built in public.</span>',
       sub: 'Every card leads to a working repository — no mockups, no vaporware.',
       s1: {
-        title: 'A backend where every security claim has a test',
-        author: 'taskflow-api · Python'
+        title: 'One router for every model',
+        author: 'omnirouter · Go'
       },
       s2: {
-        title: 'A messenger with no server to breach',
-        author: 'veilchat · Python'
+        title: 'A one-click AI server on a free Space',
+        author: 'hermes-stack · Python'
       },
       s3: {
-        title: 'NLP that ships like a real service',
-        author: 'textsense · Python'
-      },
-      s4: {
         title: 'Realtime chat you self-host in one command',
         author: 'goftego · Node.js'
+      },
+      s4: {
+        title: 'A backend where every security claim has a test',
+        author: 'taskflow-api · Python'
       },
       authorPrefix: 'Built with:',
       ui: {
@@ -69,7 +69,7 @@ export const i18n = {
     stage2: {
       cat: 'Projects · Selected Work',
       title: 'One person,<br><span class="highlight">shipping like a team.</span>',
-      sub: 'Chat platforms, encrypted messengers, bot frameworks, API bridges, Expo apps — 18 repos, every one of them runs.',
+      sub: 'Chat platforms, encrypted messengers, bot frameworks, API bridges, Expo apps — 19 repos, every one of them runs.',
       cards: [
         {
           title: 'Goftego',
@@ -137,12 +137,7 @@ export const i18n = {
           desc: 'Interactive single-file Persian (RTL) guides — Hermes Agent 2.0 and Node.js Design Patterns, with active-recall quizzes.',
           link: '/en/projects/fa-guides/'
         },
-        {
-          title: 'HardwarePT',
-          headline: 'Down to the metal.',
-          desc: 'Low-level hardware probing and pentest toolkit in pure C — enumeration, attack surfaces and stress probes.',
-          link: '/en/projects/hardwarept/'
-        },
+
         {
           title: 'NetPilot',
           headline: 'One binary, every network answer.',
@@ -299,20 +294,20 @@ export const i18n = {
       title: 'Proyectos reales,<br><span class="highlight">construidos en público.</span>',
       sub: 'Cada tarjeta lleva a un repositorio que funciona — sin maquetas ni promesas vacías.',
       s1: {
-        title: 'Un backend donde cada claim de seguridad tiene su test',
-        author: 'taskflow-api · Python'
+        title: 'Un router para todos los modelos',
+        author: 'omnirouter · Go'
       },
       s2: {
-        title: 'Un mensajero sin servidores que vulnerar',
-        author: 'veilchat · Python'
+        title: 'Un servidor de IA de un clic en un Space gratuito',
+        author: 'hermes-stack · Python'
       },
       s3: {
-        title: 'NLP que se despliega como un servicio real',
-        author: 'textsense · Python'
+        title: 'Chat en tiempo real que autoalojas en un comando',
+        author: 'goftego · Node.js'
       },
       s4: {
-        title: 'Chat en tiempo real, self-hosted en un solo comando',
-        author: 'goftego · Node.js'
+        title: 'Un backend donde cada claim de seguridad tiene su test',
+        author: 'taskflow-api · Python'
       },
       authorPrefix: 'Construido con:',
       ui: {
@@ -347,7 +342,7 @@ export const i18n = {
     stage2: {
       cat: 'Proyectos · Trabajo seleccionado',
       title: 'Una sola persona,<br><span class="highlight">entregando como un equipo.</span>',
-      sub: 'Plataformas de chat, mensajería cifrada, frameworks de bots, puentes de API, apps Expo — 18 repos, todos funcionan.',
+      sub: 'Plataformas de chat, mensajería cifrada, frameworks de bots, puentes de API, apps Expo — 19 repos, todos funcionan.',
       cards: [
         {
           title: 'Goftego',
@@ -415,12 +410,7 @@ export const i18n = {
           desc: 'Guías persas (RTL) interactivas en un solo archivo — Hermes Agent 2.0 y Node.js Design Patterns, con quizzes de recuerdo activo.',
           link: '/es/projects/fa-guides/'
         },
-        {
-          title: 'HardwarePT',
-          headline: 'Hasta el metal.',
-          desc: 'Toolkit de bajo nivel en C puro para sondeo y pentest de hardware — enumeración, superficies de ataque y pruebas de estrés.',
-          link: '/es/projects/hardwarept/'
-        },
+
         {
           title: 'NetPilot',
           headline: 'Un binario, todas las respuestas de red.',

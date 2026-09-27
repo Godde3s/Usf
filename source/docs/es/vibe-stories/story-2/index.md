@@ -1,22 +1,23 @@
 ---
-title: "VeilChat: Un Mensajero Sin Servidores Que Vulnerar"
-description: "La historia de construir VeilChat — un mensajero P2P serverless con cifrado de extremo a extremo, conexiones TCP directas y cero metadatos."
+title: "Hermes Stack: Un Clic, Todo un Servidor de IA"
+description: "La historia de Hermes Stack — convertir un Space gratuito de Hugging Face en un servidor de IA personal con agente, routers, dashboard y control por Telegram."
 ---
 
-# VeilChat: Un Mensajero Sin Servidores Que Vulnerar
+# Hermes Stack: Un Clic, Todo un Servidor de IA
 
-Todos los mensajeros convencionales dependen en silencio de una infraestructura que sabe *quién* habla con *quién*, incluso cuando no puede leer el contenido. Los metadatos son el modelo de negocio. Quise saber hasta dónde podía empujar en la dirección contraria — así nació **[VeilChat](https://github.com/Godde3s/veilchat)**: dos pares, una conexión TCP directa y un canal cifrado que nunca toca a un tercero.
+Un servidor de IA personal normalmente significa factura de VPS, dominio, reverse proxy y un fin de semana perdido. Yo quería la misma potencia por **$0** — así que construí **[Hermes Stack](https://github.com/Godde3s/hermes-stack)**: un kit de despliegue que convierte un Space gratuito de Hugging Face en un nodo de IA completo y siempre encendido.
 
-## La restricción de diseño
+## Qué aterriza en el Space
 
-Sin cuentas. Sin servidores. Sin números de teléfono. Sin metadatos. Esa restricción lo decidió todo. No hay flujo de registro porque no hay nada en qué registrarse; no hay relay de mensajes porque no existe una empresa de relays. Dos pares se descubren — por LAN o marcado directo — ejecutan un intercambio de claves con autenticación mutua, y desde ese momento cada byte en el cable es una trama AEAD cifrada.
+Un asistente — CLI, prompts guiados o un botón de GitHub Actions — provisiona un Space con tres piezas cooperando: el [agente Hermes](https://github.com/NousResearch/hermes-agent) para ejecución multi-paso, [9Router](https://github.com/decolua/9router) para agregación de proveedores y mi propio [OmniRouter](https://github.com/Godde3s/omnirouter) para enrutamiento de modelos — todo detrás de un dashboard web y una API compatible con OpenAI.
 
-## Las partes difíciles
+## Las partes de las que nadie te habla
 
-- **Intercambio de claves bien hecho** — handshake X25519 con autenticación mutua, claves de sesión derivadas con HKDF y verificación de transcript, para que ni un escuchador pasivo ni un impostor activo aprendan nada.
-- **El protocolo de cable** — una cabecera de nonce de 24 bytes más tramas ChaCha20-Poly1305: protección contra replay e integridad sin un solo byte de metadatos en claro.
-- **Entrega NAT-friendly** — descubrimiento por LAN para el caso común, marcado directo para todo lo demás, con el handshake reintentado hasta que ambos lados confirman.
+- **Keep-alive que respeta la plataforma** — un bucle de ping amable evita que el Space gratuito se duerma, sin martillearlo.
+- **Backups horarios con restore real** — el estado se guarda donde tú mandas; una reconstrucción se rehidrata en vez de empezar de cero.
+- **Telegram como plano de control** — reiniciar, redesplegar, ver estado y seguir logs desde el móvil.
+- **Honestidad de dry-run** — el asistente previsualiza cada paso antes de tocar tu cuenta y funciona con placeholders hasta que conectas secretos reales.
 
-## Lo que demuestra
+## Qué demuestra
 
-VeilChat son aproximadamente 1.000 líneas de Python legible y auditable — CLI y librería importable. Construí desde cero las partes difíciles de un mensajero: gestión de claves, diseño del handshake, protocolo de cable, entrega cifrada. Es la diferencia entre *usar* librerías de criptografía y *diseñar con* ellas, y es el proyecto al que recurro cuando alguien pregunta si entiendo la seguridad como ingeniería y no como una lista de verificación.
+Hermes Stack es empatía de DevOps codificada en Python: aprovisionamiento idempotente, runtime observable, fallos aburridos y recuperables. Es el proyecto que mis amigos me piden explicar — y la forma más rápida de entender cómo pienso el despliegue: **si no es reproducible desde cero, no está desplegado.**

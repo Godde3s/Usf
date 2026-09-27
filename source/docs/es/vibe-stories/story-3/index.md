@@ -1,24 +1,22 @@
 ---
-title: "TextSense: ML Que Se Despliega Como un Servicio Real"
-description: "Por qué la mayoría de repos de NLP son notebooks — y cómo TextSense envuelve un transformer en el andamiaje operativo que un servicio real necesita."
+title: "Goftego: Chat en Tiempo Real, a Un Comando de Distancia"
+description: "La historia de construir Goftego — una plataforma de chat self-hosted con canales en tiempo real, presencia e indicadores de escritura en un solo archivo SQLite."
 ---
 
-# TextSense: ML Que Se Despliega Como un Servicio Real
+# Goftego: Chat en Tiempo Real, a Un Comando de Distancia
 
-La mayoría de los repos de "NLP API" son un notebook detrás de un Flask `if __name__ == "__main__"`. Mueren en cuanto alguien hace una pregunta de producción: ¿dónde están las métricas? ¿qué pasa si el modelo no carga? ¿cómo escalas? **[TextSense](https://github.com/Godde3s/textsense)** es mi respuesta — un modelo de ML envuelto en el andamiaje operativo que un servicio real necesita.
+El SaaS de chat alojado encierra a tu comunidad detrás del almacenamiento, los precios y la jurisdicción de otra persona. Para equipos pequeños que solo quieren una sala, el intercambio es absurdo: tus conversaciones, su base de datos. **Goftego** ([GitHub](https://github.com/Godde3s/goftego)) — *goftego* significa "conversación" — es mi respuesta: una plataforma de chat moderna que hospedas tú, en un solo comando.
 
-## La apuesta de ingeniería
+## La apuesta del archivo único
 
-Análisis de sentimiento e intención sobre HTTP, con backend transformer (DistilBERT SST-2). Eso es lo básico. La apuesta estaba en todo lo que rodea al modelo:
+Todo el estado de un despliegue vive en **un solo archivo SQLite** con modo WAL. Ni un servidor de base de datos que cuidar, ni servicios externos de los que depender. Backup es `cp`; migración es mover el archivo. Esa única restricción moldeó todo lo demás: forzó consultas eficientes, un diseño cuidadoso de transacciones y una historia de despliegue que es literalmente `docker compose up`.
 
-- **Degradación elegante** — un patrón `ModelProvider` prueba `transformers` primero; si los pesos no están disponibles, un motor léxico determinista responde con el *mismo contrato de API*. El servicio nunca falla en seco porque un modelo no se descargó.
-- **Disciplina de latencia** — inferencia de calentamiento al arrancar, un endpoint batch con micro-batching interno, y caché para que las entradas repetidas no se recalculen.
-- **Observabilidad desde el día uno** — `/metrics` en formato Prometheus con contadores de peticiones, histogramas de latencia, aciertos de caché y el backend de modelo activo como etiqueta.
+## El tiempo real es una característica de producto, no un checkbox
 
-## Respuestas honestas
-
-Cada respuesta lleva el id del modelo que la produjo — `distilbert-sst2` o `lexicon-v1` — porque un score sin procedencia es una suposición que finge ser dato. Autenticación opcional por API-key, límites de tamaño de payload y sanitización de entrada completan la superficie.
+- **Fan-out por WebSocket** — los mensajes de canal llegan a cada suscriptor sin polling, con conteos de presencia e indicadores de escritura que hacen que la sala se sienta viva.
+- **Auth que respeta los datos** — hashing de contraseñas con bcrypt (coste 12) y sesiones JWT, porque "self-hosted" no puede significar "inseguro".
+- **Una UI para humanos** — una SPA en Vue 3, oscura por defecto, bilingüe persa/inglés con RTL correcto. Para un equipo de habla persa, una interfaz que se lee correctamente no es un lujo.
 
 ## Lo que demuestra
 
-Los 15+ tests de pytest corren offline en menos de cinco segundos contra el backend léxico — sin GPU, sin gigas de descargas, CI en verde en cada push. TextSense es el raro repo de ML escrito desde la silla de un ingeniero de backend: la elección del modelo importa menos que el contrato, las métricas y la historia de fallos. Esa es la mentalidad que aporto a cualquier equipo cercano a la IA — el modelo es un componente, el servicio es el producto.
+Goftego es trabajo de producto full-stack: diseño de protocolos en tiempo real en el backend, gestión de estado en el frontend, y un modelo de datos con opiniones debajo. Demuestra que puedo llevar un producto desde "no estaría mal" hasta `docker compose up` — y que aplico a usuarios self-hosted la misma barra de seguridad que a un SaaS público. Los datos de tu comunidad se quedan en tu máquina, donde les corresponde.

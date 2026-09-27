@@ -1,22 +1,23 @@
 ---
-title: "VeilChat: A Messenger With No Server to Breach"
-description: "The story of building VeilChat — a serverless P2P messenger with end-to-end encryption, direct TCP connections and zero metadata."
+title: "Hermes Stack: One Click, a Whole AI Server"
+description: "The story of Hermes Stack — turning one free Hugging Face Space into a personal AI server with an agent, routers, a dashboard and Telegram control."
 ---
 
-# VeilChat: A Messenger With No Server to Breach
+# Hermes Stack: One Click, a Whole AI Server
 
-Every mainstream messenger quietly relies on infrastructure that knows *who* talks to *whom*, even when it cannot read the content. Metadata is the business model. I wanted to know how far I could push in the opposite direction — so I built **[VeilChat](https://github.com/Godde3s/veilchat)**: two peers, one direct TCP connection, and an encrypted channel that never touches a third party.
+A personal AI server usually means a VPS bill, a domain, a reverse proxy and a lost weekend. I wanted the same power for **$0** — so I built **[Hermes Stack](https://github.com/Godde3s/hermes-stack)**: a deploy kit that turns one free Hugging Face Space into a complete, always-on AI node.
 
-## The design constraint
+## What lands on the Space
 
-No accounts. No servers. No phone numbers. No metadata. That constraint decided everything. There is no signup flow because there is nothing to sign up to; there is no message relay because there is no message relay company. Two peers discover each other — over the LAN or a direct dial — run a mutually-authenticated key exchange, and from that moment every byte on the wire is an AEAD-encrypted frame.
+One wizard — CLI, guided prompts or a GitHub Actions button — provisions a Space running three cooperating pieces: the [Hermes agent](https://github.com/NousResearch/hermes-agent) for multi-step task execution, [9Router](https://github.com/decolua/9router) for provider aggregation and my own [OmniRouter](https://github.com/Godde3s/omnirouter) for model routing — behind a web dashboard and an OpenAI-compatible API.
 
-## The hard parts
+## The parts nobody tells you about
 
-- **Key exchange done right** — an X25519 handshake with mutual authentication, HKDF-derived session keys and transcript checks, so neither a passive listener nor an active impostor learns anything.
-- **The wire protocol** — a 24-byte nonce header plus ChaCha20-Poly1305 frames: replay protection and integrity without a single byte of plaintext metadata.
-- **NAT-friendly delivery** — LAN discovery for the common case, direct dial for everything else, with the handshake retried until both sides confirm.
+- **Keep-alive that respects the platform** — a gentle ping loop keeps the free Space awake without hammering it.
+- **Hourly backups with real restore** — state is snapshotted somewhere you own; a rebuild rehydrates instead of starting over.
+- **Telegram as a control plane** — restart, redeploy, check status and tail logs from your phone.
+- **Dry-run honesty** — the wizard previews every step before touching your account, and works with placeholders until you wire real secrets.
 
 ## What it proves
 
-VeilChat is roughly 1,000 lines of readable, auditable Python — CLI and importable library. I built the hard parts of a messenger from scratch: key management, handshake design, wire protocol, encrypted delivery. It is the difference between *using* cryptography libraries and *designing with* them, and it is the project I reach for when someone asks whether I understand security as engineering rather than as a checklist.
+Hermes Stack is DevOps empathy encoded in Python: idempotent provisioning, observable runtime, boring, recoverable failure. It is the project friends ask me to walk them through — and the fastest way to understand how I think about deployment: **if it is not reproducible from scratch, it is not deployed.**

@@ -1,37 +1,23 @@
 ---
-title: "TaskFlow API: Security You Can Test"
-description: "Building a backend where every security claim has a test — the story behind TaskFlow API's refresh rotation, RBAC and rate limiting."
+title: "OmniRouter: Taming Model Chaos"
+description: "Why I built OmniRouter — turning model churn into a config file, with load balancing, failover and real streaming in one Go binary."
 ---
 
-# TaskFlow API: Security You Can Test
+# OmniRouter: Taming Model Chaos
 
-Every backend portfolio has "JWT authentication" in the README. Very few can show you the test that replays a rotated refresh token and asserts the **whole token family dies**. That difference — between mentioning security and proving it — is why I built [TaskFlow API](/en/projects/taskflow-api/).
+The AI ecosystem moves at scroll speed. The model that powered my app on Monday is deprecated by Friday, prices flip overnight, free tiers appear and vanish. My projects kept breaking for reasons that had nothing to do with my code — so I made the churn someone else's problem. That someone is **[OmniRouter](https://github.com/Godde3s/omnirouter)**.
 
-## Start from the threat model
+## One endpoint, many brains
 
-I wrote the threat model before the first route: stolen credentials, replayed tokens, brute-force login bursts, curious neighbors reading each other's tasks, and — the classic — a 500 page leaking a stack trace. Each threat maps to a specific, testable control in the codebase:
+OmniRouter sits between your app and every model provider you use. Your code speaks plain OpenAI — one base URL, one API key, standard `/v1/chat/completions` — and the router decides which brain actually answers: GLM, Qwen, DeepSeek or any custom OpenAI-compatible endpoint you register. Switching a model becomes a **config change, not a refactor**.
 
-- **Stolen refresh token?** Rotation with family reuse detection. One replay revokes everything the attacker holds.
-- **Brute force?** A sliding-window limiter answers the sixth burst attempt with `429` and `Retry-After`.
-- **Neighbor snooping?** Ownership checks sit in one place — `_owned_task` — so a forgotten guard is a bug you fix once, not a habit you audit forever.
-- **Info leaks?** Exception handlers return generic 500s; the details go to structured JSON logs with a request id you can grep.
+## The parts that took real engineering
 
-## The test that sells the design
-
-```python
-async def test_refresh_rotation_and_reuse_detection(client, user_tokens):
-    old = user_tokens["refresh_token"]
-    r1 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
-    assert r1.status_code == 200                      # rotated
-    r2 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
-    assert r2.status_code == 401                      # replay refused
-    new = r1.json()["refresh_token"]
-    r3 = await client.post("/api/v1/auth/refresh", json={"refresh_token": new})
-    assert r3.status_code == 401                      # family revoked
-```
-
-Thirteen tests, zero containers, a few seconds of wall time. CI runs them on every push, which means the security story stays true by construction instead of by documentation.
+- **Load balancing that understands health** — weighted routing with health checks; a provider that fails its probe is cooled down and routed around in milliseconds.
+- **Failover without lying to the client** — if a request dies mid-flight on provider A, the router retries on provider B, and the caller just sees a slightly slower 200.
+- **Real streaming, end to end** — SSE tokens flow through the router untouched, because a proxy that buffers streams is not a proxy, it is a bottleneck.
+- **One static binary** — pure Go, stdlib-first, cross-compiled: `./omnirouter` is the whole deployment story.
 
 ## What it proves
 
-TaskFlow is the reference backend for my API work — it pairs with the [Postman toolkit](/en/projects/postman-api-testing-toolkit/) that contract-tests it in CI. FastAPI, PostgreSQL 16 and Redis 7 behind Docker Compose; SQLAlchemy 2.0 async with Alembic migrations; caching with invalidation on writes; structured logs ready for Loki or ELK. It is the answer to a simple interview question: *show me how you ship a backend in 2026.* This is how — hardened, tested, observable, and running.
+OmniRouter is the backbone of my own AI stack — it fronts every model my agent tooling touches, and it ships inside [Hermes Stack](/en/projects/hermes-stack/) as part of a one-click AI server. It shows I can design API infrastructure the way production systems need it: stateless cores, observable request paths, and failure treated as a first-class case — not an afterthought.

@@ -32,7 +32,6 @@ const PAGES = {
     ['qwen-free-api', { en: 'Qwen Free API — Go Bridge', es: 'Qwen Free API — puente Go' }],
     ['gemini-free-api', { en: 'Gemini Free API — Guest Bridge', es: 'Gemini Free API — puente invitado' }],
     ['fa-guides', { en: 'Fa Guides — Persian Guides', es: 'Fa Guides — guías en persa' }],
-    ['hardwarept', { en: 'HardwarePT — C Hardware Toolkit', es: 'HardwarePT — toolkit en C' }],
     ['netpilot', { en: 'NetPilot — Go Network Toolkit', es: 'NetPilot — Kit de red en Go' }],
     ['omnirouter', { en: 'OmniRouter — One Model Endpoint', es: 'OmniRouter — Un endpoint' }],
     ['glm-free-api', { en: 'GLM Free API — Single File Bridge', es: 'GLM Free API — Puente de un archivo' }],

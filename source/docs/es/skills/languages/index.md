@@ -17,6 +17,6 @@ Rechazo la religión del "único lenguaje verdadero". Los lenguajes son herramie
 | Texto Estructurado (ST) | 96% | Programas de control industrial IEC 61131-3. |
 | Go | 94% | NetPilot, OmniRouter, glm-free-api — CLIs y servicios. |
 | C# | 93% | Backends .NET, herramientas de escritorio, WPF/MAUI. |
-| C / C++ | 78% | HardwarePT, experimentos embebidos, núcleos de rendimiento. |
+| C / C++ | 78% | experimentos embebidos, núcleos de rendimiento. |
 
 El patrón tras la lista: lenguajes de alto nivel para velocidad, lenguajes de sistemas para control, y lenguajes industriales porque alguien tiene que hacer que el mundo físico se comporte. Un lenguaje nuevo es un problema de fin de semana, no una decisión de carrera — el [flujo agéntico](/es/agentic/overview/) abarata aún más el ramp-up, ya que los agentes escriben scaffolding idiomático en cualquier ecosistema mientras yo aportó el juicio.

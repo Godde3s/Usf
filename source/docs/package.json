@@ -12,6 +12,8 @@
   "type": "commonjs",
   "dependencies": {
     "element-plus": "^2.14.5",
+    "reveal.js": "^6.0.2",
+    "viewerjs": "^1.15.0",
     "vitepress": "^2.0.0-alpha.20"
   }
 }

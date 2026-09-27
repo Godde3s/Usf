@@ -1,24 +1,22 @@
 ---
-title: "TextSense: ML That Ships Like a Real Service"
-description: "Why most NLP repos are notebooks — and how TextSense wraps a transformer in the operational scaffolding a real service needs."
+title: "Goftego: Realtime Chat, One Command Away"
+description: "The story of building Goftego — a self-hosted chat platform with realtime channels, presence and typing indicators in one SQLite file."
 ---
 
-# TextSense: ML That Ships Like a Real Service
+# Goftego: Realtime Chat, One Command Away
 
-Most "NLP API" repos you find are a notebook behind a Flask `if __name__ == "__main__"`. They die the moment someone asks a production question: what are the metrics? what happens when the model can't load? how do you scale it? **[TextSense](https://github.com/Godde3s/textsense)** is my answer — an ML model wrapped in the operational scaffolding a real service needs.
+Hosted chat SaaS locks your community behind someone else's storage, pricing and jurisdiction. For small teams that just want a room, the trade is absurd: your conversations, their database. **Goftego** ([GitHub](https://github.com/Godde3s/goftego)) — *goftego* means "conversation" — is my answer: a modern chat platform you host yourself, in one command.
 
-## The engineering bet
+## The one-file bet
 
-Sentiment and intent analysis over HTTP, with a transformer backend (DistilBERT SST-2). That part is table stakes. The bet was in everything around the model:
+The whole state of a deployment lives in **one SQLite file** with WAL mode. No database server to babysit, no external services to trust. Backup is `cp`; migration is moving the file. That single constraint shaped everything else: it forced efficient queries, careful transaction design, and a deploy story that is literally `docker compose up`.
 
-- **Graceful degradation** — a `ModelProvider` pattern tries `transformers` first; if weights are unavailable, a deterministic lexicon engine answers with the *identical API contract*. The service never hard-fails because a model didn't download.
-- **Latency discipline** — warm-up inference at startup, a batch endpoint with internal micro-batching, and caching so repeated inputs don't recompute.
-- **Observability from day one** — Prometheus-format `/metrics` with request counters, latency histograms, cache hits and the active model backend as a label.
+## Realtime is a product feature, not a checkbox
 
-## Honest responses
-
-Every response carries the model id that produced it — `distilbert-sst2` or `lexicon-v1` — because a score without provenance is a guess pretending to be data. Optional API-key auth, payload size caps and input sanitization round out the surface.
+- **WebSocket fan-out** — channel messages land on every subscriber without polling, with presence counts and typing indicators that make the room feel alive.
+- **Auth that respects the data** — bcrypt (cost 12) password hashing and JWT sessions, because "self-hosted" must not mean "insecure".
+- **A UI for humans** — a Vue 3 SPA, dark by default, bilingual Persian/English with proper RTL. For a Persian-speaking team, an interface that reads right is not a nice-to-have.
 
 ## What it proves
 
-The 15+ pytest cases run offline in under five seconds against the lexicon backend — no GPU, no gigabytes of downloads, CI green on every push. TextSense is the rare ML repo written from the backend engineer's chair: model choices matter less than the contract, the metrics and the failure story. That is the mindset I bring to any AI-adjacent team — the model is a component, the service is the product.
+Goftego is full-stack product work: realtime protocol design on the backend, state management on the frontend, and an opinionated data model underneath. It shows I can take a product from "wouldn't it be nice" to `docker compose up` — and that I treat self-hosted users with the same security bar as a public SaaS. Your community's data stays on your box, where it belongs.

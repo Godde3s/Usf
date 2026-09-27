@@ -17,6 +17,6 @@ I refuse the "one true language" religion. Languages are tools with shapes, and 
 | Structured Text (ST) | 96% | IEC 61131-3 industrial control programs. |
 | Go | 94% | NetPilot, OmniRouter, glm-free-api — CLIs and services. |
 | C# | 93% | .NET backends, desktop tools, WPF/MAUI. |
-| C / C++ | 78% | HardwarePT, embedded experiments, performance cores. |
+| C / C++ | 78% | embedded experiments, performance cores. |
 
 The pattern behind the list: high-level languages for velocity, systems languages for control, and industrial languages because somebody has to make the physical world behave. New languages are a weekend problem, not a career decision — the [agentic workflow](/en/agentic/overview/) makes ramp-up even cheaper, since agents write idiomatic scaffolding in any ecosystem while I supply the judgment.

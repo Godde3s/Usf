@@ -1,22 +1,37 @@
 ---
-title: "Goftego: Chat en Tiempo Real, a Un Comando de Distancia"
-description: "La historia de construir Goftego — una plataforma de chat self-hosted con canales en tiempo real, presencia e indicadores de escritura en un solo archivo SQLite."
+title: "TaskFlow API: Seguridad Que Puedes Probar"
+description: "Construir un backend donde cada claim de seguridad tiene su test — la historia detrás de la rotación de refresh tokens, RBAC y rate limiting de TaskFlow API."
 ---
 
-# Goftego: Chat en Tiempo Real, a Un Comando de Distancia
+# TaskFlow API: Seguridad Que Puedes Probar
 
-El SaaS de chat alojado encierra a tu comunidad detrás del almacenamiento, los precios y la jurisdicción de otra persona. Para equipos pequeños que solo quieren una sala, el intercambio es absurdo: tus conversaciones, su base de datos. **Goftego** ([GitHub](https://github.com/Godde3s/goftego)) — *goftego* significa "conversación" — es mi respuesta: una plataforma de chat moderna que hospedas tú, en un solo comando.
+Todos los portafolios de backend tienen "autenticación JWT" en el README. Muy pocos pueden mostrarte el test que repite un refresh token rotado y afirma que **toda la familia de tokens muere**. Esa diferencia — entre mencionar seguridad y demostrarla — es la razón por la que construí [TaskFlow API](/es/projects/taskflow-api/).
 
-## La apuesta del archivo único
+## Empezar por el modelo de amenazas
 
-Todo el estado de un despliegue vive en **un solo archivo SQLite** con modo WAL. Ni un servidor de base de datos que cuidar, ni servicios externos de los que depender. Backup es `cp`; migración es mover el archivo. Esa única restricción moldeó todo lo demás: forzó consultas eficientes, un diseño cuidadoso de transacciones y una historia de despliegue que es literalmente `docker compose up`.
+Escribí el modelo de amenazas antes de la primera ruta: credenciales robadas, tokens reutilizados, ráfagas de fuerza bruta, vecinos curiosos leyendo las tareas ajenas y — el clásico — una página 500 que filtra un stack trace. Cada amenaza se mapea a un control específico y comprobable en el código:
 
-## El tiempo real es una característica de producto, no un checkbox
+- **¿Refresh token robado?** Rotación con detección de reuso por familia. Una sola repetición revoca todo lo que el atacante posee.
+- **¿Fuerza bruta?** Un limitador de ventana deslizante responde al sexto intento con `429` y `Retry-After`.
+- **¿Vecinos husmeando?** Las comprobaciones de propiedad viven en un solo lugar — `_owned_task` — así que olvidar un guard es un bug que arreglas una vez, no un hábito que auditas para siempre.
+- **¿Fugas de información?** Los manejadores de excepciones devuelven 500 genéricos; los detalles van a logs JSON estructurados con un request id que puedes grepear.
 
-- **Fan-out por WebSocket** — los mensajes de canal llegan a cada suscriptor sin polling, con conteos de presencia e indicadores de escritura que hacen que la sala se sienta viva.
-- **Auth que respeta los datos** — hashing de contraseñas con bcrypt (coste 12) y sesiones JWT, porque "self-hosted" no puede significar "inseguro".
-- **Una UI para humanos** — una SPA en Vue 3, oscura por defecto, bilingüe persa/inglés con RTL correcto. Para un equipo de habla persa, una interfaz que se lee correctamente no es un lujo.
+## El test que vende el diseño
+
+```python
+async def test_refresh_rotation_and_reuse_detection(client, user_tokens):
+    old = user_tokens["refresh_token"]
+    r1 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
+    assert r1.status_code == 200                      # rotado
+    r2 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
+    assert r2.status_code == 401                      # replay rechazado
+    new = r1.json()["refresh_token"]
+    r3 = await client.post("/api/v1/auth/refresh", json={"refresh_token": new})
+    assert r3.status_code == 401                      # familia revocada
+```
+
+Trece tests, cero contenedores, unos segundos de reloj. CI los ejecuta en cada push, así que la historia de seguridad se mantiene cierta por construcción y no por documentación.
 
 ## Lo que demuestra
 
-Goftego es trabajo de producto full-stack: diseño de protocolos en tiempo real en el backend, gestión de estado en el frontend, y un modelo de datos con opiniones debajo. Demuestra que puedo llevar un producto desde "no estaría mal" hasta `docker compose up` — y que aplico a usuarios self-hosted la misma barra de seguridad que a un SaaS público. Los datos de tu comunidad se quedan en tu máquina, donde les corresponde.
+TaskFlow es el backend de referencia de mi trabajo con APIs — se empareja con el [toolkit de Postman](/es/projects/postman-api-testing-toolkit/) que lo somete a pruebas de contrato en CI. FastAPI, PostgreSQL 16 y Redis 7 detrás de Docker Compose; SQLAlchemy 2.0 async con migraciones Alembic; caché con invalidación al escribir; logs estructurados listos para Loki o ELK. Es la respuesta a una simple pregunta de entrevista: *muéstrame cómo entregas un backend en 2026.* Así — endurecido, probado, observable y funcionando.

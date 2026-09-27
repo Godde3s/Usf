@@ -1,22 +1,37 @@
 ---
-title: "Goftego: Realtime Chat, One Command Away"
-description: "The story of building Goftego — a self-hosted chat platform with realtime channels, presence and typing indicators in one SQLite file."
+title: "TaskFlow API: Security You Can Test"
+description: "Building a backend where every security claim has a test — the story behind TaskFlow API's refresh rotation, RBAC and rate limiting."
 ---
 
-# Goftego: Realtime Chat, One Command Away
+# TaskFlow API: Security You Can Test
 
-Hosted chat SaaS locks your community behind someone else's storage, pricing and jurisdiction. For small teams that just want a room, the trade is absurd: your conversations, their database. **Goftego** ([GitHub](https://github.com/Godde3s/goftego)) — *goftego* means "conversation" — is my answer: a modern chat platform you host yourself, in one command.
+Every backend portfolio has "JWT authentication" in the README. Very few can show you the test that replays a rotated refresh token and asserts the **whole token family dies**. That difference — between mentioning security and proving it — is why I built [TaskFlow API](/en/projects/taskflow-api/).
 
-## The one-file bet
+## Start from the threat model
 
-The whole state of a deployment lives in **one SQLite file** with WAL mode. No database server to babysit, no external services to trust. Backup is `cp`; migration is moving the file. That single constraint shaped everything else: it forced efficient queries, careful transaction design, and a deploy story that is literally `docker compose up`.
+I wrote the threat model before the first route: stolen credentials, replayed tokens, brute-force login bursts, curious neighbors reading each other's tasks, and — the classic — a 500 page leaking a stack trace. Each threat maps to a specific, testable control in the codebase:
 
-## Realtime is a product feature, not a checkbox
+- **Stolen refresh token?** Rotation with family reuse detection. One replay revokes everything the attacker holds.
+- **Brute force?** A sliding-window limiter answers the sixth burst attempt with `429` and `Retry-After`.
+- **Neighbor snooping?** Ownership checks sit in one place — `_owned_task` — so a forgotten guard is a bug you fix once, not a habit you audit forever.
+- **Info leaks?** Exception handlers return generic 500s; the details go to structured JSON logs with a request id you can grep.
 
-- **WebSocket fan-out** — channel messages land on every subscriber without polling, with presence counts and typing indicators that make the room feel alive.
-- **Auth that respects the data** — bcrypt (cost 12) password hashing and JWT sessions, because "self-hosted" must not mean "insecure".
-- **A UI for humans** — a Vue 3 SPA, dark by default, bilingual Persian/English with proper RTL. For a Persian-speaking team, an interface that reads right is not a nice-to-have.
+## The test that sells the design
+
+```python
+async def test_refresh_rotation_and_reuse_detection(client, user_tokens):
+    old = user_tokens["refresh_token"]
+    r1 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
+    assert r1.status_code == 200                      # rotated
+    r2 = await client.post("/api/v1/auth/refresh", json={"refresh_token": old})
+    assert r2.status_code == 401                      # replay refused
+    new = r1.json()["refresh_token"]
+    r3 = await client.post("/api/v1/auth/refresh", json={"refresh_token": new})
+    assert r3.status_code == 401                      # family revoked
+```
+
+Thirteen tests, zero containers, a few seconds of wall time. CI runs them on every push, which means the security story stays true by construction instead of by documentation.
 
 ## What it proves
 
-Goftego is full-stack product work: realtime protocol design on the backend, state management on the frontend, and an opinionated data model underneath. It shows I can take a product from "wouldn't it be nice" to `docker compose up` — and that I treat self-hosted users with the same security bar as a public SaaS. Your community's data stays on your box, where it belongs.
+TaskFlow is the reference backend for my API work — it pairs with the [Postman toolkit](/en/projects/postman-api-testing-toolkit/) that contract-tests it in CI. FastAPI, PostgreSQL 16 and Redis 7 behind Docker Compose; SQLAlchemy 2.0 async with Alembic migrations; caching with invalidation on writes; structured logs ready for Loki or ELK. It is the answer to a simple interview question: *show me how you ship a backend in 2026.* This is how — hardened, tested, observable, and running.
