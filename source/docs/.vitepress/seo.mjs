@@ -111,7 +111,7 @@ export const createSeo = ({
   const getSeoHead = (locale, title, description, path = '') => {
     const seoConfig = localeMap[locale] || localeMap['zh-cn']
     const canonicalUrl = path ? `${siteUrl}${path}` : `${siteUrl}/${locale}/`
-    const ogImageUrl = `${siteUrl}${base}logo.png`
+    const ogImageUrl = `${siteUrl}/logo.png`
 
     // 从路径中提取页面相对路径（去掉语言前缀）
     const getRelativePath = (fullPath, currentLocale) => {

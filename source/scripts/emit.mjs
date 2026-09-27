@@ -5,7 +5,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const DOCS = path.resolve(__dirname, '../../usf-vitepress/docs')
+const DOCS = path.resolve(__dirname, '../docs')
 
 const esc = (s) => String(s)
 

@@ -25,6 +25,7 @@ const PAGES = {
     ['veilchat', { en: 'VeilChat — P2P E2E Messenger', es: 'VeilChat — mensajería P2P E2E' }],
     ['baleforge', { en: 'BaleForge — Bale Bot Framework', es: 'BaleForge — framework para bots' }],
     ['snaplink', { en: 'Snaplink — URL Shortener + Analytics', es: 'Snaplink — acortador + analítica' }],
+    ['peregrine', { en: 'Peregrine — Expo AI Console', es: 'Peregrine — consola IA con Expo' }],
     ['habitgrid', { en: 'HabitGrid — Expo Habit Tracker', es: 'HabitGrid — hábitos con Expo' }],
     ['bale-php', { en: 'BalePhp — PHP 8.2 SDK', es: 'BalePhp — SDK de PHP 8.2' }],
     ['modbuslite', { en: 'ModbusLite — Modbus TCP for .NET', es: 'ModbusLite — Modbus TCP para .NET' }],

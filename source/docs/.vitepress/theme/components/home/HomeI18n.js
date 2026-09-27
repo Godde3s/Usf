@@ -96,6 +96,12 @@ export const i18n = {
           link: '/en/projects/snaplink/'
         },
         {
+          title: 'Peregrine',
+          headline: 'A native-feeling AI console.',
+          desc: 'Expo & React Native chat client for any OpenAI-compatible endpoint — streaming SSE, Keychain-stored keys, design-law compliance. Zero accounts.',
+          link: '/en/projects/peregrine/'
+        },
+        {
           title: 'HabitGrid',
           headline: 'Habits that stay on your phone.',
           desc: 'Offline-first Expo & React Native tracker — streaks, 14-day dot grids and a pure, tested domain layer. Zero accounts.',
@@ -367,6 +373,12 @@ export const i18n = {
           headline: 'Enlaces cortos, analítica real.',
           desc: 'Acortador de URLs autoalojado con analítica por clic — Next.js 14 App Router, TypeScript, Prisma, SQLite y Tailwind.',
           link: '/es/projects/snaplink/'
+        },
+        {
+          title: 'Peregrine',
+          headline: 'Una consola de IA con sensación nativa.',
+          desc: 'Cliente de chat con Expo y React Native para cualquier endpoint compatible con OpenAI — streaming SSE, claves en el Keychain, cumplimiento de las leyes de diseño. Cero cuentas.',
+          link: '/es/projects/peregrine/'
         },
         {
           title: 'HabitGrid',

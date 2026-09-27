@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd8a8"/>
+      <stop offset="100%" stop-color="#ffb35c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1672" height="941" fill="url(#bg)"/>
+  <g opacity="0.25" stroke="#7a4a00" stroke-width="3" fill="none">
+    <circle cx="220" cy="180" r="90"/><circle cx="1480" cy="760" r="130"/>
+    <circle cx="1380" cy="150" r="60"/><circle cx="160" cy="800" r="70"/>
+  </g>
+  <g opacity="0.35" font-family="SFMono-Regular, Consolas, monospace" font-size="30" fill="#7a4a00">
+    <text x="120" y="770">{}</text>
+    <text x="1500" y="240">&lt;/&gt;</text>
+  </g>
+  <g fill="none" stroke="#7a4a00" stroke-width="12">
+    <rect x="726" y="270" width="220" height="400" rx="34"/>
+    <line x1="796" y1="310" x2="876" y2="310"/>
+    <line x1="806" y1="626" x2="866" y2="626"/>
+  </g>
+  <g>
+    <rect x="766" y="380" width="140" height="64" rx="20" fill="#7a4a00" opacity="0.9"/>
+    <polygon points="900,432 936,448 900,462" fill="#7a4a00" opacity="0.9"/>
+    <polygon points="816,404 836,404 832,412 850,412 820,428 828,412 812,412" fill="#ffd8a8"/>
+    <rect x="796" y="486" width="80" height="18" rx="9" fill="#7a4a00" opacity="0.55"/>
+    <rect x="796" y="516" width="112" height="18" rx="9" fill="#7a4a00" opacity="0.35"/>
+    <polygon points="980,560 1050,560 1090,600 1044,606 1058,636 986,616 1010,596 986,590" fill="#7a4a00" opacity="0.85"/>
+  </g>
+</svg>

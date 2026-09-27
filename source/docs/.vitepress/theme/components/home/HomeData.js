@@ -9,6 +9,7 @@ import cardVeilchat from '../../assets/home/cards/card-veilchat.svg'
 import cardBaleforge from '../../assets/home/cards/card-baleforge.svg'
 import cardSnaplink from '../../assets/home/cards/card-snaplink.svg'
 import cardHabitgrid from '../../assets/home/cards/card-habitgrid.svg'
+import cardPeregrine from '../../assets/home/cards/card-peregrine.svg'
 import cardBalePhp from '../../assets/home/cards/card-bale-php.svg'
 import cardModbuslite from '../../assets/home/cards/card-modbuslite.svg'
 import cardDeepseek from '../../assets/home/cards/card-deepseek.svg'
@@ -77,6 +78,12 @@ export const stage2Cards = [
     image: cardSnaplink,
     imageAlt: 'URL shortener analytics concept illustration',
     link: '/en/projects/snaplink/'
+  },
+  {
+    imageColor: '#ffb35c',
+    image: cardPeregrine,
+    imageAlt: 'Expo AI console concept illustration',
+    link: '/en/projects/peregrine/'
   },
   {
     imageColor: '#a8edea',

@@ -155,6 +155,11 @@ const resolveFooterHref = (link) => {
   if (link.startsWith('http://') || link.startsWith('https://')) {
     return link
   }
+  // Idempotent: links coming from getFooterLink already carry the base.
+  const based = withBase('/')
+  if (link.startsWith(based)) {
+    return link
+  }
   return withBase(link)
 }
 </script>
